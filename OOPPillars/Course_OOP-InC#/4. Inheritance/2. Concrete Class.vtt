@@ -1,0 +1,382 @@
+WEBVTT
+
+00:00.210 --> 00:03.970
+Let's talk about the fundamental building block of object or in a programming class.
+
+00:03.990 --> 00:09.690
+The most common type of class is a concrete class and the name already hints you as to what it actually
+
+00:09.690 --> 00:13.800
+is concrete means that everything in the class is defined and implemented.
+
+00:13.800 --> 00:15.930
+It can be instantiated and then used.
+
+00:15.930 --> 00:20.280
+And as you remember once you have instantiated a class you have an object which you can then using a
+
+00:20.280 --> 00:20.880
+program.
+
+00:20.880 --> 00:22.510
+Now let's go in and create a concrete class.
+
+00:22.530 --> 00:25.170
+I will go ahead and create a file called car salesman.
+
+00:25.200 --> 00:27.680
+Then I will go ahead and create a concrete class.
+
+00:27.690 --> 00:30.540
+Let's go ahead and say new file.
+
+00:30.540 --> 00:30.930
+I'll say.
+
+00:30.940 --> 00:38.100
+Car salesman yes.
+
+00:38.730 --> 00:42.870
+Then I will create a class a concrete class
+
+00:52.920 --> 00:56.560
+so you will do this by using the reserved keyword class.
+
+00:56.760 --> 00:58.830
+And then writing the name of the class after it.
+
+00:58.830 --> 01:00.380
+It can be anything you want.
+
+01:00.410 --> 01:02.490
+But in this case it is car salesmen.
+
+01:02.520 --> 01:06.300
+In this class we'll have a constructor fields and property and a method.
+
+01:06.300 --> 01:10.010
+This constructor will take in two parameters one called first name.
+
+01:10.010 --> 01:12.350
+The other one called last name.
+
+01:12.450 --> 01:18.120
+I'm going to say public car salesman.
+
+01:19.560 --> 01:27.900
+And then this will take in first name.
+
+01:30.360 --> 01:34.680
+Strong blast name.
+
+01:34.680 --> 01:36.580
+All right.
+
+01:36.590 --> 01:53.410
+And then I'm going to have the fields.
+
+01:54.840 --> 01:55.450
+OK.
+
+01:56.570 --> 02:02.230
+So I'm gonna set the first name equals first No.
+
+02:02.660 --> 02:08.830
+Then last name is equal to last name.
+
+02:09.350 --> 02:10.220
+OK.
+
+02:10.700 --> 02:11.730
+Here we go.
+
+02:12.020 --> 02:17.090
+Then we will have a property which will expose the combined value of these fields and the expose value
+
+02:17.090 --> 02:18.620
+will be the full name.
+
+02:18.620 --> 02:22.310
+So we'll just simply put the first name in the last name together go in and create that.
+
+02:22.310 --> 02:27.260
+I will say public string full name
+
+02:34.880 --> 02:45.250
+and then gets we just aren't getting the value from the property and this block you will say the following.
+
+02:45.320 --> 02:50.750
+I'm going to use string format which is basically going to let us return a String and a template or
+
+02:50.750 --> 02:57.080
+format just more convenient to concatenate a string together instead of just saying string plus another
+
+02:57.080 --> 02:57.700
+string.
+
+02:57.740 --> 02:59.050
+It's a cleaner way of doing it.
+
+02:59.360 --> 03:02.630
+So in this case I will say 0 1.
+
+03:02.630 --> 03:08.180
+These are just place holders for values you pass into the string format this case 0 will be first name
+
+03:09.890 --> 03:15.070
+and one will be last name call.
+
+03:15.290 --> 03:18.330
+So here's a distinct difference between the fields and the properties.
+
+03:18.500 --> 03:22.460
+As mentioned before you want to keep your fields private and then use your properties to expose the
+
+03:22.460 --> 03:23.770
+value or value.
+
+03:23.770 --> 03:27.960
+So if your fields and transform them if you want to as well.
+
+03:28.090 --> 03:32.560
+So now our first name or last name are private and full name is public.
+
+03:32.560 --> 03:42.020
+So you are basically saying full name will expose the values of the fields which is your property.
+
+03:42.040 --> 03:47.830
+Now you don't have to have your fields as private and you don't have to have your property as public
+
+03:48.040 --> 03:49.990
+but that's the best practice.
+
+03:49.990 --> 03:53.800
+So why not keep up with the standards that are being used in the field.
+
+03:53.830 --> 03:58.390
+Also one convention is that properties are capitalized and the fields have an underscore in front of
+
+03:58.390 --> 03:58.870
+them.
+
+03:59.050 --> 04:06.810
+Like so once again you don't have to do it the way that is shown but it is a very well known convention.
+
+04:06.810 --> 04:12.030
+So why not be in line with how things are being done in the field once again then we will have a method
+
+04:12.030 --> 04:12.920
+called sell.
+
+04:13.020 --> 04:18.480
+It will simply print out a message introducing the salesman and then asking a potential client to purchase
+
+04:18.480 --> 04:18.900
+a car.
+
+04:18.990 --> 04:23.340
+So I will say public void sell
+
+04:26.600 --> 04:32.940
+and that's going to say console right line in order to get access to a console class.
+
+04:32.940 --> 04:36.300
+We need to export the system which we already did.
+
+04:37.500 --> 04:44.160
+And then inside we're going to use string format once again for convenience strength and coordination.
+
+04:44.170 --> 04:58.070
+Now we'll say Hi my name is 0 which is a place holder I would recommend you to buy this car.
+
+04:58.880 --> 05:05.400
+And then we'll say full name which is going to be replacing the zero right here.
+
+05:05.400 --> 05:08.490
+So once again is that convenient way for us to create a string.
+
+05:08.760 --> 05:09.390
+So that's it.
+
+05:09.390 --> 05:10.320
+Note A few things here.
+
+05:10.320 --> 05:12.440
+Constructor has the same name as the class.
+
+05:12.450 --> 05:13.990
+That's how you know it's a constructor.
+
+05:14.020 --> 05:21.410
+See car salesman and car salesmen car salesmen is the class name that this reserve keyword references
+
+05:21.410 --> 05:24.320
+to the class that you are inside of at the moment.
+
+05:24.320 --> 05:26.330
+So in this case it is car salesmen.
+
+05:26.330 --> 05:32.390
+When you type in this and then you say dot in front of it it will show you all of the available fields
+
+05:32.390 --> 05:34.970
+properties and methods on the given class.
+
+05:35.000 --> 05:38.140
+So if you take this out so dot.
+
+05:38.210 --> 05:40.160
+So you have full name first name last name.
+
+05:40.170 --> 05:42.320
+And so this case we need first name.
+
+05:42.320 --> 05:45.200
+Now let's go ahead and actually instantiate this class.
+
+05:45.270 --> 05:48.220
+We'll go to program take this out.
+
+05:49.360 --> 05:59.330
+And then I will say car salesman Steve the salesman equals new car salesman.
+
+05:59.880 --> 06:02.850
+I will say Steve Rogers.
+
+06:03.130 --> 06:04.640
+Rogers his last name.
+
+06:06.510 --> 06:06.960
+Will go.
+
+06:08.200 --> 06:12.960
+So as you notice we use the new reserve keyword in order to instantiate the class.
+
+06:12.970 --> 06:19.600
+And during the instantiation the constructor of the class right here is going to require us of all the
+
+06:19.600 --> 06:24.970
+parameters it needs to build out the object or the instance of the class as it isn't also known once
+
+06:25.060 --> 06:32.830
+instantiated we can use all of the properties and methods available to us so we can say console right
+
+06:32.850 --> 06:33.480
+line.
+
+06:33.490 --> 06:36.320
+In this case we just want to print out the full name.
+
+06:36.580 --> 06:40.950
+So we say Steve the salesman got the full name.
+
+06:41.900 --> 06:44.980
+We can say Steve the salesman does sell.
+
+06:45.900 --> 06:50.170
+Notice that we're using the variable in order to access the properties in the methods because that is
+
+06:50.170 --> 06:52.110
+where the instance of the class is.
+
+06:52.150 --> 06:54.550
+The variable here is our object.
+
+06:54.550 --> 06:56.470
+The car salesman is the class.
+
+06:56.500 --> 06:58.030
+So this is the class.
+
+06:58.030 --> 06:59.810
+This is the instance of the class.
+
+07:00.070 --> 07:03.370
+Once again the car salesman is the blueprint or the map.
+
+07:03.370 --> 07:09.240
+And then this Steve the salesman is the object which we can use to call properties and methods on.
+
+07:09.370 --> 07:13.930
+We could have as easily made another object and called it Eric the sales dude and this would have been
+
+07:13.960 --> 07:16.700
+a different instance of the same object.
+
+07:16.780 --> 07:17.770
+So let's go out and do that.
+
+07:17.770 --> 07:22.540
+I will say car salesman Eric the sales dude
+
+07:25.120 --> 07:30.820
+equals new car salesman and Eric
+
+07:34.330 --> 07:35.240
+where is Eric.
+
+07:35.270 --> 07:44.560
+Eric Erickson and I'm going to actually copy paste this part because pretty similar except the fact
+
+07:44.560 --> 07:48.480
+that we're gonna use Eric the sales dude as the variable name.
+
+07:48.650 --> 07:49.860
+All right.
+
+07:49.970 --> 07:54.620
+Once again if you remember from the chart we have one class that tells us how to build the object and
+
+07:54.620 --> 07:57.740
+then we can build as many objects as we want from that class.
+
+07:57.740 --> 08:03.560
+So here we have one class which is the blueprint and then we can use that blueprint to create as many
+
+08:03.620 --> 08:07.340
+instances of that class or a.k.a. objects as we want.
+
+08:07.340 --> 08:13.160
+Going back here this is our class the blueprint then from that blueprint we can create as many objects
+
+08:13.190 --> 08:13.970
+as they want.
+
+08:13.970 --> 08:19.820
+In this case we have two which is Steve the salesman and then Eric the sales Dude two separate instances
+
+08:19.880 --> 08:21.310
+of the same class.
+
+08:21.320 --> 08:23.780
+Let's go ahead and run this to see how it works.
+
+08:23.810 --> 08:32.980
+So we'll go in and Breakpoint it and then one.
+
+08:33.000 --> 08:35.170
+All right let's go through it.
+
+08:38.560 --> 08:40.530
+And you can see it's a Steve Rogers.
+
+08:40.550 --> 08:41.840
+Hi my name is Steve Rogers.
+
+08:41.840 --> 08:43.550
+I would recommend you to buy this car.
+
+08:43.550 --> 08:44.290
+Eric Erickson.
+
+08:44.300 --> 08:45.590
+Hi my name is Eric Erickson.
+
+08:45.620 --> 08:47.410
+I would recommend you to buy this car.
+
+08:47.420 --> 08:48.510
+So there you go.
+
+08:48.530 --> 08:51.800
+This is a concrete class an object oriented programming.

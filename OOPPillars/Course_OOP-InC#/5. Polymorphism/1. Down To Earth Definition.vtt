@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00.120 --> 00:05.370
+Now it is time for us to define the second feature of object or in a programming which is polymorphism.
+
+00:05.370 --> 00:09.630
+I would define it in a very high level manner and in the next two videos we will talk more about the
+
+00:09.630 --> 00:10.470
+specifics.
+
+00:10.470 --> 00:15.680
+So with that said polymorphism simply stays that you can have the same form with different behavior.
+
+00:15.690 --> 00:18.060
+That is all nothing more nothing less.
+
+00:18.090 --> 00:23.450
+So you can have two components which have the same form but behave differently.
+
+00:23.450 --> 00:28.500
+Now there are two types of polymorphism one called static and another one called dynamic polymorphism
+
+00:28.680 --> 00:34.830
+and static polymorphism two components that can be the same but have different behaviour are methods
+
+00:34.980 --> 00:41.070
+so static polymorphism is on a method level meaning that we can do it within our concrete classes right
+
+00:41.070 --> 00:45.240
+here we can do it in our abstract classes right here.
+
+00:45.330 --> 00:50.850
+We can even do it in our interface but dynamic polymorphism is on a class level meaning that we need
+
+00:50.850 --> 00:58.970
+our abstract classes or abstract class or our interface in order to perform dynamic polymorphism in
+
+00:58.990 --> 01:04.810
+the next two videos we will explore more and see how we perform both static and dynamic polymorphism.

@@ -1,0 +1,169 @@
+WEBVTT
+
+00:00.120 --> 00:00.830
+Send this video.
+
+00:00.830 --> 00:04.240
+Let's go over how you achieve abstraction through encapsulation.
+
+00:04.260 --> 00:10.590
+Well he have achieved abstraction through encapsulation in our code but will be governed over is how
+
+00:10.590 --> 00:11.640
+we have done that.
+
+00:11.700 --> 00:15.630
+And also a bit of more explanation of what encapsulation is.
+
+00:15.630 --> 00:23.130
+So here you can see five methods of selling which we're only making visible to the inheriting child
+
+00:23.130 --> 00:23.940
+classes.
+
+00:23.940 --> 00:27.840
+What we exposed to the world is the cell method.
+
+00:27.840 --> 00:29.230
+Now here is the subtlety.
+
+00:29.280 --> 00:32.710
+And here is how you achieve abstraction through encapsulation.
+
+00:32.730 --> 00:37.050
+If you listen to it and you don't get it the first time around please rewind and listen to it multiple
+
+00:37.050 --> 00:37.470
+times.
+
+00:37.470 --> 00:39.580
+This is very very important.
+
+00:39.600 --> 00:53.610
+So here it comes encapsulation is just the process of either hiding or showing members of a class.
+
+00:53.610 --> 01:03.870
+Nothing more nothing less we just say hey this is what I want to hide and this is what I want to show.
+
+01:03.910 --> 01:05.840
+All right that's it.
+
+01:05.920 --> 01:11.840
+And we hide or show by using Access specifies now.
+
+01:11.850 --> 01:20.580
+Abstraction is the reason why we perform encapsulation because encapsulation on its own is just a blind
+
+01:20.580 --> 01:22.110
+process.
+
+01:22.110 --> 01:25.200
+We can just say Hey hide this field.
+
+01:25.350 --> 01:27.340
+Show this property.
+
+01:27.390 --> 01:29.250
+Show the constructor.
+
+01:29.310 --> 01:34.930
+Show the cell method you know hide methods only for the inheriting class.
+
+01:35.100 --> 01:40.720
+So it's a blind process of hiding or showing things.
+
+01:40.770 --> 01:44.190
+Why do we decide to hide and show.
+
+01:44.190 --> 01:48.120
+That's the question why do we decide to hide certain things.
+
+01:48.120 --> 01:51.150
+And why do we decide to show other things.
+
+01:51.150 --> 01:57.110
+This is the question and the answer to this is abstraction.
+
+01:57.210 --> 02:04.650
+We only show what is relevant to the end user and that is abstraction.
+
+02:04.860 --> 02:16.300
+We only show what is relevant to the user which is why we hide certain things and show other things.
+
+02:16.380 --> 02:21.540
+You see that the way we hide and show is done in a concrete way.
+
+02:21.540 --> 02:28.350
+Using axis specifies but the reason why I said abstraction is a more of a generic term is because it
+
+02:28.350 --> 02:38.400
+happens as a natural result of encapsulation because as you hide and show things you will achieve abstraction.
+
+02:38.400 --> 02:44.810
+However if you just blindly hide and show things then you will achieve abstraction.
+
+02:44.820 --> 02:47.570
+But that abstraction won't really mean much.
+
+02:48.150 --> 02:55.410
+But if you know what you want to make relevant for the user then it's going to be a more of a conscious
+
+02:55.440 --> 02:56.640
+abstraction.
+
+02:56.640 --> 03:02.040
+But I could have just went and made all of the methods public or maybe only one of them public and the
+
+03:02.040 --> 03:08.340
+rest of them private or not even that I could have made one protected one private just randomize all
+
+03:08.340 --> 03:09.770
+the Axis specifies.
+
+03:09.930 --> 03:12.180
+Am I also achieving abstraction.
+
+03:12.180 --> 03:13.810
+Hundred percent.
+
+03:13.920 --> 03:14.990
+Of course I am.
+
+03:15.000 --> 03:17.460
+However there is no meaning behind that abstraction.
+
+03:17.460 --> 03:27.090
+It's not useful abstraction but if I have a conscious idea Hey man I know that the cell method is what
+
+03:27.090 --> 03:31.400
+the user needs and the rest of it is just details.
+
+03:31.410 --> 03:32.990
+They don't need to know about this stuff.
+
+03:33.510 --> 03:40.690
+So that's how I achieve more meaningful abstraction through encapsulation.
+
+03:40.710 --> 03:47.310
+So once again we just give the end user what they need in order to achieve what they want the end user
+
+03:47.310 --> 03:50.710
+in our case wanted to be able to sell an item.
+
+03:50.760 --> 03:53.210
+So we expose the cell method.
+
+03:53.370 --> 03:55.890
+They don't need to know how we sell the item.
+
+03:56.030 --> 03:56.810
+OK.
+
+03:56.880 --> 04:01.370
+And this is how applications are written in the real world.
+
+04:01.410 --> 04:09.570
+We hide things that the end user doesn't care about and we show what the end user needs.
+
+04:09.570 --> 04:15.600
+Once again to be able to achieve what they want and that is abstraction.

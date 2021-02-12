@@ -1,0 +1,163 @@
+WEBVTT
+
+00:00.150 --> 00:04.010
+In this video I want to talk about object oriented programming basics.
+
+00:04.020 --> 00:09.060
+The building blocks of it and its main features since we will be using them in each section.
+
+00:09.060 --> 00:12.260
+All words and I wouldn't want you to be confused about any of them.
+
+00:12.270 --> 00:17.040
+This will be more of a high level video to put things into perspective so we'll be using diagrams in
+
+00:17.040 --> 00:22.530
+charge to grasp the big idea and in the next videos we'll be diving into specifics and showing them
+
+00:22.560 --> 00:27.990
+in real code examples as you can see here we have a representation of an object and all object oriented
+
+00:27.990 --> 00:31.180
+programming is is a collection of collaborating objects.
+
+00:31.230 --> 00:37.110
+Each object is an autonomous concept that interacts with another concept the way you build object is
+
+00:37.110 --> 00:43.080
+by creating a blueprint to where we have it here for them and then using that blueprint to instantiate
+
+00:43.080 --> 00:43.720
+them.
+
+00:43.740 --> 00:46.350
+So what you see here is a blueprint.
+
+00:46.500 --> 00:54.360
+You have a constructor method field and a property constructor just allows you to specify anything that
+
+00:54.360 --> 00:56.040
+an object needs to be created.
+
+00:56.040 --> 00:58.740
+It doesn't have to have a constructor but it's an option.
+
+00:58.740 --> 01:03.750
+Methods are just behaviors of an object that performs some type of function on the values passed in
+
+01:03.750 --> 01:06.120
+from the constructor or other values.
+
+01:06.120 --> 01:12.630
+Bottom line is methods are behaviors on an object that's all fields known as Private Members of a class.
+
+01:12.630 --> 01:16.740
+They don't have to be but best practices to keep them private.
+
+01:16.740 --> 01:21.590
+We'll talk more about private public protected which are access specifies and the encapsulation video.
+
+01:21.600 --> 01:22.500
+So don't worry about it.
+
+01:22.500 --> 01:25.970
+Fields are set when you pass values into the constructor.
+
+01:26.100 --> 01:29.520
+Properties are a way to expose any fields you choose to.
+
+01:29.580 --> 01:32.300
+You can also set fields directly in the constructor as well.
+
+01:32.430 --> 01:38.520
+But the best practice once again is to set fields in the constructor and then use properties to expose
+
+01:38.520 --> 01:40.760
+field values back to the example.
+
+01:40.830 --> 01:44.960
+Here we have a constructor method field and a property.
+
+01:45.000 --> 01:49.740
+You don't have to have any of these things mentioned you can just have an empty object without any of
+
+01:49.740 --> 01:50.030
+this.
+
+01:50.040 --> 01:51.030
+But what's the point.
+
+01:51.030 --> 01:56.250
+Usually you have some type of combination of these things mentioned or all of it at once just the way
+
+01:56.310 --> 01:56.720
+we have it.
+
+01:56.720 --> 01:57.750
+In this example.
+
+01:57.780 --> 02:01.950
+So here once again we have the blueprint but we can't do anything with the blueprint.
+
+02:01.950 --> 02:08.520
+We need to use the new reserved keyword in order to perform instantiation which is the process of creating
+
+02:08.580 --> 02:10.130
+an instance of a class.
+
+02:10.140 --> 02:12.110
+What's the instance of a created.
+
+02:12.150 --> 02:14.090
+We call them objects right here.
+
+02:14.130 --> 02:19.050
+So we have the blueprint and then we use the new reserved keyword to perform instantiation which then
+
+02:19.050 --> 02:22.440
+creates our objects and we can have as many as we want.
+
+02:22.440 --> 02:28.110
+So these are the different objects that we have been instantiating from the same class.
+
+02:28.140 --> 02:32.960
+Everything will be the same except what has been specified in the constructor during instantiation.
+
+02:33.030 --> 02:35.660
+So one of them might have aged 70.
+
+02:35.660 --> 02:40.950
+Another might have aged twenty five because they're different objects that have been instantiated separately
+
+02:41.100 --> 02:45.440
+and that's if we are setting the field age in the constructor.
+
+02:45.480 --> 02:47.370
+So that's my assumption that we're doing this.
+
+02:47.370 --> 02:52.260
+In this example once we have the objects we can do some interesting stuff with them Object Oriented
+
+02:52.260 --> 02:56.790
+Programming has four main features which we can use on our objects.
+
+02:56.790 --> 02:59.750
+And this is where the power of object or any programming comes in.
+
+02:59.760 --> 03:03.600
+We have inheritance polymorphism encapsulation and abstraction.
+
+03:03.600 --> 03:08.670
+Now let's jump into the next couple of sections and start talking about specifics and how each of these
+
+03:08.670 --> 03:09.710
+features works.
+
+03:09.720 --> 03:11.790
+First one in line is inheritance.
+
+03:11.850 --> 03:15.780
+So I will see you in the next video we will be defining the inheritance.
+
+03:15.780 --> 03:21.060
+Just giving you a down to earth definition nothing complex and then start exploring it in code.

@@ -1,0 +1,382 @@
+WEBVTT
+
+00:00.150 --> 00:04.830
+Now let's use dynamic polymorphism to solve our problem.
+
+00:04.830 --> 00:08.070
+What I will do is change the object type into salesman.
+
+00:08.090 --> 00:17.880
+So let's go ahead we'll change this to salesman and I will also change this salesman see it still works
+
+00:18.510 --> 00:23.760
+then I will go ahead and rewrite to show me how to sell method and say that it only takes salesman type
+
+00:23.790 --> 00:28.060
+and once it takes a salesman type he just calls the sell method on it.
+
+00:28.410 --> 00:30.950
+So I'll just say this is salesman.
+
+00:30.990 --> 00:37.380
+And then I will say here's the beautiful part I don't need any of this take all this stuff out and I
+
+00:37.380 --> 00:41.550
+just say sell boom.
+
+00:41.550 --> 00:42.730
+That's it.
+
+00:42.780 --> 00:44.250
+All right.
+
+00:44.670 --> 00:46.610
+Isn't this much cleaner.
+
+00:46.650 --> 00:47.610
+And guess what.
+
+00:47.610 --> 00:50.970
+This is fully satisfying our business requirement.
+
+00:50.970 --> 00:56.460
+So if they added another type such as online marketer it would still work without us having to touch
+
+00:56.460 --> 00:57.230
+the code.
+
+00:57.240 --> 00:59.120
+Let's go out and do that actually.
+
+00:59.220 --> 01:08.050
+I will go to explore say new file online marketer dot see yes.
+
+01:08.940 --> 01:10.860
+All right.
+
+01:10.860 --> 01:15.780
+Now I will simply just go here grab that.
+
+01:15.810 --> 01:19.190
+You already know the drill rename.
+
+01:19.200 --> 01:21.330
+Copy that.
+
+01:21.330 --> 01:27.750
+And that's why my name is the full name I were recommended to buy this online product.
+
+01:28.410 --> 01:29.980
+OK.
+
+01:30.060 --> 01:35.220
+And no developing so keeping it simple once again.
+
+01:35.220 --> 01:36.800
+All right.
+
+01:37.050 --> 01:48.120
+And let's go ahead to the program and I will say a new online marketer.
+
+01:48.930 --> 01:59.770
+And we will say Steve Rogers OK.
+
+01:59.960 --> 02:01.650
+Check this out.
+
+02:01.700 --> 02:03.310
+Beautiful.
+
+02:03.450 --> 02:07.660
+See we don't have to touch our method.
+
+02:07.860 --> 02:09.280
+We don't do anything with it.
+
+02:09.300 --> 02:11.120
+They can add 50 types.
+
+02:11.130 --> 02:13.070
+They can add 100 types.
+
+02:13.110 --> 02:15.060
+They can have billions of rows.
+
+02:15.210 --> 02:16.480
+We don't care.
+
+02:16.500 --> 02:23.850
+This method will never change if they change something other with their business requirements for example
+
+02:23.850 --> 02:27.090
+if they want to see the sell method and they want to do something else.
+
+02:27.170 --> 02:27.350
+Yeah.
+
+02:27.360 --> 02:29.280
+We can change this method no problem.
+
+02:29.280 --> 02:37.520
+But we don't have to change it based on the number of rows or any different types that they add.
+
+02:37.770 --> 02:39.380
+And that is beautiful.
+
+02:39.390 --> 02:42.240
+Let me go ahead and run this code actually.
+
+02:42.240 --> 02:48.620
+So I will breakpoint it right here and say run.
+
+02:49.360 --> 02:53.670
+And once again we have our list.
+
+02:53.670 --> 02:54.840
+That's cool.
+
+02:54.840 --> 02:57.720
+We've gone through our list and check it out.
+
+02:57.750 --> 03:13.680
+One two three four and five so two car salesmen and retail salesperson insurance broker online marketer
+
+03:14.310 --> 03:15.950
+it does not care.
+
+03:15.990 --> 03:23.880
+It just says as long as you are of salesman type so you are inheriting from a salesman.
+
+03:24.420 --> 03:33.420
+If this parent class is pointing to any of these child classes it will be able to take care of it and
+
+03:33.420 --> 03:36.000
+call its sell method.
+
+03:36.000 --> 03:44.190
+So the sell method will be directed from the child class that is being passed into this method which
+
+03:44.190 --> 03:52.110
+takes in the parent class so the parent class will be pointing to one of these child classes whichever
+
+03:52.110 --> 03:59.990
+one happens to come into this method in the first run the parent class is pointing to this child class.
+
+04:00.000 --> 04:03.190
+The second run the parent class is pointing to this child class.
+
+04:03.330 --> 04:07.980
+The third one this one fourth one it's pointing to this one in fifth one is pointing to this one right.
+
+04:08.070 --> 04:12.610
+You get the idea and is is pointing to these classes.
+
+04:12.630 --> 04:15.580
+It knows how to handle the sell method.
+
+04:15.630 --> 04:18.730
+So this is what we mean by method overwriting.
+
+04:18.990 --> 04:21.670
+The method has the same signature.
+
+04:21.690 --> 04:26.130
+However the implementation is completely different.
+
+04:26.130 --> 04:31.290
+Now that we've seen how to perform dynamic polymorphism using abstract classes let's see how it is done
+
+04:31.290 --> 04:32.860
+using interfaces.
+
+04:32.940 --> 04:37.530
+Let's say a requirement now is very similar but instead in the database they have types which are self
+
+04:37.530 --> 04:40.830
+developing and the rest of the requirements are the same.
+
+04:40.830 --> 04:46.800
+So once again we would have a list of self developing classes and imagine that it has been loaded with
+
+04:46.800 --> 04:48.760
+all of the items from the database.
+
+04:48.780 --> 04:54.020
+In other words let's just imagine for simplicity's sake that we don't have to instantiate a class once
+
+04:54.020 --> 04:59.520
+a new role comes into the database but it is being loaded into the list here automatically.
+
+04:59.550 --> 05:01.130
+Just like I mentioned before.
+
+05:01.410 --> 05:05.640
+And then all we have to do is loop around and pass individual items into our method.
+
+05:05.640 --> 05:13.200
+So what we do I'm gonna stop this and we're going to just have another list are similar but in this
+
+05:13.200 --> 05:23.040
+case we're using interfaces so I'm going to say self developing and I'm going to say self developing
+
+05:24.930 --> 05:34.050
+and we see we can't include these guys in there because none of them satisfy the interface requirements
+
+05:34.370 --> 05:34.610
+right.
+
+05:34.620 --> 05:39.590
+So these can't be here but guess what retail salesperson is not underlined.
+
+05:39.600 --> 05:40.430
+Red why.
+
+05:40.440 --> 05:43.340
+Because it is of type self developing.
+
+05:43.500 --> 05:51.930
+Now the other type that we had was web developer see web developer and we can have that here and we
+
+05:51.930 --> 05:55.230
+just give it something like C sharp all right.
+
+05:55.630 --> 05:56.250
+And that's cool.
+
+05:56.790 --> 06:00.960
+And then we will have another method that's similar to this.
+
+06:00.960 --> 06:16.170
+And this one says show me how you self developed and it's going to take an interface of type self developing
+
+06:17.110 --> 06:18.400
+all right.
+
+06:18.420 --> 06:25.510
+And it's gonna say call the developed method on self developing so not sell developed.
+
+06:25.870 --> 06:26.160
+OK.
+
+06:26.160 --> 06:27.880
+Very very similar.
+
+06:27.900 --> 06:32.670
+Now we actually have to also change the method name I forgot to do that.
+
+06:32.730 --> 06:39.000
+So change the method name and the item that we're gonna pass into.
+
+06:39.000 --> 06:40.160
+Also it's not salesmen.
+
+06:40.230 --> 06:41.250
+It was just a copy paste there.
+
+06:41.250 --> 06:45.950
+So it's going to have to go through all self developing and that's the item we're going to pass that
+
+06:45.950 --> 06:47.580
+item in to show me.
+
+06:47.580 --> 06:49.880
+Show me how you self develop.
+
+06:49.920 --> 06:55.240
+So show me how you self develop and then it's gonna show us how it develops.
+
+06:55.260 --> 07:02.310
+OK so now we're gonna go through we're gonna run and as you can see we're all that he ran through all
+
+07:02.310 --> 07:06.410
+the salesman that's cool but now it's time for us to run to a self developing.
+
+07:06.480 --> 07:06.780
+All right.
+
+07:06.810 --> 07:11.760
+So now it's gonna go through and you're gonna say I double myself by watching retail sales training
+
+07:11.760 --> 07:18.060
+videos because we had retail salesperson first one on the list and then we're gonna go through a second
+
+07:18.060 --> 07:23.160
+one is gonna say I devote myself by watching you Demi web development courses because it was a web developer.
+
+07:23.370 --> 07:23.730
+All right.
+
+07:24.570 --> 07:31.440
+So once again same idea if we add more types and we hooked them up with the self developing interface
+
+07:31.820 --> 07:36.320
+we can include it in this list and we can also put it through this method.
+
+07:36.330 --> 07:44.160
+Another beautiful thing is that if you have a abstract class or you have an interface you are able to
+
+07:44.160 --> 07:51.570
+create regulation and stability into your program meaning that you can log into what can go into this
+
+07:51.570 --> 07:52.180
+list.
+
+07:52.380 --> 07:56.590
+For example right now we have retail salesperson and web developer.
+
+07:56.700 --> 08:01.280
+If this was an object then guess what.
+
+08:01.500 --> 08:03.070
+We can still do this.
+
+08:03.210 --> 08:11.310
+However the problem here is that anything else we put in here that is not from an interface cell developing
+
+08:11.430 --> 08:13.320
+could get into this list.
+
+08:13.320 --> 08:19.380
+So for example if it's a new car salesman copy this and I put it right here.
+
+08:19.710 --> 08:32.140
+This can get into it just as simply but if we put self developing interface what this does is it creates
+
+08:32.140 --> 08:37.930
+a regulation it creates boundaries around what can get into this list and what can not get into this
+
+08:37.930 --> 08:38.860
+list.
+
+08:39.400 --> 08:43.890
+And it just basically creates as I mentioned more stability into our program.
+
+08:43.900 --> 08:50.380
+Another quick thing to note is the fact that right here I have an abstract class and here I have an
+
+08:50.380 --> 08:59.050
+interface see an abstract class unifies related objects so car salesmen retail salesperson insurance
+
+08:59.050 --> 09:06.880
+broker online marketer These are all unified but these are all related objects because they basically
+
+09:06.880 --> 09:09.540
+have common functionality here.
+
+09:09.580 --> 09:16.900
+The interface can unify unrelated group of objects so retail salesperson web developer that early have
+
+09:16.900 --> 09:20.100
+much to do with each other but they're unified through an interface.
+
+09:20.200 --> 09:24.850
+So that's another difference that I wanted to show you through this code.
+
+09:24.850 --> 09:30.940
+Even though we talked about it already but it's a good demonstration of the same idea so that's all
+
+09:30.940 --> 09:32.460
+for this video.
+
+09:32.490 --> 09:37.720
+Well that he went over the dynamic polymorphism and in the next section we'll be talking about encapsulation.

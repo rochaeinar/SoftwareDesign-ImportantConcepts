@@ -1,0 +1,403 @@
+WEBVTT
+
+00:00.150 --> 00:02.610
+So we have learned what a program is.
+
+00:02.670 --> 00:08.730
+But the next question is how do we write our program or in other words how do we express our idea and
+
+00:08.730 --> 00:12.820
+our intention for making that idea come to life in a programming language.
+
+00:12.840 --> 00:13.760
+That's a great question.
+
+00:13.770 --> 00:18.010
+So the simplest way to do this is to express our intention in a series of steps.
+
+00:18.030 --> 00:22.830
+So we have our program be a giant list of lines with no proper organization of any sort.
+
+00:22.830 --> 00:23.910
+Just have it be this.
+
+00:23.910 --> 00:25.890
+Do that do more of this do more of that.
+
+00:25.890 --> 00:26.820
+Do something else.
+
+00:26.820 --> 00:32.130
+Here's an example demonstrating the idea let's say our intention is to create an application that allows
+
+00:32.130 --> 00:37.620
+us to provide a YouTube's user name and based on that allows us to print a full length for their YouTube
+
+00:37.620 --> 00:38.160
+channel.
+
+00:38.160 --> 00:44.940
+Here's a simple pseudocode which is just us writing the program line by line without any specific organization
+
+00:45.000 --> 00:45.930
+as agreed.
+
+00:45.930 --> 00:47.800
+And once again this is not a real program.
+
+00:47.810 --> 00:50.730
+This is just pseudocode for us to get the concept.
+
+00:50.730 --> 00:53.230
+So in other words it is a fake programming language.
+
+00:53.250 --> 01:00.210
+And the point of it is to get the concept of how we write a program and how object or programming evolved
+
+01:00.210 --> 01:00.800
+from that.
+
+01:00.810 --> 01:05.780
+And as you can see I have some variables here and I'm assigning the user name.
+
+01:05.820 --> 01:11.160
+And then here I'm printing the full link on how to access their YouTube channels.
+
+01:11.160 --> 01:16.050
+Now let's go wants to forward in the evolution of the program and talk about procedural programming.
+
+01:16.050 --> 01:21.750
+This is a programming paradigm which says this instead of writing our program line by line let's organize
+
+01:21.750 --> 01:27.300
+those common lines into procedures or functions so that if we want to use them again we don't have to
+
+01:27.300 --> 01:28.470
+repeat ourselves.
+
+01:28.470 --> 01:33.840
+For example in the initial example we see that if for whatever reason the youtube channel link changes
+
+01:34.110 --> 01:37.380
+we would need to change it in all the three places granite.
+
+01:37.380 --> 01:39.860
+In this case it is not that difficult to do.
+
+01:39.960 --> 01:44.710
+But imagine if you had thousands of lines and changes were happening very frequently.
+
+01:44.730 --> 01:51.660
+So for example if we changed the youtube link to something else then we would have to change it here
+
+01:51.720 --> 01:52.750
+here and here.
+
+01:52.860 --> 01:58.560
+And it's easy for this case but if there was thousands of lines everywhere and changes were happening
+
+01:58.590 --> 02:02.130
+frequently then we would have a problem.
+
+02:02.130 --> 02:07.410
+Bottom line is that in the field of software development and computer science we want to simplify things.
+
+02:07.410 --> 02:11.400
+Programs are becoming more and more complex to write and even harder to maintain.
+
+02:11.400 --> 02:17.910
+So with new programming paradigms we're trying to simplify this process making software more scalable
+
+02:18.120 --> 02:24.630
+maintainable and readable so that big teams can work together over long periods of time regardless of
+
+02:24.630 --> 02:27.030
+the amount of code present in the code base.
+
+02:27.030 --> 02:32.080
+Now let's go ahead and rewrite the code and use procedural programming paradigm.
+
+02:32.100 --> 02:35.940
+I will go ahead and create a method called Print YouTube channel.
+
+02:39.180 --> 02:46.590
+So I will say print YouTube channel.
+
+02:46.680 --> 02:53.340
+Then I will pass in YouTube user name as a parameter.
+
+02:54.180 --> 02:59.670
+And then what I will do is I will simply print the print outs I will use the same functionality there
+
+03:02.100 --> 03:09.150
+but differences that then I can use this method three times or however many times I want from now on
+
+03:10.980 --> 03:13.710
+in order to print what I want.
+
+03:15.600 --> 03:16.500
+So here we go
+
+03:20.400 --> 03:21.660
+here.
+
+03:21.710 --> 03:26.180
+The grand cartoon form.
+
+03:26.390 --> 03:27.090
+And here we go.
+
+03:27.110 --> 03:33.430
+See here we don't have to repeat ourselves and we can use a procedure in order to unify common functionality.
+
+03:33.440 --> 03:36.410
+This is much better than our original implementation.
+
+03:36.410 --> 03:43.070
+The reason is because as I've said before if the link changes now in this example we only have to change
+
+03:43.070 --> 03:44.110
+it in one place.
+
+03:44.120 --> 03:45.560
+So now it is maintainable.
+
+03:45.560 --> 03:50.360
+It's also readable because we understand what's going on based on the name of the function as opposed
+
+03:50.360 --> 03:56.690
+to just looking at multiple lines and not understanding what it is trying to do or we can't understand
+
+03:56.690 --> 03:57.380
+what it's trying to do.
+
+03:57.400 --> 03:59.140
+But it's gonna take us a little bit more.
+
+03:59.140 --> 04:00.600
+So it's not as readable.
+
+04:00.620 --> 04:03.140
+Now let's talk about object oriented programming.
+
+04:03.170 --> 04:08.600
+What is it object or programming is a programming paradigm which allows us to solve problems via an
+
+04:08.660 --> 04:11.900
+object or more collection of collaborating objects.
+
+04:11.930 --> 04:14.900
+So in other words we have objects which represent the real world.
+
+04:14.900 --> 04:20.660
+And through those objects we describe our intention each object contains a behavior and or attribute
+
+04:20.780 --> 04:27.650
+just like a real object for example a rock is an object that has an attribute of color and age and behavior
+
+04:27.650 --> 04:28.880
+of degrading.
+
+04:28.880 --> 04:34.640
+Another example is a person which has an attribute of age name and many others and a behavior walking
+
+04:34.640 --> 04:37.100
+and talking amongst other behaviors.
+
+04:37.100 --> 04:41.840
+One other example is a YouTube who has an attribute of user name and a behavior of printing out the
+
+04:41.840 --> 04:45.950
+full YouTube channel link based on the user name rings a bell.
+
+04:45.980 --> 04:46.610
+Exactly.
+
+04:46.610 --> 04:49.040
+This is our initial example see what we did.
+
+04:49.040 --> 04:56.090
+We combine attributes a.k.a. data and the behavior together in one object which describes our intention
+
+04:56.090 --> 05:02.330
+much more naturally since it is aligned with the real world and how we as humans think we think and
+
+05:02.360 --> 05:08.450
+objects and hence object our inner programming lets us think the way we naturally do procedural programming
+
+05:08.450 --> 05:14.540
+might sound a bit too cryptic since we don't think and functions with that cell let's go ahead and rewrite
+
+05:14.540 --> 05:18.170
+this and object doing it programming I will make an object called YouTube.
+
+05:18.470 --> 05:23.620
+I will go ahead and take this out.
+
+05:24.200 --> 05:29.870
+Combine these two more lines and then I will say class
+
+05:32.900 --> 05:33.680
+YouTube to
+
+05:37.040 --> 05:39.070
+my username.
+
+05:40.080 --> 05:42.170
+Then I will say constructor
+
+05:49.970 --> 05:51.170
+given user name
+
+06:00.330 --> 06:13.380
+my username equals giving user name then I will create a function called Print for Channel path.
+
+06:15.560 --> 06:18.870
+I will say print.
+
+06:19.140 --> 06:29.640
+So there are going to have here but I'm going to use my username right here.
+
+06:29.640 --> 06:32.320
+Then I will go ahead and use this object.
+
+06:32.640 --> 06:41.880
+So say var powerful Gyari equals new YouTube where
+
+06:48.830 --> 06:56.400
+and then I will say powerful Jerry dot Grenfell channel path.
+
+06:57.150 --> 06:58.060
+All right.
+
+06:58.760 --> 07:01.400
+And then for the rest of the guys.
+
+07:03.080 --> 07:11.060
+So that news for Gary V.
+
+07:11.400 --> 07:13.400
+Those four grand car known.
+
+07:15.420 --> 07:16.180
+And here we go.
+
+07:16.190 --> 07:24.080
+We have a class and then we instantiate that class right here to get an object and each object then
+
+07:24.140 --> 07:34.490
+has a behavior print full channel path print full channel path then accesses the data that is within
+
+07:34.610 --> 07:43.850
+the instantiated object which is for this one for this one and for this one each one gets its own variable
+
+07:43.880 --> 07:45.970
+so it's its own container.
+
+07:46.190 --> 07:55.250
+And then when we run the behavior the function the behavior acts on the data that is within the object
+
+07:55.280 --> 08:03.620
+that it's in so behavior and data are both encapsulated in one object and this behavior which is this
+
+08:03.620 --> 08:11.300
+guy uses the attribute that is within the object within the same object that it's in.
+
+08:11.350 --> 08:12.430
+All right.
+
+08:12.440 --> 08:17.000
+Now some of the concepts might be new to you such as constructor and a class but I will go with the
+
+08:17.000 --> 08:21.630
+old p basics in the next video just so you're familiar with those things before we move on.
+
+08:21.740 --> 08:27.230
+Very quickly a constructor is just a function that lets you build the object says these are the things
+
+08:27.230 --> 08:29.150
+I need before I can create an object for you.
+
+08:29.150 --> 08:30.320
+It's a gatekeeper.
+
+08:30.320 --> 08:34.680
+So in this case it says I need a user name before I can create an object for you.
+
+08:34.880 --> 08:37.280
+A class is a blueprint for the object.
+
+08:37.340 --> 08:41.990
+So it is the roadmap that you need to use in order to create your object.
+
+08:41.990 --> 08:48.170
+Look at it as a factory and your object things coming out of the factory instantiating a class just
+
+08:48.170 --> 08:50.980
+means we're using the class to create an object.
+
+08:50.990 --> 08:56.100
+So the instance of our object is then assigned to a variable such as wants to have above.
+
+08:56.750 --> 09:08.880
+So right here we're instantiating and then that instantiate a class gets assigned to this variable which
+
+09:08.880 --> 09:16.050
+is which it basically creates an object that creates an instance of an object from our class blueprint.
+
+09:16.050 --> 09:24.230
+We create an instance of an object like so that then gets assigned to a variable and the variable we
+
+09:24.230 --> 09:25.430
+can name anything one.
+
+09:25.430 --> 09:30.290
+In this case powerful Jerry in this case is Gary V in this case is Grant Cardone And then that variable
+
+09:30.290 --> 09:33.090
+is the instance of our object right.
+
+09:33.320 --> 09:40.640
+So then we can then use the behaviors which are specific to our instance of the object.
+
+09:40.640 --> 09:45.620
+Once again don't worry we'll be talking about all this in our later videos.
+
+09:45.620 --> 09:47.700
+Now once again what are the benefits here.
+
+09:47.720 --> 09:50.120
+First we have data and behavior in one place.
+
+09:50.150 --> 09:57.440
+So if we were to pass a grand car don't object to any other function or decided to use it anywhere else.
+
+09:57.740 --> 10:00.610
+We don't have to worry about passing in the data with it.
+
+10:00.650 --> 10:05.840
+Once you pass it to the constructor you create the object then the object will have everything it needs
+
+10:05.840 --> 10:07.580
+to know how to operate itself.
+
+10:07.700 --> 10:08.900
+It is autonomous.
+
+10:08.900 --> 10:12.490
+Second thing is it still has the benefits of not repeating itself.
+
+10:12.500 --> 10:20.080
+Meaning that the code is only written one such as the print full channel path behavior so to recap object
+
+10:20.080 --> 10:25.300
+or in programming makes it easier for us to think in terms of objects keeps our code clean by letting
+
+10:25.300 --> 10:31.510
+us have scalable maintainable and readable code through packing attributes and behavior together in
+
+10:31.510 --> 10:38.450
+one object and allowing us to unify code in behaviors so we don't have to repeat ourselves.
+
+10:38.470 --> 10:39.830
+I'll see you guys in the next video.

@@ -1,0 +1,727 @@
+WEBVTT
+
+00:00.150 --> 00:05.490
+Now let's talk about interfaces an interface and see sharp contains only the declarations of methods
+
+00:05.520 --> 00:10.710
+and properties but not the implementations it is left to recall classes inheriting from the interface
+
+00:10.710 --> 00:12.930
+to provide their own definitions.
+
+00:13.050 --> 00:18.360
+You can think of an interface as an abstract class that only has abstract methods and properties.
+
+00:18.360 --> 00:24.390
+Interfaces do not have constructors or fields on them so they don't have a constructor.
+
+00:24.390 --> 00:25.990
+They don't have fields.
+
+00:25.990 --> 00:30.750
+Now the question that might arise naturally is this Why in the world would we have interfaces if we
+
+00:30.750 --> 00:35.380
+already have abstract classes then we can make them act as an interface.
+
+00:35.400 --> 00:37.980
+This is an amazing question and one worth asking.
+
+00:38.010 --> 00:42.380
+Also one quick invention you inherit from classes would you implement an interface.
+
+00:42.420 --> 00:44.310
+Once again this is just a convention.
+
+00:44.310 --> 00:47.730
+But at the end of the day it is just how you referred to an abstract class.
+
+00:47.790 --> 00:49.920
+Inheritance versus interface inheritance.
+
+00:50.160 --> 00:56.400
+But on the back end inheritance gets performed the same exact way for an abstract class or an interface
+
+00:56.670 --> 00:58.490
+which is via a common symbol.
+
+00:58.530 --> 01:02.250
+So for both you still perform inheritance just like this.
+
+01:02.250 --> 01:07.590
+So you just put a call in the left side is the class inheriting from the class that you put on the right
+
+01:07.590 --> 01:09.090
+side or an interface.
+
+01:09.090 --> 01:15.060
+But back to the question why do we have interfaces basically interfaces were made to get around the
+
+01:15.060 --> 01:18.030
+lack of multiple inheritances in C sharp.
+
+01:18.030 --> 01:23.740
+So that means that you cannot inherit from more than one class but you can implement multiple interfaces.
+
+01:23.850 --> 01:25.590
+Let's go out and see an example.
+
+01:25.610 --> 01:33.120
+I will go ahead and copy the salesman class the abstract class rather and I will have another abstract
+
+01:33.120 --> 01:34.620
+class called salesman.
+
+01:34.650 --> 01:36.560
+Little dots.
+
+01:36.570 --> 01:44.260
+Yes I will add little next to the name and I will actually take everything out.
+
+01:44.400 --> 01:48.760
+I will keep this a very simple abstract class.
+
+01:48.990 --> 01:56.850
+I will take this one as well and I will just basically make this an abstract method and that's it.
+
+01:57.020 --> 01:57.350
+OK.
+
+01:57.360 --> 01:59.760
+Very very simple abstract class.
+
+01:59.760 --> 02:09.210
+Now I will go ahead and I'll say car salesman inherits from salesman based class and it inherits from
+
+02:09.420 --> 02:12.340
+salesman little See I can't do it.
+
+02:12.350 --> 02:13.550
+Why.
+
+02:13.720 --> 02:17.600
+It says class car salesman cannot have multiple base classes.
+
+02:17.770 --> 02:22.570
+And that's because we cannot inherit from multiple classes.
+
+02:22.570 --> 02:29.260
+In this case multiple abstract classes in C sharp that is prohibited but the way to get around it is
+
+02:29.260 --> 02:30.750
+to use interfaces.
+
+02:30.850 --> 02:31.710
+So I'll take that out.
+
+02:33.680 --> 02:34.840
+I will remove this as well.
+
+02:36.370 --> 02:38.390
+So as you can see that's the main reason.
+
+02:38.390 --> 02:41.120
+The other one is where to utilize each one.
+
+02:41.240 --> 02:46.940
+So abstract classes are meant to unify related class functionality into one unit so that it can be shared
+
+02:46.970 --> 02:48.590
+and maintained in one place.
+
+02:48.590 --> 02:53.480
+As we saw in the previous videos some of the functionality as you know can be predefined and the rest
+
+02:53.480 --> 02:55.350
+of it can be abstract or virtual.
+
+02:55.350 --> 02:59.560
+It depends on the needs requirements etc. But that is the purpose of the abstract class.
+
+02:59.570 --> 03:00.840
+We already know this part.
+
+03:00.860 --> 03:06.410
+So this is just a refresher interfaces on the other hand are made to be completely abstract and their
+
+03:06.410 --> 03:10.790
+purpose is to provide with an ability to unrelated group of classes.
+
+03:10.820 --> 03:16.010
+We can try our best to do the same thing we do for abstract classes view interfaces but that would be
+
+03:16.010 --> 03:17.870
+putting a square peg in a round hole.
+
+03:17.960 --> 03:23.720
+Why torture ourselves and make our lives harder and other developers lives harder when they are reading
+
+03:23.720 --> 03:24.560
+our code.
+
+03:24.560 --> 03:29.860
+If we can just use each tool for what it was made for as a matter of fact we learn through failure.
+
+03:29.860 --> 03:30.550
+Correct.
+
+03:30.560 --> 03:33.430
+So let's go ahead and let's put a square peg in a round hole.
+
+03:33.470 --> 03:39.500
+Let's rewrite our abstract class and make it into an interface and see how it affects our code overall.
+
+03:39.710 --> 03:45.620
+This will show us even better why we didn't choose to use an interface in this particular scenario.
+
+03:45.650 --> 03:48.890
+Okay so we'll go ahead and turn our abstract class into an interface.
+
+03:48.900 --> 03:54.200
+The way you create an interface is via the interface reserved keyword.
+
+03:54.230 --> 03:56.690
+So say interface.
+
+03:56.690 --> 04:03.260
+And as you can see I can't have fields I can't have anything defined such as a method or property and
+
+04:03.260 --> 04:09.410
+I can't have a constructor so I'll actually take the constructor out start from the retail person bring
+
+04:09.410 --> 04:14.230
+it over here and I really need this anymore except the name.
+
+04:15.770 --> 04:17.000
+So here we go.
+
+04:17.000 --> 04:22.940
+That part is complete and then I will leave the method inside.
+
+04:22.940 --> 04:24.110
+That's cool.
+
+04:24.410 --> 04:32.270
+I will bring the properties or rather store the fields into retail salesperson.
+
+04:32.270 --> 04:39.950
+That is all set now and we can't have anything defined on our interface so I'll take this definition
+
+04:39.950 --> 04:40.360
+out.
+
+04:40.460 --> 04:41.600
+Can only have declarations.
+
+04:41.600 --> 04:48.410
+We can have virtual abstract now that just a signature of the method and our property defined in an
+
+04:48.410 --> 04:49.970
+abstract manner.
+
+04:49.970 --> 04:59.120
+So that means that we can just say that full name is a property and it has a get method but we can't
+
+04:59.120 --> 05:01.280
+say what that get method does.
+
+05:01.280 --> 05:02.880
+The way we have it right here.
+
+05:03.200 --> 05:13.260
+This has to be defined on the child class or the implementing class which you know once again is just
+
+05:13.260 --> 05:16.760
+a convention the way it's done is very similar.
+
+05:16.760 --> 05:24.650
+So if I go to a retail salesperson right now the method says that it has a problem because of the fact
+
+05:24.650 --> 05:29.690
+that we're using override when we're dealing with interfaces we don't really need to say override we
+
+05:29.690 --> 05:32.380
+don't use the reserve keyword override within interfaces.
+
+05:32.390 --> 05:35.400
+That's only with abstract classes that have abstract methods.
+
+05:35.430 --> 05:36.620
+That's all.
+
+05:36.620 --> 05:43.690
+So we can't take this out as you can't see the full name doesn't exist so we need to do it so we can
+
+05:43.690 --> 05:51.980
+just create that and then give it the definition right here.
+
+05:52.020 --> 05:52.340
+OK
+
+05:55.670 --> 06:02.290
+I'll just put it at the top just so it reads better at least for me it does.
+
+06:02.450 --> 06:04.340
+But you can't leave it anywhere it doesn't really matter.
+
+06:04.340 --> 06:10.670
+This is not a technical issue it's just for organizational purposes is all OK so now we have everything
+
+06:10.670 --> 06:11.330
+here.
+
+06:11.420 --> 06:18.530
+This works are a salesman is an interface and we can go ahead and grab all this stuff bring it to car
+
+06:18.530 --> 06:22.340
+salesman and we will only need to change a few things here.
+
+06:22.470 --> 06:27.170
+We need to change the name of the constructor so that the constructor name matches the name of the class
+
+06:27.200 --> 06:28.040
+which it does.
+
+06:28.040 --> 06:30.600
+And then here we just need to change it to car.
+
+06:30.730 --> 06:31.970
+And that's it.
+
+06:32.030 --> 06:33.410
+If we go the program.
+
+06:33.410 --> 06:42.260
+So as you can see nothing has changed on the program class we have changed the implementation behind
+
+06:42.290 --> 06:43.430
+how it works.
+
+06:43.430 --> 06:49.410
+However the way classes get instantiated stayed exactly the same.
+
+06:49.430 --> 06:57.050
+So even with retail salesperson I mean it would be very similar to this but if I was to say let's just
+
+06:57.050 --> 07:05.390
+make another one if I said retail sales person and I said John
+
+07:09.030 --> 07:12.100
+the sales dude once again.
+
+07:12.100 --> 07:14.960
+So check these guys here.
+
+07:14.980 --> 07:22.890
+Say John Doe then this basically is the same thing right.
+
+07:22.980 --> 07:29.680
+The implementation behind it has changed so before it was inheriting from an abstract class.
+
+07:29.890 --> 07:36.320
+But now it's implementing an interface so the implementation behind it has changed.
+
+07:36.400 --> 07:38.460
+As you can see we've done it.
+
+07:39.250 --> 07:43.830
+Right now there's an interface instead of an abstract class so as for the retail salesperson.
+
+07:43.840 --> 07:51.910
+However the way we instantiate the class does not change and I just wanted to show that to you.
+
+07:52.090 --> 07:57.990
+So once again as you can see with an interface we cannot unify all the functionality.
+
+07:58.060 --> 08:02.430
+So here we still have our fields in two places so repeating a lot of code.
+
+08:02.440 --> 08:11.680
+We have our property defined the same exact way we have it right here and we have our constructor that's
+
+08:11.680 --> 08:13.230
+very similar except a name.
+
+08:13.240 --> 08:18.390
+But if it was on the base class or the abstract class then we would just have it once.
+
+08:18.400 --> 08:23.020
+The only thing that's different is the cell method which before we had a defined on each class.
+
+08:23.020 --> 08:24.310
+So that's fine.
+
+08:24.310 --> 08:25.920
+But the rest of them is repetitive.
+
+08:26.140 --> 08:30.380
+So this is why we have used an abstract class for this kind of scenario.
+
+08:30.460 --> 08:32.240
+And what was the scenario once again.
+
+08:32.380 --> 08:36.120
+We basically had multiple concrete classes which shared functionality.
+
+08:36.150 --> 08:42.610
+So we unified it all into an abstract class and let only methods be overridden by each concrete class
+
+08:42.940 --> 08:46.150
+since it was truly not shared.
+
+08:46.150 --> 08:51.070
+Now let's go ahead and undo all the recent interface rewrites and turn salesman back into an abstract
+
+08:51.070 --> 08:56.470
+class since we saw it was not a correct tool for our specific situation.
+
+08:56.470 --> 09:05.320
+So I will go ahead and turn this back into an abstract class so that comes back the method the fields
+
+09:06.900 --> 09:10.580
+the constructor abstract class.
+
+09:10.630 --> 09:10.920
+OK.
+
+09:10.950 --> 09:13.140
+So I think I have everything here.
+
+09:13.180 --> 09:22.570
+Car salesmen will go back to its original definition retail salesperson will also go back to its original
+
+09:22.570 --> 09:28.640
+definition so no fields no property.
+
+09:28.720 --> 09:33.030
+Take that out OK.
+
+09:33.670 --> 09:36.970
+And there you go.
+
+09:37.660 --> 09:40.820
+So now it's overriding the method specifically.
+
+09:41.080 --> 09:45.100
+We have a constructor that passes in the fields to the base.
+
+09:45.100 --> 09:46.720
+Same here.
+
+09:46.930 --> 09:54.370
+And our salesman is an abstract class so we have came back to our original state that we started from.
+
+09:54.490 --> 10:00.220
+But the reason why I wanted to do a quick rewrite is just to show you that it was not the correct tool
+
+10:00.220 --> 10:01.790
+for our situation.
+
+10:01.900 --> 10:06.790
+So that then we can see when is the right time to use an interface.
+
+10:06.790 --> 10:12.190
+I will not go ahead and create another abstract class called developer followed by two concrete classes
+
+10:12.190 --> 10:15.030
+called web developer and software developer.
+
+10:15.220 --> 10:20.140
+These will have a very similar structure to the salesman with a few exceptions but regardless these
+
+10:20.140 --> 10:26.980
+will be an unrelated group from the salesman abstract class new file developer
+
+10:29.520 --> 10:35.250
+that yes is an abstract class developer.
+
+10:35.250 --> 10:37.620
+I will only have one field.
+
+10:37.620 --> 10:42.770
+The field will be called main dev language.
+
+10:44.010 --> 10:45.430
+No property.
+
+10:45.540 --> 10:53.400
+Very simple one and she's going to set that in the constructor.
+
+10:53.400 --> 10:54.590
+And here we go.
+
+10:59.200 --> 11:00.240
+All right.
+
+11:00.330 --> 11:07.130
+And then you have your developer as the constructor and we will not have cell instead of.
+
+11:07.130 --> 11:16.750
+We will have something called code and that will just say simply so say
+
+11:21.500 --> 11:22.700
+I am coding
+
+11:25.400 --> 11:34.900
+using my main language and then the actual dub language.
+
+11:36.750 --> 11:37.180
+OK.
+
+11:37.760 --> 11:40.670
+I'm coding using my main dev language and that's it.
+
+11:40.670 --> 11:45.500
+It's a virtual method and both of the other classes the comedy classes inheriting from developer will
+
+11:45.500 --> 11:47.570
+actually use the virtual.
+
+11:47.570 --> 11:50.460
+So those will be symbol as well as a new file.
+
+11:50.660 --> 12:01.460
+Web developer see us copy the name web developer and then I will just basically paste that can be very
+
+12:01.460 --> 12:10.610
+similar to this really but I just don't want to write code just making it simpler for myself by copying
+
+12:10.610 --> 12:15.200
+and pasting it in this case so that the video doesn't get longer as well.
+
+12:15.200 --> 12:24.260
+OK so I will say that and we can actually take all this out and let it generate automatically I will
+
+12:25.250 --> 12:32.810
+inherit from developer instead of salesmen and the only thing we have is really the constructor we will
+
+12:32.840 --> 12:36.460
+get the generic definition for a code method.
+
+12:36.500 --> 12:37.700
+So that's fine.
+
+12:37.700 --> 12:48.020
+And then I will say new file software developer yes so software developer and very simple to web developer
+
+12:48.820 --> 12:50.530
+cept a name.
+
+12:50.650 --> 12:56.840
+So I would say rename grab the name from that and bam we're good to go.
+
+12:56.930 --> 13:02.120
+Now that we have two unrelated groups of classes let's introduce a new problem for which we will use
+
+13:02.120 --> 13:06.160
+interfaces as a solution to demonstrate how they work even clearly.
+
+13:06.200 --> 13:10.130
+The problem is that we want to be able to give certain classes.
+
+13:10.130 --> 13:16.190
+In this case individuals such as salesmen and developers to have an ability to self develop.
+
+13:16.190 --> 13:20.870
+Now you can argue that we don't need an interface for this we can just go ahead and create separate
+
+13:20.870 --> 13:25.920
+methods one for each class that we want it to have a self development ability.
+
+13:26.060 --> 13:32.150
+Let's actually go ahead and do that and then we will see why it doesn't work very well.
+
+13:32.270 --> 13:40.550
+So I will go to retail salesperson and I will say retail salesperson needs to have a method called develop.
+
+13:40.780 --> 13:41.260
+OK.
+
+13:41.480 --> 13:42.680
+So this is develop
+
+13:45.350 --> 13:51.380
+and it's going to say the following for retail salesperson is going to say simply
+
+13:54.020 --> 13:56.240
+I don't need that.
+
+13:56.380 --> 13:58.140
+So take it out.
+
+14:00.170 --> 14:13.410
+It's going to say I develop myself by watching retail sales training videos.
+
+14:13.630 --> 14:14.040
+OK.
+
+14:14.720 --> 14:19.460
+So I develop myself by watching retail sales training videos.
+
+14:19.460 --> 14:20.780
+Cool.
+
+14:20.780 --> 14:26.780
+Now we have we'll have another method with the same signature same signature on web developer.
+
+14:26.810 --> 14:27.750
+OK.
+
+14:28.160 --> 14:35.930
+Right here I develop myself by watching you DME web development
+
+14:38.660 --> 14:40.260
+courses.
+
+14:41.380 --> 14:41.850
+OK.
+
+14:41.900 --> 14:45.620
+I develop myself by watching you dummy Web development courses.
+
+14:45.650 --> 14:50.490
+Great as you can see we have the developed method as separate method in each class.
+
+14:50.510 --> 14:54.010
+In no way shape or form is it enforced by anything.
+
+14:54.050 --> 14:59.870
+For example when we have an abstract method in an abstract class and we inherit from the abstract class
+
+14:59.900 --> 15:03.530
+it it forces us to overwrite it and have our own definition.
+
+15:03.710 --> 15:06.080
+If we don't do it the program won't run.
+
+15:06.080 --> 15:11.170
+This is a great reminder which introduces stability and regulation into our program.
+
+15:11.330 --> 15:17.090
+Since anybody making a child class in inheriting from the base class which has an abstract method would
+
+15:17.090 --> 15:23.810
+have to define that method in our case there are no rules to regulate as to which class has to have
+
+15:23.810 --> 15:25.370
+self development ability.
+
+15:25.370 --> 15:26.900
+There are no regulations.
+
+15:26.900 --> 15:32.800
+Now you might be asking why in the world do we need to regulate this and how is an interface beneficial.
+
+15:32.800 --> 15:38.570
+In this case since it doesn't have any implementation meaning that implementation is still going to
+
+15:38.570 --> 15:46.180
+be on the concrete class just the way we have it right here and right here.
+
+15:46.210 --> 15:47.710
+So with that said.
+
+15:47.710 --> 15:50.750
+How does an interface going to change anything.
+
+15:50.800 --> 15:52.000
+This is a great question.
+
+15:52.030 --> 15:56.340
+In order to answer this we need to place ourselves into a more realistic scenario.
+
+15:56.350 --> 16:01.750
+Imagine you are working in a team of 10 people and one of the developers decides to go ahead and rewrite
+
+16:01.780 --> 16:03.250
+your web developer class.
+
+16:03.250 --> 16:05.710
+So they go here and they decide to rewrite it.
+
+16:05.710 --> 16:10.780
+They the person the person rewriting it then proceed to take out the developed method and put it somewhere
+
+16:10.780 --> 16:11.420
+else.
+
+16:11.470 --> 16:13.850
+Then just take this out and put it somewhere else.
+
+16:13.900 --> 16:18.910
+If you don't have any rules in place that say a developed method is required and the web developer class
+
+16:19.240 --> 16:22.770
+then the person rewriting will just not know anything about it.
+
+16:22.780 --> 16:28.740
+This will cause problems if you had something that reminded the person rewriting it that it is required.
+
+16:28.840 --> 16:31.380
+Then it would avoid a whole lot of trouble.
+
+16:31.390 --> 16:41.310
+For example if you go to your salesmen and make this an abstract method right.
+
+16:41.620 --> 16:43.990
+Let's just keep this abstract for now.
+
+16:44.230 --> 16:50.320
+Instead of virtual and you go to the car salesman and let's say I'm that same person rewriting this
+
+16:50.620 --> 16:56.270
+class if I was to take the sell method and put it somewhere else guess what.
+
+16:56.470 --> 17:00.640
+The program won't run because it says it is required.
+
+17:00.730 --> 17:06.270
+So then I would know hey this method is required as part of this class.
+
+17:06.280 --> 17:09.100
+It needs to be there and it needs to have its own definition.
+
+17:09.100 --> 17:15.640
+So something gave me a reminder this introduced stability and regulation into the program but would
+
+17:15.640 --> 17:19.950
+develop here and here we don't have that same stability.
+
+17:19.960 --> 17:24.640
+Anybody can come in and do whatever they want they can change the name of develop they can make it return
+
+17:24.640 --> 17:30.400
+a type they can basically take it out and put it somewhere else and there is no way for us to tell that
+
+17:30.430 --> 17:33.040
+other person that it is a required thing.
+
+17:33.040 --> 17:37.960
+Now the other question you might have is why don't we just put the developed method on the abstract
+
+17:37.960 --> 17:42.080
+class and let the abstract class require it from the inheriting class.
+
+17:42.130 --> 17:46.630
+Once again good question and the answer is because then all of the inheriting classes would need to
+
+17:46.630 --> 17:50.230
+implement the developed method which in our case is not true.
+
+17:50.350 --> 17:56.770
+So for example if you're saying that we should put the developer on the developer right here and make
+
+17:56.770 --> 18:04.450
+it into an abstract method then web developer would required of course but so as the software developer
+
+18:04.630 --> 18:10.270
+but our requirement is that only the web developer has the ability to sell develop.
+
+18:10.300 --> 18:15.290
+So that would not really satisfy our quote unquote business requirement.
+
+18:15.290 --> 18:21.940
+Now in the next video for a continuation of this one we will actually put an interface into place and
+
+18:21.940 --> 18:24.480
+see how it solves our current problem.

@@ -1,0 +1,862 @@
+WEBVTT
+
+00:00.090 --> 00:05.610
+So in the last video we talked about static polymorphism which achieved the results through something
+
+00:05.610 --> 00:08.120
+that is known as method overloading.
+
+00:08.130 --> 00:16.430
+So when we have the same method code the way we have it here but different parameters which is what
+
+00:16.430 --> 00:21.080
+we have as well we have different parameters.
+
+00:21.180 --> 00:28.050
+We are performing method overloading and by method overloading we were able to perform static polymorphism
+
+00:28.080 --> 00:31.130
+or letting the same method have different behaviors.
+
+00:31.140 --> 00:35.730
+Now in this video we'll be talking about dynamic polymorphism which is basically a mechanism by which
+
+00:35.730 --> 00:44.100
+a call to an overridden function is resolved at a runtime a.k.a. when your code is running on the machine.
+
+00:44.100 --> 00:50.220
+We achieved dynamic polymorphism through method overwriting so method overwriting as we already saw
+
+00:50.490 --> 00:56.970
+just means that we have two or more methods with the same name and same signature.
+
+00:57.130 --> 01:04.860
+Unlike in static polymorphism however what is different in this one is that those two methods with the
+
+01:04.860 --> 01:09.950
+same name and same signature will have different behaviors.
+
+01:10.080 --> 01:22.080
+So as you can see here and the retail sales person and car salesman same method signature right same
+
+01:22.080 --> 01:28.940
+method signature but different implementation so different implementation.
+
+01:29.280 --> 01:34.060
+But they're coming from the same base class OK.
+
+01:34.120 --> 01:34.620
+I agree.
+
+01:34.630 --> 01:36.720
+This all sounds very confusing.
+
+01:36.730 --> 01:42.460
+Let me go ahead and once again propose a hypothetical problem so that while we solve it we can also
+
+01:42.460 --> 01:45.490
+understand what dynamic polymorphism is all about.
+
+01:46.240 --> 01:51.610
+Let's imagine that one of our clients calls us and says Hey man remember that program you're writing
+
+01:51.610 --> 01:54.130
+with salespeople and developers okay.
+
+01:54.250 --> 01:55.650
+They have a new requirement.
+
+01:55.750 --> 02:01.240
+They just got this new database and the database contains all of the child classes of salesmen for now
+
+02:01.300 --> 02:03.610
+car salesmen and retail salesperson.
+
+02:03.640 --> 02:11.590
+So this guy and this guy there over a million rose in that database just a bunch of car salesmen and
+
+02:11.590 --> 02:17.440
+retail salesperson data as mentioned later on they will be adding more child classes to the salesman
+
+02:17.440 --> 02:18.400
+based class.
+
+02:18.460 --> 02:19.680
+So keep that in mind.
+
+02:19.720 --> 02:21.820
+Meaning these won't be two types forever.
+
+02:21.820 --> 02:24.440
+Very soon they will be adding more and more.
+
+02:24.460 --> 02:29.680
+Your task is to load all of the items from the database and then for each separate item you need to
+
+02:29.680 --> 02:36.220
+show us how that salesman sells regardless if it is a car salesman or a salesperson or any other child
+
+02:36.220 --> 02:39.730
+class that we create from the salesman parent class.
+
+02:39.730 --> 02:45.760
+Now what they want is a flexible software that will take all of the items from the database and print
+
+02:45.820 --> 02:50.790
+how they sell and they don't want to be constantly changing the code.
+
+02:50.890 --> 02:56.650
+If they keep adding more types they told me that after we released a software they will be adding 50
+
+02:56.650 --> 02:57.970
+types per day.
+
+02:57.970 --> 03:03.820
+So if they have to change the code that frequently then they will just give the job to another contractor
+
+03:03.970 --> 03:04.820
+altogether.
+
+03:04.840 --> 03:10.630
+But if you can make it flexible so that they don't have to touch the code at all times then they will
+
+03:10.630 --> 03:12.240
+give you the price you asked for.
+
+03:12.410 --> 03:16.660
+And also they will give you a bonus which will be a 50 percent of the price you asked.
+
+03:16.720 --> 03:18.430
+So not a bad gig at all.
+
+03:18.430 --> 03:20.220
+OK so let's look at a diagram.
+
+03:20.230 --> 03:22.930
+They send us to even better understand the requirements.
+
+03:23.200 --> 03:28.180
+See here they are going to have a database in the database.
+
+03:28.180 --> 03:31.660
+They're going to have this is just a few rows that I'm showing you.
+
+03:31.660 --> 03:32.410
+Just an example.
+
+03:32.410 --> 03:36.880
+Also I understand that the data in the message will be repetitive but I just had to keep my table very
+
+03:36.880 --> 03:37.510
+simplistic.
+
+03:37.510 --> 03:41.070
+I don't want to normalize and everything else just for simplicity's sake.
+
+03:41.080 --> 03:42.180
+We're gonna keep it like this.
+
+03:42.190 --> 03:43.660
+So this is just three rows.
+
+03:43.780 --> 03:48.430
+But they said there's millions of rows so we have just a bunch of car salesmen retail salesmen we have
+
+03:48.430 --> 03:50.890
+a bunch of first names and last names and just the message.
+
+03:50.890 --> 03:55.930
+Messages are pretty much the same for car salesmen and retail salesperson so it just varies like that
+
+03:56.260 --> 04:03.520
+but now from the database we somehow have to load it into our application and then we have to tell our
+
+04:03.640 --> 04:10.780
+application to basically show how each of these sells men sells.
+
+04:10.870 --> 04:16.240
+Now one quick thing this is just a hypothetical database and I won't be showing you how to connect with
+
+04:16.240 --> 04:19.380
+the database and load that stuff because that's just way too complex.
+
+04:19.420 --> 04:25.540
+We're just going to imagine that we have loaded stuff into our application and that is coming from a
+
+04:25.540 --> 04:26.340
+database.
+
+04:26.470 --> 04:32.140
+But this is just so that you can see the problem within a more realistic context.
+
+04:32.320 --> 04:37.690
+But once again I won't be doing any database connections or anything just not to introduce more complexity
+
+04:37.690 --> 04:42.050
+to the course at least for this section because this is just about dynamic polymorphism.
+
+04:42.070 --> 04:47.260
+And once again I just wanted to show you this problem within a more realistic application.
+
+04:47.320 --> 04:50.470
+So you see how this could be used in the real world.
+
+04:50.800 --> 04:51.950
+But I digress.
+
+04:51.970 --> 04:56.980
+So we have a database once again we have to load that into an application which this part we will just
+
+04:56.980 --> 05:03.400
+imagine that we have loaded it from a database into our application and then we will have to find a
+
+05:03.400 --> 05:10.780
+way to flexibly show the end user how each of these salesmen sells.
+
+05:10.780 --> 05:15.670
+And we have to do it in a way that even if they add more types here we don't have to touch the code
+
+05:15.910 --> 05:16.810
+in our application.
+
+05:16.960 --> 05:18.170
+OK.
+
+05:18.520 --> 05:24.400
+The first thing that comes to mind is that we will not be instantiating all of the classes line by line
+
+05:24.970 --> 05:27.040
+and then calling the cell method on them.
+
+05:27.040 --> 05:30.080
+We can try that but you already know the problem with that.
+
+05:30.100 --> 05:31.170
+Let's give it a try.
+
+05:31.900 --> 05:37.560
+So we'll go here and I will actually remove this.
+
+05:37.570 --> 05:40.160
+Let's go ahead and write our code.
+
+05:40.190 --> 05:48.830
+So here I have car sale to car salesmen and one retail salesperson so I was a car salesman and I will
+
+05:48.830 --> 05:53.530
+say car salesmen just for simplicity's sake.
+
+05:53.530 --> 05:59.980
+Once again I'm just going to name this car salesman one new car salesman.
+
+06:00.190 --> 06:02.730
+I'll put the names in just a bit.
+
+06:02.780 --> 06:08.690
+I to get this part going and then we'll have a retail salesperson so retail salesperson.
+
+06:09.280 --> 06:10.410
+OK.
+
+06:10.460 --> 06:12.900
+And that will be that.
+
+06:12.950 --> 06:14.690
+And here we go.
+
+06:14.810 --> 06:21.740
+Now for each of these after after I put the names we're gonna have to call sell method on them right
+
+06:21.740 --> 06:25.480
+to see how each of these salesmen sells.
+
+06:25.550 --> 06:28.190
+Now that's where we're going to do here.
+
+06:28.190 --> 06:28.980
+That's cool.
+
+06:29.810 --> 06:39.920
+And also here in the spacing as messed up that's why I go and do the same for this guy the same for
+
+06:39.920 --> 06:40.930
+this guy.
+
+06:41.530 --> 06:42.170
+OK.
+
+06:42.200 --> 06:43.990
+So this is too.
+
+06:44.340 --> 06:46.130
+That's what I meant.
+
+06:46.130 --> 06:50.840
+And here we also are going to have cell.
+
+06:51.080 --> 06:52.680
+OK.
+
+06:52.880 --> 06:57.700
+Now we can also pop in the names that we have from our sample.
+
+06:57.830 --> 06:59.960
+We'll go ahead and quickly do that as well.
+
+07:00.680 --> 07:08.510
+So I actually copy it from here one.
+
+07:08.780 --> 07:09.590
+All right.
+
+07:09.610 --> 07:11.960
+That's good.
+
+07:12.040 --> 07:14.700
+And then we have two.
+
+07:15.630 --> 07:17.990
+Right.
+
+07:18.160 --> 07:24.220
+And last one actually this one was for our retail salesperson if I don't I'm not mistaken.
+
+07:25.390 --> 07:33.180
+So just this part and I just want to double check that nope.
+
+07:33.210 --> 07:35.010
+That's for our car salesman actually.
+
+07:35.040 --> 07:35.280
+OK.
+
+07:35.310 --> 07:35.910
+So that's fine.
+
+07:35.910 --> 07:36.690
+That was my mistake.
+
+07:36.690 --> 07:40.020
+I'll just copy this.
+
+07:40.020 --> 07:40.800
+Bring it back.
+
+07:40.830 --> 07:43.590
+So we have already all the information.
+
+07:43.640 --> 07:47.220
+I'm just going to grab this guy and pop it right in here.
+
+07:47.370 --> 07:47.580
+OK.
+
+07:47.600 --> 07:49.940
+So now we have it all.
+
+07:50.140 --> 07:52.460
+Now there are a lot of problems with this.
+
+07:52.540 --> 07:57.580
+Let's say magically we were able to write a million of these statements which is already ridiculous.
+
+07:57.580 --> 08:04.210
+But if they add more rows not even types we will have to open our program and add another line for just
+
+08:04.210 --> 08:05.620
+that row in the database.
+
+08:05.620 --> 08:07.600
+This is a horrible solution.
+
+08:07.600 --> 08:10.310
+One thing which comes to mind is a list.
+
+08:10.690 --> 08:13.490
+Why not load these in the list.
+
+08:13.570 --> 08:15.630
+So that's a bit of a better solution.
+
+08:15.760 --> 08:18.130
+So we can go ahead and do that.
+
+08:18.130 --> 08:23.150
+The question though is since we have different types how can we put them in one list.
+
+08:23.230 --> 08:26.320
+One way we can do that is by using an object type.
+
+08:26.500 --> 08:32.630
+Basically you can think of an object as the ultimate base class for old data types in C sharp.
+
+08:32.800 --> 08:35.380
+So you know how our salesman is a base class.
+
+08:35.440 --> 08:43.250
+So this guy right is a base class for retail salesperson and car salesman will object.
+
+08:43.260 --> 08:48.230
+There's a base class for everything in C sharp so we can take advantage of that and say hey our list
+
+08:48.230 --> 08:51.710
+can take anything including salesman shop classes or any other type.
+
+08:51.890 --> 08:53.370
+It's all inclusive.
+
+08:53.390 --> 08:59.200
+So for example this is a car salesman and this is a retail salesperson.
+
+08:59.200 --> 09:07.360
+But I can say I can just put salesmen in both places and it will just be fine.
+
+09:07.360 --> 09:08.620
+Why.
+
+09:08.620 --> 09:15.160
+Because these two classes are child classes of this base class whether it's a car salesman or retail
+
+09:15.160 --> 09:16.170
+salesperson.
+
+09:16.300 --> 09:18.220
+It plugs right into the salesman.
+
+09:18.670 --> 09:24.350
+But what I'm saying is we can go a few levels higher and just say object.
+
+09:24.550 --> 09:24.790
+Right.
+
+09:24.790 --> 09:30.790
+So just say object and that will double work just fine because object is a base class for everything
+
+09:30.790 --> 09:31.500
+else.
+
+09:31.510 --> 09:36.940
+The only problem is that the object doesn't know about the cell method and we will take care of that
+
+09:36.940 --> 09:38.230
+in just a minute.
+
+09:38.270 --> 09:39.390
+Let's bring this back.
+
+09:41.710 --> 09:43.020
+OK.
+
+09:43.260 --> 09:47.320
+Now let's make a list as I suggest it.
+
+09:47.380 --> 10:00.150
+Let's say this is a list of objects and we will say salesman so salesman equals new list of objects.
+
+10:00.500 --> 10:08.750
+And we're just going to have to import the system collections generic that's fine and then we're we're
+
+10:08.750 --> 10:13.310
+going to do is we're actually going to put the declarations within our list.
+
+10:13.700 --> 10:20.820
+So right here one two three all right.
+
+10:23.370 --> 10:26.910
+And take out our line by line instantiation.
+
+10:26.960 --> 10:28.940
+Now here's thing we.
+
+10:28.950 --> 10:35.400
+This is the part where we need to kind of wire up our imagination just imagined that this part is being
+
+10:35.400 --> 10:36.900
+loaded from the database.
+
+10:36.930 --> 10:42.900
+So some program that we wrote just grab stuff from the database and put some right near it.
+
+10:43.020 --> 10:49.320
+It converts the database information into our types that we have in our application and put them right
+
+10:49.320 --> 10:49.860
+into our list.
+
+10:49.860 --> 10:51.810
+So this is basically what we have given.
+
+10:52.170 --> 10:55.980
+So even if they put more rose more types anything else we don't have to touch this.
+
+10:56.070 --> 10:59.850
+That will automatically come into our list and be put right here for us.
+
+10:59.910 --> 11:06.960
+Now what we need to do is we need to write a method that will flexibly take these types and print the
+
+11:06.960 --> 11:07.710
+way they sell.
+
+11:07.710 --> 11:13.070
+So it's have to take a salesman and tell us how that salesman sells.
+
+11:13.090 --> 11:18.700
+Now this looks much better but we're not calling the developed method let's loop around our list and
+
+11:18.700 --> 11:19.760
+call the developed method.
+
+11:19.780 --> 11:25.600
+On each class the wait since we put classes into a list that accept objects.
+
+11:25.600 --> 11:26.550
+Remember that problem.
+
+11:26.620 --> 11:32.650
+How do we then convert them back into our types that we put them in initially because we can't really
+
+11:32.650 --> 11:34.210
+use the sell method.
+
+11:34.310 --> 11:35.200
+And I'll show you why.
+
+11:35.950 --> 11:40.000
+So if we say for each and then we just say
+
+11:42.610 --> 11:50.190
+var item in salesman.
+
+11:50.980 --> 11:55.540
+This item doesn't know anything about sell.
+
+11:55.630 --> 11:57.790
+All right.
+
+11:58.210 --> 12:06.490
+It doesn't know what sell is because we're basically going all the levels up to object and putting these
+
+12:06.580 --> 12:12.230
+into our object and the object points to our child classes.
+
+12:12.340 --> 12:16.690
+But the parent class doesn't have that method on it.
+
+12:16.690 --> 12:23.250
+If we go a few levels down to salesmen it will know what sell method is but at the highest level at
+
+12:23.260 --> 12:27.130
+an object we don't know what that sell method is.
+
+12:27.130 --> 12:32.800
+So what we need to do to get around that is use casting casting is just a process of going from one
+
+12:32.800 --> 12:33.910
+type to another.
+
+12:33.910 --> 12:37.940
+In this case we're going from one object to salesman child class.
+
+12:38.150 --> 12:41.200
+So let's make a method called to show me how to sell.
+
+12:41.410 --> 12:47.300
+So we'll just basically create another method and say static void.
+
+12:47.320 --> 12:53.280
+Show me how to sell that method.
+
+12:53.380 --> 12:59.920
+We'll take in an object and we'll say it's a salesman
+
+13:03.610 --> 13:04.110
+all right.
+
+13:05.170 --> 13:10.870
+And then we'll just say each item will be passed into the.
+
+13:10.870 --> 13:13.090
+Show me how to sell method.
+
+13:13.510 --> 13:13.780
+OK.
+
+13:13.870 --> 13:16.540
+And then we'll take care of the rest inside the method.
+
+13:16.570 --> 13:21.040
+So once we get the object we then have to determine its type.
+
+13:21.180 --> 13:30.960
+And we can do this by the IS RESERVED keyword so we can say if the salesman which is the generic Object
+
+13:30.960 --> 13:35.480
+being passed in is car salesman.
+
+13:36.530 --> 13:41.220
+Then just create car salesman variable
+
+13:43.780 --> 13:54.660
+of the car salesman type and say this is how you do casting by the way you put parentheses and you put
+
+13:54.660 --> 14:01.110
+the type that you want to convert to from the type that you have.
+
+14:01.110 --> 14:03.050
+So in this case salesman.
+
+14:03.950 --> 14:05.540
+OK.
+
+14:05.910 --> 14:13.740
+And this is how you are converting from whatever object in this case object that the most generic Object
+
+14:14.100 --> 14:15.870
+back to what it was.
+
+14:15.870 --> 14:17.840
+So as you can see it's just a two way conversion.
+
+14:17.940 --> 14:24.660
+We're going from a concrete class to a very generic class and then we're going from a generic class
+
+14:24.930 --> 14:28.130
+to a concrete class through casting.
+
+14:28.140 --> 14:30.930
+That's all we're doing from one to the other.
+
+14:30.930 --> 14:34.530
+Now once we have converted it into a car salesman.
+
+14:34.540 --> 14:38.900
+When I say ok cool I know how to I know how to call the sell method on that.
+
+14:38.900 --> 14:39.870
+And we just say sell.
+
+14:40.290 --> 14:42.040
+OK.
+
+14:42.090 --> 14:47.490
+And then else since we only have two types we can just say else and say I will.
+
+14:47.490 --> 14:50.210
+Otherwise it's just gonna have to be retail salesperson.
+
+14:50.220 --> 14:50.970
+Right.
+
+14:50.970 --> 14:57.270
+So we just do this change the name of the variable readability sake.
+
+14:57.480 --> 14:59.230
+And here we go.
+
+14:59.520 --> 15:04.620
+As you can see we're checking to see which type of salesman it is so that we can appropriately convert
+
+15:04.920 --> 15:09.200
+our object into that type of salesman and then call that sell method on it.
+
+15:09.210 --> 15:10.830
+Now let's run the program.
+
+15:10.980 --> 15:15.570
+I'm gonna pop that in here and run the code.
+
+15:15.570 --> 15:16.580
+So here we go.
+
+15:16.590 --> 15:20.300
+We have a list and I'm going to breakpoint right here.
+
+15:20.460 --> 15:27.510
+And each time we go first item as a car salesman will it you know that step into it's going to say what
+
+15:27.510 --> 15:29.700
+is the what is this salesman you passed me.
+
+15:29.700 --> 15:30.630
+Is it a car salesman.
+
+15:30.630 --> 15:31.620
+Yes it is.
+
+15:31.650 --> 15:34.520
+Now it's gonna convert into car salesman and call sell.
+
+15:34.530 --> 15:37.450
+See I would recommend you to buy this car.
+
+15:37.480 --> 15:39.650
+I'm actually going to bring it right up there.
+
+15:39.660 --> 15:40.250
+There we go.
+
+15:40.260 --> 15:41.650
+So we can see it is.
+
+15:42.030 --> 15:45.670
+And then it's gonna it's gonna go to the next one.
+
+15:45.720 --> 15:46.540
+OK.
+
+15:46.610 --> 15:49.490
+It goes to the next one says what is the next one the list is stuck.
+
+15:49.670 --> 15:57.100
+So car salesman yes it is called a sell method on it now.
+
+15:57.120 --> 15:59.960
+Next one is what is it retail sales person.
+
+15:59.960 --> 16:07.570
+Right now it's going to go and say Is it car salesman no OK retail salesperson.
+
+16:07.590 --> 16:08.190
+Perfect.
+
+16:08.190 --> 16:13.980
+See I would recommend you to buy this nice with a first name and last name also.
+
+16:14.910 --> 16:15.740
+Now that's great.
+
+16:16.650 --> 16:22.590
+Now this works but if we add more types we would definitely have to mess with our code meaning we won't
+
+16:22.590 --> 16:24.430
+satisfy the business requirement.
+
+16:24.450 --> 16:24.980
+Let's try it
+
+16:29.880 --> 16:39.540
+I will add another type so I will basically create a new file cold call insurance broker and I will
+
+16:39.540 --> 16:41.460
+say insurance brokers.
+
+16:41.460 --> 16:43.650
+Yes.
+
+16:44.730 --> 16:47.050
+And that's that.
+
+16:47.370 --> 16:50.310
+Then I will copy the code from here.
+
+16:50.700 --> 16:54.930
+Go to insurance broker rename.
+
+16:55.170 --> 16:59.020
+Copy that is itself developing.
+
+16:59.350 --> 17:03.280
+Well not going to give itself developing properties just for the sake of it.
+
+17:03.540 --> 17:09.930
+Keep it simple and you know changing the constructor name cool high name in my name is whatever the
+
+17:09.930 --> 17:11.170
+name we give it.
+
+17:11.200 --> 17:13.930
+I recommend you to buy this insurance.
+
+17:14.120 --> 17:17.640
+So OK so that's that.
+
+17:18.030 --> 17:20.310
+And then develop class we don't need that.
+
+17:20.310 --> 17:21.470
+So we're gonna take that out.
+
+17:22.340 --> 17:23.480
+OK.
+
+17:23.490 --> 17:24.600
+So that's it.
+
+17:24.630 --> 17:32.250
+Now if we come back to this right now let's say they added something a database and we automatically
+
+17:32.250 --> 17:33.690
+loaded it here.
+
+17:33.960 --> 17:37.610
+We say new insurance broker.
+
+17:37.610 --> 17:38.900
+All right.
+
+17:39.060 --> 17:42.110
+And we just say let's say that's my name.
+
+17:42.810 --> 17:45.570
+And that.
+
+17:45.570 --> 17:51.950
+Now if we run this you'll see what happens I'm actually going to take this out so we can speed it up
+
+17:51.950 --> 17:52.330
+a bit.
+
+17:56.280 --> 18:01.850
+You'll see that it runs for the first one and runs for the second want.
+
+18:01.860 --> 18:03.730
+It runs for the third one.
+
+18:03.730 --> 18:10.870
+But the fourth one it's not going to know it's gonna break.
+
+18:11.090 --> 18:17.900
+It's gonna say unable to cast object of type insurance broker to type retail salesperson.
+
+18:18.020 --> 18:21.180
+This just means that we have to change our code.
+
+18:21.260 --> 18:24.980
+We have to go ahead and we have to change our code.
+
+18:24.980 --> 18:29.720
+We have to add another condition and we have to say something like this.
+
+18:29.720 --> 18:39.500
+We have to say you know else if basically the salesman is the type of type of retail salesperson then
+
+18:39.500 --> 18:40.610
+do this.
+
+18:40.610 --> 18:47.090
+And otherwise you know take care of the new case new type that is insurance broker.
+
+18:47.090 --> 18:47.770
+Right.
+
+18:47.900 --> 18:49.480
+And we can change this as well.
+
+18:50.240 --> 18:51.910
+And this will work.
+
+18:52.080 --> 18:57.700
+But as you saw you know if they start adding 50 more types they have to add 50 more types here.
+
+18:57.710 --> 19:01.280
+So you can see that this can get really really large really quickly.
+
+19:01.370 --> 19:03.230
+And that's definitely not maintainable.
+
+19:03.230 --> 19:05.510
+Definitely not scalable.
+
+19:05.560 --> 19:09.380
+The next video we'll look for a solution on how to get out of this problem.

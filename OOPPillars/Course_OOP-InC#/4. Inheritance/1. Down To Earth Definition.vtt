@@ -1,0 +1,76 @@
+WEBVTT
+
+00:00.120 --> 00:01.880
+Now it's time to talk about an inheritance.
+
+00:01.890 --> 00:05.640
+One of the four features of object oriented programming.
+
+00:05.670 --> 00:10.050
+This video is not going to be long because I'm going to keep it simple and to the point this is all
+
+00:10.050 --> 00:14.220
+you need to know about inheritance whether you are working on your own project or working as a software
+
+00:14.220 --> 00:14.700
+developer.
+
+00:14.700 --> 00:15.120
+Google.
+
+00:15.150 --> 00:16.840
+Here's a down to earth definition.
+
+00:16.890 --> 00:23.850
+Inheritance allows one class to acquire attributes and behaviors of another class.
+
+00:23.850 --> 00:25.110
+That's all very simple.
+
+00:25.110 --> 00:29.160
+Now guess what happens when you instantiate the class that inherited from another class.
+
+00:29.160 --> 00:30.150
+That's correct.
+
+00:30.180 --> 00:36.840
+The objects these guys instantiated from the class will have access to the attributes and behaviors
+
+00:36.840 --> 00:44.070
+of the class inherited from as well so you see the class inherited from has a first name last name and
+
+00:44.070 --> 00:45.460
+a method show full name.
+
+00:45.510 --> 00:52.490
+And once this class inherits from this class what you have is you have the original method field and
+
+00:52.490 --> 00:59.370
+property from the previous video and then you have the new method and two fields that are inherited
+
+00:59.370 --> 01:00.990
+from this class.
+
+01:00.990 --> 01:06.960
+Notice in the class being inherited from we only have fields and a method so fields and a method.
+
+01:06.960 --> 01:12.030
+This has nothing to do with inheritance but I wanted to put your attention to it so you can see that
+
+01:12.030 --> 01:17.500
+a class can just have a few of the things such as the field and a method and a constructor but no properties.
+
+01:17.520 --> 01:22.770
+But in summary as mentioned inheritance is a feature of object or programming which allows one class
+
+01:23.220 --> 01:30.270
+to acquire attributes and behaviour a.k.a. fields properties constructors and methods of another class.
+
+01:30.270 --> 01:30.880
+That's it.
+
+01:30.960 --> 01:32.190
+Very simple.
+
+01:32.190 --> 01:33.410
+There is nothing else to it.

@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.120 --> 00:02.700
+Now it is time for us to talk about abstraction.
+
+00:02.700 --> 00:08.130
+The reason why I left abstraction is the last concept to talk about is because it is a more of a generic
+
+00:08.130 --> 00:08.610
+term.
+
+00:08.640 --> 00:13.740
+Unlike the rest of the concepts mentioned before for example inheritance is something you can do by
+
+00:13.740 --> 00:15.210
+using a colon symbol.
+
+00:15.240 --> 00:22.020
+So you see the cause and effect dynamic polymorphism also happens when you derive subclasses from the
+
+00:22.020 --> 00:26.930
+same base class and perform method overwriting by using the reserved keyword overwrite.
+
+00:26.970 --> 00:28.650
+In order to give it a different behavior.
+
+00:28.650 --> 00:31.620
+You've already seen this happen static polymorphism.
+
+00:31.620 --> 00:36.320
+You have more than one method with the same signature except different parameters.
+
+00:36.480 --> 00:39.710
+So that's also as a concrete way of being implemented.
+
+00:39.720 --> 00:46.860
+And lastly encapsulation is performed to axis specifies so as you can see all of the concepts we have
+
+00:46.860 --> 00:51.000
+went over so far have a concrete way of being implemented.
+
+00:51.030 --> 00:56.170
+However abstraction as mentioned is more of a generic term.
+
+00:56.310 --> 00:57.990
+And here is what I mean.
+
+00:58.260 --> 01:06.930
+First of all abstraction is a process of hiding irrelevant information in order to only show what is
+
+01:06.930 --> 01:10.850
+relevant to the end user by decreasing complexity.
+
+01:10.890 --> 01:14.130
+You achieve abstraction through encapsulation.
+
+01:14.160 --> 01:15.750
+This might sound confusing.
+
+01:15.810 --> 01:22.320
+So in the next video I will show you on our salesman abstract class that act as a base class how we
+
+01:22.320 --> 01:25.890
+have already performed abstraction through encapsulation.

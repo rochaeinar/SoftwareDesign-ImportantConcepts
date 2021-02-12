@@ -1,0 +1,637 @@
+WEBVTT
+
+00:00.180 --> 00:05.490
+Now let's talk about an abstract class abstract classes a special type of class that cannot be instantiated
+
+00:05.910 --> 00:10.380
+abstract classes designed to be inherited by other abstract classes or concrete classes that either
+
+00:10.380 --> 00:12.440
+inherit or overwrite its members.
+
+00:12.450 --> 00:17.490
+You can have all the components in your abstract class that you can have in your concrete class properties
+
+00:17.490 --> 00:19.890
+and methods however can be abstract or virtual.
+
+00:19.890 --> 00:22.230
+We'll talk about abstract or virtual a little later.
+
+00:22.260 --> 00:26.070
+I want to go ahead and create another concrete class called retail salesperson.
+
+00:26.070 --> 00:30.690
+This concrete class is going to have everything that the car salesman class has done anything different
+
+00:30.690 --> 00:35.160
+is going to be the message in the sell method which is going to say I would recommend you to buy this
+
+00:35.160 --> 00:35.540
+pen.
+
+00:35.640 --> 00:38.590
+So we'll go ahead and create another class.
+
+00:38.700 --> 00:46.080
+Right click new file we'll call this retail sales person.
+
+00:46.080 --> 00:48.870
+That's a yes name.
+
+00:48.870 --> 00:50.190
+Here we go.
+
+00:50.190 --> 00:50.850
+Public
+
+00:53.580 --> 01:04.350
+class retail salesperson and then I will copy over the contents and we need to import console so we
+
+01:04.350 --> 01:10.620
+can use as methods change the name of the constructor because the constructor name has to match the
+
+01:10.620 --> 01:11.710
+name of the class.
+
+01:12.030 --> 01:13.530
+And then I will change this to Penn.
+
+01:14.360 --> 01:14.830
+OK.
+
+01:15.210 --> 01:19.950
+So we go now as you can see we have two classes that have the same exact functionality for the most
+
+01:19.950 --> 01:22.520
+part except one small part which is different.
+
+01:22.530 --> 01:27.480
+I will go out and instantiate the retail salesperson as you can see will we have car salesmen instantiate
+
+01:27.490 --> 01:27.680
+it.
+
+01:27.690 --> 01:32.430
+So I will change the second instantiation and make it to be retail salesperson and keep the first name
+
+01:32.430 --> 01:35.110
+and last name as it was before.
+
+01:35.190 --> 01:37.980
+So we'll say retail salesperson
+
+01:41.760 --> 01:45.270
+there it is let's run it as you can see it's already breakpoint.
+
+01:45.380 --> 01:58.240
+So we'll go ahead and press play and we will go ahead and go through this line by line and continue.
+
+01:58.250 --> 01:59.860
+So as you can see it's Steve Rogers.
+
+01:59.870 --> 02:00.910
+Hi my name is Steve Rogers.
+
+02:00.920 --> 02:02.870
+I would recommend you to buy this car.
+
+02:02.870 --> 02:04.640
+Eric Erickson Hi my name is Eric Erickson.
+
+02:04.640 --> 02:06.560
+I would recommend you to buy this pen.
+
+02:06.560 --> 02:11.570
+So we now see that the car salesman has its way of selling and the retail salesperson has its own way
+
+02:11.570 --> 02:16.460
+of selling which makes sense because they're two completely separate methods defined differently.
+
+02:16.460 --> 02:20.280
+But as you have noticed once again there's a crap ton of code duplication.
+
+02:20.330 --> 02:23.270
+We have rewritten the same code over and over again.
+
+02:23.300 --> 02:26.720
+This is where the abstract class comes to help.
+
+02:26.720 --> 02:31.220
+Let me create an abstract class called salesman who will use the reserved keyword abstract in order
+
+02:31.220 --> 02:32.600
+to create an abstract class.
+
+02:32.750 --> 02:37.940
+Let's go to back to explore right click new file salesman dots.
+
+02:38.030 --> 02:38.570
+Yes.
+
+02:40.040 --> 02:42.130
+OK.
+
+02:42.160 --> 02:49.700
+And then I will say public abstract class salesman.
+
+02:49.780 --> 02:51.010
+Here we go.
+
+02:51.020 --> 02:55.700
+Now I will take all of the contents from the car salesman and I will put it inside of the salesman abstract
+
+02:55.700 --> 02:56.340
+class.
+
+02:56.420 --> 02:58.670
+The only thing I will change is the sell method.
+
+02:58.670 --> 03:01.090
+I'll make it abstract and take out the contents.
+
+03:01.100 --> 03:04.500
+I will also go out and remove everything from the retail salesperson.
+
+03:04.580 --> 03:06.170
+Then I will perform inheritance.
+
+03:06.890 --> 03:09.680
+So I will go ahead grab everything from here
+
+03:12.550 --> 03:17.190
+and I will bring it to salesman.
+
+03:17.530 --> 03:18.670
+Put it back.
+
+03:18.700 --> 03:27.690
+I will actually take everything out from here and there you go salesman has everything.
+
+03:27.730 --> 03:33.170
+I will just change that to salesman import castle
+
+03:38.320 --> 03:48.070
+and then I will actually make this but I said abstract which I will show you what it means in just a
+
+03:48.070 --> 03:48.940
+few minutes.
+
+03:49.480 --> 03:55.570
+So now let's go to car salesman and I will inherit from the salesman abstract class the way you do it
+
+03:55.570 --> 03:56.960
+is through a colon.
+
+03:57.100 --> 04:02.520
+You put the call after the class that needs to perform inheritance which is this class car salesman.
+
+04:02.530 --> 04:06.340
+And after that you put the class that you wanted to inherit from.
+
+04:06.340 --> 04:07.410
+In this case salesman.
+
+04:07.410 --> 04:09.340
+So I was a salesman.
+
+04:09.550 --> 04:13.630
+I will go in and do the same thing for retail salesperson so.
+
+04:13.650 --> 04:16.540
+Same thing here.
+
+04:16.560 --> 04:21.210
+Now notice and what are the concrete classes we need to add a few things we need to have a constructor
+
+04:21.250 --> 04:24.570
+and we need to define individually how sell method is going to work.
+
+04:24.960 --> 04:34.340
+So I will can just say General constructor and that'll do that and then we need to implement abstract
+
+04:34.340 --> 04:36.890
+class so same thing for this guy.
+
+04:39.360 --> 04:43.710
+And once again implement the abstract class.
+
+04:43.920 --> 04:48.630
+So the reason why we need to have a constructor in the concrete class is because we need to build the
+
+04:48.630 --> 04:52.330
+abstract class first before we can build anything else inheriting from it.
+
+04:52.350 --> 04:57.720
+Also a quick conversion the class inheriting from another class is called either a subclass or child
+
+04:57.720 --> 04:58.130
+class.
+
+04:58.140 --> 05:02.070
+And the class being inherited from is called a base class or planned class.
+
+05:02.070 --> 05:07.590
+In our case the salesman has a base class or parent class and the concrete classes are it's children
+
+05:07.620 --> 05:08.820
+or subclasses.
+
+05:08.820 --> 05:13.700
+Now let's take a look at it here we have this base reserve keyword.
+
+05:13.890 --> 05:16.100
+Before we just knew that the constructor was this part.
+
+05:16.120 --> 05:19.180
+But now we have colon and then we have this base reserve keyword.
+
+05:19.190 --> 05:24.760
+Now the base reserve keyword is just here to say that you're using the base classes constructor.
+
+05:24.840 --> 05:29.460
+So instead of taking the first name in the last name and setting them to the fields in the concrete
+
+05:29.460 --> 05:35.460
+class which doesn't have any we take those and pass them down to the base constructor so that the abstract
+
+05:35.460 --> 05:37.360
+class can set those fields.
+
+05:37.410 --> 05:42.300
+So this way any other class using the salesman class which is the base class can have access to those
+
+05:42.300 --> 05:47.220
+fields as well without having to repeat the same code inside of their own class.
+
+05:47.220 --> 05:50.280
+Same thing goes for methods properties and constructors.
+
+05:50.280 --> 05:55.050
+So as you can see we take the first name in the last name and we just pass them down to the base constructor
+
+05:55.620 --> 06:03.480
+by using base rows of keyword and base just refers to salesman's constructor which is right here.
+
+06:03.480 --> 06:09.950
+So we're setting it all here and that's what the base reserved keyword does.
+
+06:09.950 --> 06:14.720
+One quick thing you might be wondering about is what happens when you have more parameters for the child
+
+06:14.720 --> 06:17.330
+class that might not be going into a base class.
+
+06:17.330 --> 06:20.290
+And the answer is we just don't pass it into the base class.
+
+06:20.300 --> 06:21.960
+We set those in the child class.
+
+06:22.070 --> 06:28.210
+An example would be H So if we have age or anything else in this case I just mentioned age.
+
+06:28.210 --> 06:35.020
+So if we say in age and this doesn't really go anywhere but we needed for our child class then we would
+
+06:35.020 --> 06:44.190
+just have a field that's a private field here and I would say private int age.
+
+06:45.060 --> 06:51.700
+And then we would just say this age equals age.
+
+06:52.220 --> 06:57.940
+We just set it inside of the concrete class or the child class and the parent doesn't know anything
+
+06:57.940 --> 06:58.540
+about it.
+
+06:58.940 --> 07:02.160
+So that's just an example we don't really need this for our example.
+
+07:02.380 --> 07:03.660
+And it will take it out.
+
+07:04.300 --> 07:05.120
+Then we can move on.
+
+07:07.090 --> 07:10.720
+So as you can see abstract classes purpose is to unify relate to functionality.
+
+07:10.720 --> 07:15.610
+In this case we have two types of salesmen who have similar functionality different other functionalities
+
+07:15.990 --> 07:20.650
+the similar part is included inside of the abstract class and the different part is going to be overridden
+
+07:20.650 --> 07:22.300
+by each concrete class.
+
+07:22.300 --> 07:26.980
+So let's talk about overwriting as you can see we're overwriting the cell method which doesn't have
+
+07:26.980 --> 07:27.690
+much in it.
+
+07:27.700 --> 07:31.300
+The reason is because it is abstract on the abstract class.
+
+07:31.330 --> 07:34.360
+So that forces any check class to define it on their own.
+
+07:34.360 --> 07:39.070
+It could have also been concrete which could have just been inherited and would not have needed to be
+
+07:39.070 --> 07:39.840
+overridden.
+
+07:39.850 --> 07:43.900
+So as you can see once again salesman has cell as abstract.
+
+07:43.900 --> 07:47.940
+So it just says I don't know how it's going to be defined and the car salesman takes it.
+
+07:47.950 --> 07:49.350
+And this is just a method stop.
+
+07:49.390 --> 07:50.550
+That's what it puts in it.
+
+07:50.560 --> 07:51.810
+But it's just basically an empty mouth.
+
+07:51.850 --> 07:54.010
+That's like elegant it's an empty method.
+
+07:54.010 --> 07:56.350
+And for now it's just says throw an exception.
+
+07:56.380 --> 07:59.280
+So say that this is this method has not been implemented.
+
+07:59.290 --> 08:03.430
+That's all the straw you not implemented exception means.
+
+08:03.430 --> 08:06.850
+So I can just you know take stuff out and keep it empty.
+
+08:07.210 --> 08:14.820
+But for now each of the classes copy classes or child classes is going to define it on their own.
+
+08:14.890 --> 08:21.100
+And it's going to say hey this is how my cell method is going to work so I'm going to start from the
+
+08:21.130 --> 08:31.750
+retail salesperson I'm going to say console right line and we're going to say string format.
+
+08:32.200 --> 08:33.920
+You only know the deal.
+
+08:34.120 --> 08:35.690
+I already had the seventh copy it.
+
+08:35.700 --> 08:37.420
+So spacing it here.
+
+08:37.420 --> 08:40.120
+Hi my name is and then zero the place holder.
+
+08:40.120 --> 08:45.380
+I would recommend you to buy this pen and then I say this the full name.
+
+08:45.720 --> 08:46.650
+And that's that.
+
+08:46.660 --> 08:50.650
+So that takes care of the cell method on retail salesperson.
+
+08:50.680 --> 08:55.360
+And then we go to the car salesman and we do the same thing which is changed this to a car OK.
+
+08:56.110 --> 08:57.220
+So that's that.
+
+08:57.220 --> 09:02.120
+Now let's run this go to the program as you can see not much has different.
+
+09:02.140 --> 09:06.010
+I mean we have everything else the same.
+
+09:06.070 --> 09:08.250
+We didn't change any of the instantiation.
+
+09:08.260 --> 09:09.070
+Everything stayed the same.
+
+09:09.070 --> 09:12.090
+But in the back end you know we have the salesman.
+
+09:12.100 --> 09:14.110
+Everything is different we have a sale of an abstract class.
+
+09:14.110 --> 09:20.470
+That's the base class for these two child classes and they have their constructors and their way of
+
+09:20.470 --> 09:22.240
+defining their own cell method.
+
+09:22.240 --> 09:23.900
+So everything else is different.
+
+09:23.930 --> 09:28.780
+It's been refactor it's been changed but the front and everything else is the same.
+
+09:28.780 --> 09:31.370
+So now we're going to run it.
+
+09:31.450 --> 09:35.750
+So start debugging and it's already breakpoint.
+
+09:35.810 --> 09:44.510
+So I'm going to go line by line and that and then finish the execution so you can see.
+
+09:44.550 --> 09:45.010
+Same thing.
+
+09:45.010 --> 09:47.840
+Steve Rogers I mean Amnesty Rogers I was recommended to buy this car.
+
+09:47.840 --> 09:49.420
+Erick Erickson My name is Erick Erickson.
+
+09:49.430 --> 09:55.730
+I would recommend you to buy this pencil same exact thing but with less code and much more elegant much
+
+09:55.730 --> 10:00.710
+more elegant so you have the salesman abstract class that defines the base functionality and then it
+
+10:00.710 --> 10:02.630
+says this is not base functionality.
+
+10:02.630 --> 10:04.130
+This is just something you have to have.
+
+10:04.160 --> 10:09.350
+But I don't know how it's going to be defined and then we just defined those on the child classes so
+
+10:09.340 --> 10:10.370
+we the final on this guy.
+
+10:10.780 --> 10:12.980
+And that would define it on this guy just differently.
+
+10:12.980 --> 10:13.250
+Right.
+
+10:13.260 --> 10:14.320
+And this was his car.
+
+10:14.480 --> 10:15.230
+This was his pen.
+
+10:15.230 --> 10:16.790
+Now this is a pretty simple example.
+
+10:16.790 --> 10:22.640
+You can see how complex this can get because each one might have a very very different definition than
+
+10:22.640 --> 10:23.330
+this.
+
+10:23.330 --> 10:29.210
+So once again abstract classes help us to keep our code scalable readable and maintainable so we don't
+
+10:29.210 --> 10:31.210
+have to duplicate our code everywhere.
+
+10:31.220 --> 10:35.410
+Now let's quickly talk about the virtual and abstract keywords as you saw the abstract reserve keyword
+
+10:35.420 --> 10:37.880
+just means that it has no definition of its own.
+
+10:37.910 --> 10:40.290
+And it needs to be defined on the inheriting class.
+
+10:40.340 --> 10:42.140
+Virtual means that it has a definition.
+
+10:42.140 --> 10:44.600
+However one can overwrite it if one decides to.
+
+10:44.750 --> 10:50.240
+So we could go ahead and give the cell a concrete definition and make it a generic cell page and let
+
+10:50.330 --> 10:56.750
+each concrete method or let each child method in this case decide whether they want to use the generic
+
+10:56.750 --> 10:58.490
+picture or want to have their own.
+
+10:58.520 --> 11:06.750
+So we'll go ahead and I will actually copy this and go to salesmen and make this virtual.
+
+11:07.040 --> 11:12.430
+So I use virtual reserved keyword and then I actually give it a definition.
+
+11:12.440 --> 11:16.280
+It's not abstract anymore but I say Hi my name is so-and-so.
+
+11:16.400 --> 11:18.800
+I would recommend you to buy this item.
+
+11:18.800 --> 11:19.000
+OK.
+
+11:19.010 --> 11:26.120
+This is a much more generic way of pitching but it you know it's on it and we can either use it or write
+
+11:26.120 --> 11:26.250
+it.
+
+11:26.260 --> 11:31.670
+And if you go to retail sales personal car salesperson see this part doesn't break because we are able
+
+11:31.670 --> 11:38.090
+to overwrite it but if we don't want to overwrite it for example for retail sales poor person I will
+
+11:38.180 --> 11:41.070
+make retail salesperson use the generic pitch.
+
+11:41.090 --> 11:43.080
+So we'll actually take this out.
+
+11:43.240 --> 11:48.980
+And when you don't overwrite it by default you get what the base class has.
+
+11:49.010 --> 11:56.210
+So that on our abstract class which acts as a base class we have this sell method the cellmate virtual
+
+11:56.210 --> 11:58.100
+method which has its own definition.
+
+11:58.100 --> 12:02.230
+Let's go out and run we'll go ahead and run this one more time.
+
+12:02.360 --> 12:06.530
+So remember Eric the sales dude is going to have the generic pitch.
+
+12:06.530 --> 12:07.910
+So it's not going to say bye.
+
+12:07.970 --> 12:09.950
+I recommended to buy this pen anymore.
+
+12:10.130 --> 12:18.520
+So if we go here I will actually step in and you can see now it's not in the retail salesperson anymore.
+
+12:18.740 --> 12:19.000
+Right.
+
+12:19.010 --> 12:26.690
+Because it doesn't have a method but instead it is hitting the virtual method.
+
+12:26.690 --> 12:30.040
+So now it says Hi my name is Erick Erickson.
+
+12:30.050 --> 12:32.960
+I would recommend you to buy this item.
+
+12:32.970 --> 12:34.150
+Right.
+
+12:34.250 --> 12:44.870
+So now you see that the car salesman hits its own overwritten method and the retail salesperson just
+
+12:44.900 --> 12:50.630
+grabs the sell method with the generic method but it has an opportunity to overwrite it.
+
+12:50.630 --> 12:54.270
+So if actually bring this back I bring this back.
+
+12:54.260 --> 13:04.150
+You'll see if I run it again you see that first of all this goes into it's over a method which is the
+
+13:04.420 --> 13:05.140
+car salesman.
+
+13:05.170 --> 13:06.560
+So we you know that.
+
+13:06.650 --> 13:13.100
+And then this one before it went to the salesman and hit the virtual method.
+
+13:13.210 --> 13:17.970
+But now you can see it's hitting its own overridden method.
+
+13:18.220 --> 13:23.980
+So now it's actually going to say hi my name is Erick Erickson I would recommend you to buy this pen.
+
+13:23.980 --> 13:24.190
+OK.
+
+13:24.190 --> 13:27.490
+So here we go we have talked about abstract classes and inheritance.
+
+13:27.520 --> 13:32.860
+And next we're going to talk about interfaces and the difference between abstract classes and interfaces.

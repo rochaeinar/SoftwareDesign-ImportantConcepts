@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.120 --> 00:05.420
+Now this video is going to be pretty short because the private access specified is very simple to understand.
+
+00:05.450 --> 00:08.730
+And that's exactly what we're going to talk about in this video.
+
+00:08.730 --> 00:14.970
+All that is saying is if something is set as private then it can only and only be used from within the
+
+00:14.970 --> 00:15.470
+class.
+
+00:15.480 --> 00:21.510
+And nowhere else even classes inheriting from the class with private fields would or from you know with
+
+00:21.540 --> 00:26.540
+any other private member will not give access to the children classes.
+
+00:26.550 --> 00:34.860
+And that is all in our case we have the fields as private and the property as you can see is public.
+
+00:34.860 --> 00:41.220
+So the fields can only be used from within our abstract class.
+
+00:41.220 --> 00:42.700
+And we've already seen that.
+
+00:42.840 --> 00:50.010
+No this reason why specifically we keep our fields private which is the reason why it's a best practice
+
+00:50.010 --> 00:57.930
+to do so is because fields are the building blocks of classes and we don't want to expose the building
+
+00:57.930 --> 01:04.340
+blocks to other classes since they can be messing around with the workings of our current class.
+
+01:04.410 --> 01:08.610
+We want to keep the building blocks private but that is just an example for fields.
+
+01:08.610 --> 01:12.410
+You can set other things private as well such as constructors.
+
+01:12.720 --> 01:16.320
+You can set your properties as private.
+
+01:16.440 --> 01:22.250
+You can set your methods as private so you know you can set.
+
+01:22.260 --> 01:27.150
+If you have an engage and that's you know a concrete class you can set that as private.
+
+01:27.150 --> 01:28.950
+So let's say sell.
+
+01:28.970 --> 01:35.810
+I'm just going to comment these out or just take these out real quickly in private.
+
+01:35.820 --> 01:42.000
+You can have a private method like that then it can only in only be used from within the salesman class.
+
+01:42.000 --> 01:42.720
+Right.
+
+01:42.750 --> 01:45.030
+And that's it that's all.
+
+01:45.030 --> 01:52.050
+A private access specify is you basically you know the bottom line is that you set things private which
+
+01:52.050 --> 01:56.550
+you don't want to be access by anything else other than your class.
+
+01:56.610 --> 01:57.710
+And that's about it.
+
+01:57.900 --> 02:01.380
+In the next section we will be talking about abstraction.

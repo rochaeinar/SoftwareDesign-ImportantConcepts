@@ -1,0 +1,7 @@
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\bin\Debug\oop.exe.config
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\bin\Debug\oop.exe
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\bin\Debug\oop.pdb
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\obj\Debug\oop.csprojAssemblyReference.cache
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\obj\Debug\oop.csproj.CoreCompileInputs.cache
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\obj\Debug\oop.exe
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\oop\obj\Debug\oop.pdb

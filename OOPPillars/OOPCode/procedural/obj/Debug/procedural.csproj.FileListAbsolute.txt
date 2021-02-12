@@ -1,0 +1,6 @@
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\procedural\bin\Debug\procedural.exe.config
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\procedural\bin\Debug\procedural.exe
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\procedural\bin\Debug\procedural.pdb
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\procedural\obj\Debug\procedural.csproj.CoreCompileInputs.cache
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\procedural\obj\Debug\procedural.exe
+D:\Documents\Software Design - Important Concepts\OOPPillars\oop\procedural\obj\Debug\procedural.pdb

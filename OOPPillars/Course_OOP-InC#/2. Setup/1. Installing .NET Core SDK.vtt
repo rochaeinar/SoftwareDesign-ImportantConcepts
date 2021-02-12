@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.300 --> 00:07.950
+So first we're going to download and install dot net core as decay dot net core is basically an open
+
+00:07.950 --> 00:12.500
+source framework for Windows Linux and Mac OS operating systems.
+
+00:12.510 --> 00:14.980
+Now what is a framework you might ask.
+
+00:15.210 --> 00:21.480
+To put it very simply it is just a collection of libraries a.k.a. a code that other people at Microsoft
+
+00:21.480 --> 00:22.640
+have already written.
+
+00:22.650 --> 00:29.100
+So we can use right out of the box it is pre written functionality that we can use for free without
+
+00:29.100 --> 00:32.010
+having to write anything ourselves.
+
+00:32.010 --> 00:35.980
+Just makes development easier so we don't have to reinvent the wheel.
+
+00:36.030 --> 00:39.450
+That's all a framework is nothing more nothing less.
+
+00:39.450 --> 00:45.120
+One special thing about that night core though is that it is a new framework by Microsoft and it is
+
+00:45.120 --> 00:51.180
+cross platform compatible so if you want to use it on Windows Linux or Mac OS operating systems you
+
+00:51.180 --> 00:57.380
+can our reason for using it is because it is new so want to stay with the latest and greatest.
+
+00:57.390 --> 01:03.450
+Now you might also ask what's the difference between dot net core and dot net core as decay.
+
+01:03.450 --> 01:04.960
+And that's a good question.
+
+01:05.040 --> 01:12.900
+Basically dot net core is just the framework but dot net core SDK is a package of dot net core plus
+
+01:13.410 --> 01:19.070
+other tools that will allow us to build applications using dot net core.
+
+01:19.080 --> 01:25.400
+So once again it is dot net core plus other stuff that we need in order to write apps.
+
+01:25.440 --> 01:28.860
+That's all you will see some of those tools in the next video.
+
+01:28.860 --> 01:33.000
+For now let's go ahead and download and install dot net core as decay.
+
+01:33.300 --> 01:42.870
+So as you see I'm on Google just type in download dot net core as decay say Google search and then the
+
+01:42.870 --> 01:52.870
+first link as you see right here click on that and then you will choose build apps so click download
+
+01:52.870 --> 01:54.400
+dot net core as Dick
+
+01:57.650 --> 01:58.820
+wait for it to download
+
+02:04.560 --> 02:07.350
+so once as download it just open it up
+
+02:10.370 --> 02:17.780
+give it a few seconds and now the installation process is actually very simple just say install
+
+02:24.320 --> 02:25.370
+and let it do its thing
+
+02:31.730 --> 02:40.490
+great installation was successful you can close and I would suggest you restart your computer before
+
+02:40.490 --> 02:44.900
+moving onto the next video so that everything is proper.
+
+02:44.900 --> 02:45.850
+I'll see you in the next video.

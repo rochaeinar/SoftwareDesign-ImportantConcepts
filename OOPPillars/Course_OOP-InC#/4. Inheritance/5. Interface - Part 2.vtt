@@ -1,0 +1,268 @@
+WEBVTT
+
+00:00.180 --> 00:04.050
+OK so let's go ahead and create an interface and call it self developing.
+
+00:04.050 --> 00:06.590
+I will go ahead and create an interface.
+
+00:06.640 --> 00:09.220
+So first the file self.
+
+00:09.640 --> 00:14.830
+The thing that yes OK.
+
+00:14.840 --> 00:22.620
+And we used a reserved keyword interface as a public interface so developing.
+
+00:23.350 --> 00:28.060
+And this will only have one method on it called the Vel develop.
+
+00:29.890 --> 00:30.460
+OK.
+
+00:31.640 --> 00:32.140
+So that's it.
+
+00:32.140 --> 00:33.340
+Very very simple.
+
+00:33.440 --> 00:35.630
+Just develop as a signature.
+
+00:35.870 --> 00:39.380
+And there's just declaration no implementation on the interface.
+
+00:39.380 --> 00:45.170
+Now go ahead and implement this interface by the previously mentioned classes which where retail salesperson
+
+00:45.200 --> 00:47.030
+and web developer.
+
+00:47.030 --> 00:50.580
+So I'll go ahead to here.
+
+00:51.470 --> 00:56.970
+1 and 2.
+
+00:57.140 --> 00:58.810
+There we go by the way.
+
+00:58.820 --> 01:03.680
+As you can see this is how C Sharp gets around the problem of multiple inheritance.
+
+01:03.680 --> 01:11.070
+So a class can inherit from one class but it can not inherit from multiple classes as you've seen before.
+
+01:11.240 --> 01:14.240
+But it can inherit from multiple interfaces.
+
+01:14.240 --> 01:18.100
+So even if we had another interface all we would do is just say comma.
+
+01:18.140 --> 01:22.200
+And you know another interface in this case we don't have anything but this would look like.
+
+01:22.220 --> 01:26.180
+So you just say comma and the next thing you want to inherit or implement.
+
+01:26.180 --> 01:32.960
+So in this case we have one abstract class which is developer and then we have another interface which
+
+01:32.960 --> 01:40.040
+is self developing and the same thing goes for retail salesperson salesman abstract class and self developing
+
+01:40.040 --> 01:41.210
+interface.
+
+01:41.240 --> 01:46.360
+Now after you add the interface you have to implement it's required members.
+
+01:46.370 --> 01:49.420
+In this case we've already implemented it which is the developer.
+
+01:49.430 --> 01:53.610
+So we have one here and we have another one right here.
+
+01:53.630 --> 01:59.780
+So on web developer and on retail salesperson both are all set.
+
+01:59.780 --> 02:01.000
+Now here's the beauty.
+
+02:01.040 --> 02:02.210
+Check it out.
+
+02:02.210 --> 02:06.110
+Remember before when I took out develop nothing really changed.
+
+02:06.110 --> 02:11.330
+If I was the same person and I came back and I was trying to rewrite this class or rewrite this class
+
+02:11.330 --> 02:17.870
+whichever it was to take out develop if I was to take this out guess what.
+
+02:17.870 --> 02:21.670
+It would break because this is setting a regulation.
+
+02:21.680 --> 02:27.080
+This is putting stability into our program it says web developer does not implement interface members
+
+02:27.080 --> 02:28.880
+self developing dad develop.
+
+02:28.880 --> 02:30.170
+So it says we need this.
+
+02:30.200 --> 02:34.610
+We need this this method is required just the way it looks like.
+
+02:34.700 --> 02:38.150
+We can't change this to end or anything any other time.
+
+02:38.150 --> 02:40.000
+We can't change the name of it.
+
+02:40.060 --> 02:42.970
+No void and then develop two or anything else.
+
+02:42.970 --> 02:47.690
+If we can't do it we can't mess with the signature we can't touch this method well we can't change is
+
+02:47.690 --> 02:51.170
+the implementation of the method but that's a different story.
+
+02:51.170 --> 02:54.860
+But this introduces a whole lot of stability into our program.
+
+02:54.950 --> 02:57.810
+Here is a top view of what we already have.
+
+02:57.830 --> 03:03.080
+Basically we have the salesman abstract class and the developer abstract class salesman abstract class
+
+03:03.110 --> 03:11.000
+unifies the retail salesperson and car salesmen concrete classes because they have common functionality
+
+03:11.030 --> 03:17.270
+which then goes into the salesman and whatever is not common gets defined individually in each concrete
+
+03:17.270 --> 03:19.010
+class or child class in this case.
+
+03:19.050 --> 03:23.980
+Now the developer does the same thing and web developer and software developer are its children.
+
+03:24.170 --> 03:32.180
+But we also needed an ability which we gave to only these two classes separately.
+
+03:32.180 --> 03:37.740
+So retail salesperson and web developer are totally separate groups.
+
+03:37.760 --> 03:45.770
+However they're unified by an interface because they happen to have the same ability a.k.a. a method
+
+03:45.950 --> 03:50.120
+that they need to define individually on their classes.
+
+03:50.140 --> 03:57.020
+Okay now I'm going to go back and I want to actually run this so web developer and retail salesperson.
+
+03:57.050 --> 03:57.700
+OK.
+
+03:57.870 --> 03:59.670
+I'm going to go to program.
+
+04:00.080 --> 04:07.930
+We already have this part so I'm going to take this out and retail salesperson.
+
+04:07.940 --> 04:19.000
+Next thing is web developer and I will just say Mike equals new web developer and the primary languages
+
+04:19.060 --> 04:22.080
+angular 6.
+
+04:22.660 --> 04:23.600
+OK.
+
+04:23.720 --> 04:28.490
+And then Mike dot we can just call code just so we see that it works.
+
+04:28.490 --> 04:29.370
+Why not.
+
+04:29.450 --> 04:32.780
+But the most important part is the developer for us right.
+
+04:33.260 --> 04:36.540
+So it's actually call it and see how that works.
+
+04:37.160 --> 04:42.550
+And we're going to have the same thing here.
+
+04:42.590 --> 04:45.130
+All right.
+
+04:45.130 --> 04:47.390
+There we go.
+
+04:47.390 --> 04:58.290
+So if we were to run it here's what happens as you would expect cell does exactly that and develops
+
+04:58.300 --> 05:02.420
+as I devote myself by watching retail sales training videos.
+
+05:02.510 --> 05:03.400
+Great.
+
+05:03.800 --> 05:09.680
+And web developer code I'm coding using my main dev language angular 6.
+
+05:09.680 --> 05:10.220
+Great.
+
+05:10.220 --> 05:11.020
+And then develop.
+
+05:11.030 --> 05:14.590
+Same thing I develop myself watching dummy Web development courses.
+
+05:14.600 --> 05:15.650
+Wonderful.
+
+05:15.680 --> 05:21.680
+Now as you saw once again just want to remind you that develop is here and we could have had it without
+
+05:21.680 --> 05:26.690
+the interface a web developer could have had developed retail salesperson could have had develop however
+
+05:26.840 --> 05:31.520
+if we were to take this out if we didn't have the interface and somebody else was to mess with the method
+
+05:32.420 --> 05:36.500
+nothing would prevent him from doing that.
+
+05:36.560 --> 05:46.310
+But when we enforce it with an interface and then we mess with the method again see we get regulation
+
+05:46.310 --> 05:47.430
+in place.
+
+05:47.690 --> 05:56.030
+So that is the beauty of interfaces and also the fact that it gets around the problem of multiple inheritance
+
+05:56.060 --> 05:56.970
+in C sharp.
+
+05:56.990 --> 06:03.050
+So if you had more abilities you could just chain them together on here by using a comma and then continuing
+
+06:03.050 --> 06:03.490
+it on.
+
+06:03.500 --> 06:05.540
+So that's interfaces and inheritance.
+
+06:05.660 --> 06:08.480
+And in the next section we're going to go over polymorphism.

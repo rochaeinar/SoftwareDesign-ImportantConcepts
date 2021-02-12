@@ -1,0 +1,766 @@
+WEBVTT
+
+00:00.120 --> 00:04.340
+OK so let's go ahead and fulfill the requirements for promoters.
+
+00:04.380 --> 00:06.520
+Let's see what we can do.
+
+00:06.540 --> 00:12.150
+So in this case we're going to use the protected access specified to give access to the children but
+
+00:12.150 --> 00:13.320
+not to the outside world.
+
+00:13.320 --> 00:15.470
+I hope you've done that when you were doing it yourself.
+
+00:16.110 --> 00:20.010
+So I'm going to do is I'm going to create a method called shared with inner circle.
+
+00:20.250 --> 00:23.140
+So let's go back Cheryl our circle and then paid ads.
+
+00:23.160 --> 00:24.770
+So I'm going to say use paid ads.
+
+00:24.780 --> 00:25.110
+Right.
+
+00:25.780 --> 00:36.600
+So go back here go to promoter and the promoter will say I have protected abstract void and it's going
+
+00:36.600 --> 00:43.280
+to say share with inner circle.
+
+00:44.460 --> 00:49.060
+How it's going to do it is going to be defined on the inheriting class.
+
+00:49.100 --> 00:59.850
+So that's one and then the other is going to be used paid ads so use paid ads.
+
+01:00.120 --> 01:05.550
+And the other thing is that the promote is no longer going to be abstract.
+
+01:05.610 --> 01:14.100
+It's going to be concrete but we will define these abstract methods which basically defines how promote
+
+01:14.100 --> 01:15.380
+works essentially.
+
+01:15.420 --> 01:20.650
+So we say this dot share within our circle.
+
+01:20.650 --> 01:28.950
+So this is not abstract anymore I'll take that out and then the next one is this use paid ads.
+
+01:28.950 --> 01:38.520
+All right so let's do that and then let's go back to Armenia and this we can no longer override but
+
+01:38.520 --> 01:41.180
+we can't override as the methods within that.
+
+01:42.240 --> 01:46.960
+So these guys right here you know promote anymore.
+
+01:47.140 --> 01:53.470
+Take that out and implement abstract class or we go these are the guys I'm going to put them right up
+
+01:53.470 --> 01:56.900
+there just for readability purposes.
+
+01:57.490 --> 02:00.810
+OK so we have that there.
+
+02:00.820 --> 02:03.630
+So basically fulfill this requirement as well.
+
+02:03.640 --> 02:09.660
+Now let's actually start creating the constructors so we know that the writer has first name last name.
+
+02:09.730 --> 02:11.020
+So let's go out and do that.
+
+02:11.050 --> 02:15.240
+So a writer right here has a constructor.
+
+02:15.250 --> 02:22.480
+So we're going to say public writer and it's going to have first name and last name.
+
+02:22.480 --> 02:27.470
+So let's do Strang first name.
+
+02:27.710 --> 02:38.120
+So first name string last name and then we're going to have fields so a private String.
+
+02:38.120 --> 02:43.120
+I'm going to say first name here and private.
+
+02:44.310 --> 02:45.510
+OK.
+
+02:47.390 --> 02:49.880
+And last name right here.
+
+02:51.400 --> 02:51.930
+OK.
+
+02:52.240 --> 02:58.890
+So then we have to set these fields first name equals first name.
+
+02:59.230 --> 03:08.210
+And this last name last name equals notice keyboard is being a little strange today.
+
+03:08.320 --> 03:11.650
+Last name is last name.
+
+03:11.650 --> 03:12.310
+OK.
+
+03:12.310 --> 03:14.290
+So I think that does that.
+
+03:14.290 --> 03:17.950
+Now we need to set them in the chalk glasses you remember that.
+
+03:17.950 --> 03:22.220
+So we need to I'm actually going to take this out and regenerate it.
+
+03:22.370 --> 03:25.010
+So I'm going to let it regenerate the entire constructor.
+
+03:25.020 --> 03:28.570
+So this is good to go and do the same thing with this guy.
+
+03:29.290 --> 03:32.290
+Let it regenerate itself sent off to write code.
+
+03:32.290 --> 03:33.090
+Here we go.
+
+03:33.100 --> 03:36.490
+And that starts a book writer and blog writer.
+
+03:36.490 --> 03:39.840
+Let's see what we have missed so far.
+
+03:39.850 --> 03:41.380
+So here we go.
+
+03:41.380 --> 03:47.770
+I think the first name last name and this is taken care for the writer and then we have this author
+
+03:47.770 --> 03:52.490
+bio which is basically a property so I'm going to go out and create that as well.
+
+03:52.660 --> 03:55.150
+And this is just in the writer.
+
+03:55.150 --> 04:02.020
+So let's go ahead here and let's say public string.
+
+04:02.440 --> 04:10.200
+And I'm going to say author bio author bio.
+
+04:10.510 --> 04:11.780
+And here we go.
+
+04:11.790 --> 04:20.080
+Get and return.
+
+04:21.220 --> 04:33.220
+And I will say Strang the format so we can fill in the place folders and that's going to give me.
+
+04:34.030 --> 04:41.030
+So let's actually put in here and then I will say what it wants.
+
+04:41.420 --> 04:42.820
+Using system that's cool.
+
+04:43.560 --> 04:51.190
+And this that first name and this the last name.
+
+04:51.240 --> 04:56.890
+So essentially what I'm doing is I'm saying this is the quick property to kind of show our information
+
+04:56.890 --> 04:57.750
+and more readable way.
+
+04:57.750 --> 05:01.990
+That's all that this is and we're getting that information you know quote unquote from the database.
+
+05:02.010 --> 05:08.220
+So it's can say my name is whatever the first name and last name that are given in our constructor.
+
+05:08.220 --> 05:10.920
+So a writer seems to be good to go.
+
+05:10.920 --> 05:16.260
+The next thing is are promoters so the promoter has is pretty similar except that we have this extra
+
+05:16.260 --> 05:17.670
+field which is a cell phone.
+
+05:18.210 --> 05:23.790
+So we can actually go out and copy this guy and actually we're going to copy this whole thing and go
+
+05:23.790 --> 05:34.560
+to promoter and we're we're going to do is we're going to paste that here and we're going to say the
+
+05:35.430 --> 05:39.950
+name is different friend just to match it up to constructor name with a class time you only know that.
+
+05:40.140 --> 05:52.830
+And then I'm going to say in the phone and that order you know cell phone the words and the be private
+
+05:54.510 --> 05:56.020
+and phone.
+
+05:56.100 --> 06:02.670
+So cell phone and cell phone does good to go as well.
+
+06:03.450 --> 06:04.430
+Let me see.
+
+06:04.470 --> 06:10.440
+So then we're setting it here everything is good here and then we're going to have to set it in here.
+
+06:10.620 --> 06:16.420
+So cell phone equals cell phone OK not that.
+
+06:17.580 --> 06:18.000
+OK.
+
+06:18.000 --> 06:25.440
+So then I think we are looking good except that something's not fine here.
+
+06:25.590 --> 06:26.340
+Because I misspoke.
+
+06:27.420 --> 06:27.720
+OK.
+
+06:27.750 --> 06:38.050
+So cell phone cell phone so far on my business cards and next thing so is there my business card so
+
+06:38.050 --> 06:38.650
+the business cards.
+
+06:38.670 --> 06:41.820
+But basically you're gonna be the first name last name and the phone numbers.
+
+06:41.830 --> 06:43.130
+It's not that complicated.
+
+06:43.190 --> 06:44.410
+Going to grab this guy.
+
+06:46.450 --> 06:55.050
+Come back here and it's just says 0 1 2 so it's 3 properties as placeholders first name last name and
+
+06:55.090 --> 06:57.460
+the third one is the phone.
+
+06:57.830 --> 06:59.480
+A cell phone number.
+
+06:59.770 --> 07:02.370
+So we need to use console.
+
+07:02.380 --> 07:08.440
+Are you using system to be able to get access to the string and then it's methods that are approved
+
+07:08.500 --> 07:08.950
+for it.
+
+07:09.400 --> 07:15.790
+So just format and really took care of the promotion and the steps and the constructor is there.
+
+07:15.790 --> 07:22.630
+Now we have to go to its children classes and as you've seen in the previous writer based class we need
+
+07:22.630 --> 07:25.930
+to generate the constructor.
+
+07:25.930 --> 07:30.850
+So that's good to go and do the same thing with this guy.
+
+07:32.080 --> 07:33.780
+So here we go.
+
+07:34.240 --> 07:36.050
+And we're looking good.
+
+07:36.100 --> 07:38.940
+Let's go back once again look at our requirements.
+
+07:39.460 --> 07:45.540
+So we have our property we have our constructor property constructors are looking good.
+
+07:45.550 --> 07:47.260
+This is all looking good.
+
+07:47.260 --> 07:49.250
+This is all looking good.
+
+07:49.450 --> 07:52.110
+Now this entire thing is looking good.
+
+07:52.150 --> 07:55.850
+The only thing we need to do is left to do is create the lists.
+
+07:55.870 --> 07:57.430
+So let's go ahead and do that.
+
+07:57.430 --> 07:59.070
+We're going to start from the list one.
+
+07:59.140 --> 08:03.560
+And it says databases three writers and three promoters I mean doesn't really matter.
+
+08:03.640 --> 08:09.340
+We what we care about is the list so we can be very creative with with the text and we you know we're
+
+08:09.340 --> 08:10.330
+going to do that afterwards.
+
+08:10.330 --> 08:15.040
+But let's actually go ahead and create the list and then and then we'll create the text after that.
+
+08:15.040 --> 08:26.860
+So I'm going to go back and I'm going to say Close these guys just once again clean our dashboard say
+
+08:26.860 --> 08:27.570
+that.
+
+08:27.910 --> 08:37.090
+And in the program what I'm going to say is I'm going to say we have a list of so it's going to be promoters
+
+08:38.800 --> 08:47.210
+and let's see motors promoters equals new list of promoters.
+
+08:47.890 --> 08:52.390
+And here we go.
+
+08:52.390 --> 08:58.060
+We're going to need to import systems collection generic to be able to use the lists go back once again
+
+08:58.660 --> 09:00.480
+show to access and one Omni.
+
+09:00.510 --> 09:01.180
+Right.
+
+09:01.240 --> 09:02.480
+So let's do that.
+
+09:02.680 --> 09:11.130
+So new promoter or rather Net Promoter IP address access club promoter.
+
+09:11.470 --> 09:16.280
+So what we need and this takes in First Name Last Name is cell phones.
+
+09:16.300 --> 09:19.780
+So first name I'm going to say John Jones
+
+09:22.210 --> 09:36.100
+and I'm gonna say 6 1 7 5 5 5 5 5 5 and then let's see oh it's because our number is way larger than
+
+09:36.520 --> 09:38.140
+an integer can hold.
+
+09:38.140 --> 09:41.890
+So we're actually going to do is we're gonna go and fix that real quick.
+
+09:41.890 --> 09:45.820
+We can go to the promoter and change this too long.
+
+09:46.210 --> 09:52.900
+That'll give us enough space and capacity to store a large number like that we can also store that as
+
+09:52.900 --> 09:53.310
+a string.
+
+09:53.320 --> 09:54.420
+That's also not our problem.
+
+09:54.430 --> 09:57.280
+But yeah I'm destroying it as numbers so it doesn't really matter.
+
+09:57.280 --> 10:01.890
+You could have done it as a string you know won't make much of a difference.
+
+10:01.960 --> 10:10.130
+So you see so in this case I'm not really sure what's working.
+
+10:10.140 --> 10:13.300
+Let's go and try to troubleshoot this real quick.
+
+10:13.500 --> 10:21.030
+So we have this and this is already a long time long.
+
+10:21.030 --> 10:27.270
+So we have that there and our promoter is access club promoter.
+
+10:27.650 --> 10:34.610
+Really sure if it's not taking this then it's actually go to excess club promoter.
+
+10:34.980 --> 10:36.900
+That's the thing.
+
+10:37.140 --> 10:38.720
+I would go it's all about the details.
+
+10:38.780 --> 10:44.860
+Got to follow the trail and you eventually will find the bucks and now excess club promoter and Armenia
+
+10:44.950 --> 10:49.110
+club promoter both you have to fix that's one problem out the way.
+
+10:50.190 --> 11:01.490
+And so to excess I'm going to say John Jones Jones and another like Jim Jones and this one is 6 1 8
+
+11:02.790 --> 11:05.900
+and then we're going to have another one called.
+
+11:06.090 --> 11:08.690
+This one is gonna be Armenia.
+
+11:08.850 --> 11:11.310
+So it's gonna be Armenia.
+
+11:11.310 --> 11:20.040
+A promoter analysts make this Jane Jones OK.
+
+11:20.220 --> 11:21.930
+And this is gonna be new.
+
+11:21.930 --> 11:27.630
+You have to use their reserve you're new to instantiate the class and get an object out of it and 6
+
+11:27.630 --> 11:31.320
+1 9 5 5 5 5 5 5.
+
+11:31.340 --> 11:32.590
+Okay.
+
+11:33.140 --> 11:35.670
+One two three four one two three.
+
+11:35.670 --> 11:36.100
+Cool.
+
+11:36.750 --> 11:37.180
+OK.
+
+11:37.200 --> 11:38.630
+We've got our first list down.
+
+11:38.970 --> 11:39.890
+Let's.
+
+11:40.140 --> 11:42.320
+So it's actually copy that.
+
+11:43.580 --> 11:48.470
+And we're gonna keep the names the same because it's not really about that.
+
+11:49.100 --> 11:50.900
+It's about us getting the requirements down.
+
+11:50.900 --> 11:53.010
+That's really the important part here.
+
+11:53.150 --> 11:57.190
+And list two we have three writers two book writers and one blog writer.
+
+11:57.440 --> 12:08.320
+So to book writers first of all make this in to writers and to book and one blog to book and one blog.
+
+12:08.930 --> 12:10.830
+So writers.
+
+12:12.080 --> 12:18.790
+So this is gonna be a book writer book writer and a blog writer.
+
+12:18.800 --> 12:19.940
+Cool.
+
+12:19.940 --> 12:27.220
+Get these name get the rather the phones out because we don't have that parameter in our book.
+
+12:27.230 --> 12:32.240
+Writer and blog writer because we don't have it in our writer base class.
+
+12:32.420 --> 12:40.030
+And this should do that then we have a list three which is going to have two body builders of any type.
+
+12:40.030 --> 12:42.340
+That has to be excess club promoter.
+
+12:42.370 --> 12:54.970
+Now let's go back here and we're going to say this list holds I body builders and I'm going to say body
+
+12:54.970 --> 12:58.240
+builders body.
+
+13:00.310 --> 13:06.080
+And this is going to be messy.
+
+13:07.450 --> 13:14.010
+This is going to be excess promoter or someone's again John and then another one.
+
+13:14.010 --> 13:17.120
+Jim you know they know those guys.
+
+13:17.560 --> 13:22.810
+So the reason why it's underlined by the way is because we haven't put the cell phone numbers in so
+
+13:22.810 --> 13:28.890
+we're going to add those up here we go as a as you can see they're accepted in the eye.
+
+13:28.900 --> 13:36.650
+Body bodybuilder types and then we're going to copy and paste that and let's see this war is going to
+
+13:36.650 --> 13:43.280
+have to loggers any time so I'm going to choose to loggers I'm going to choose one blog writer or another
+
+13:43.280 --> 13:43.950
+one.
+
+13:44.570 --> 13:48.710
+Excess club promoter just so that you can see how it combines unrelated groups.
+
+13:48.830 --> 13:51.470
+And so let's do exactly that.
+
+13:51.500 --> 14:00.850
+I'm going to go back here and I'm going to save loggers.
+
+14:02.010 --> 14:08.330
+I'm going to say I blogger
+
+14:11.230 --> 14:14.390
+blogger one is access club promoter.
+
+14:14.390 --> 14:18.280
+Another one is going to be new.
+
+14:19.070 --> 14:25.540
+Let's grab this guy so grab Jim bring him down here.
+
+14:25.640 --> 14:26.870
+He's also a blogger.
+
+14:26.870 --> 14:28.670
+See they fit into the same list.
+
+14:29.060 --> 14:31.060
+So we also have the list ready.
+
+14:31.190 --> 14:34.010
+So then we want to see how promoters promote how art is right.
+
+14:34.010 --> 14:36.080
+How bodybuilders work out of bloggers blog.
+
+14:36.230 --> 14:37.760
+And we can be created with a text.
+
+14:37.760 --> 14:38.680
+So here's what I'm gonna do.
+
+14:38.690 --> 14:44.300
+I'm gonna go and I'm gonna I'm gonna write a for each loop for each of these guys and I'm going to save
+
+14:44.300 --> 14:46.660
+for each.
+
+14:48.050 --> 14:55.030
+So var promoter and promoters rights.
+
+14:56.850 --> 15:04.040
+And I'm gonna say promoter that promotes.
+
+15:05.120 --> 15:16.320
+And I'm going to use the same thing for writers and this is going to just say writer and writer is going
+
+15:16.320 --> 15:19.160
+to write.
+
+15:19.190 --> 15:21.020
+Here we go.
+
+15:21.020 --> 15:23.780
+Same thing for bodybuilders and loggers
+
+15:35.110 --> 15:37.240
+and rock gods.
+
+15:37.280 --> 15:40.090
+And then I'm gonna put the last one down here.
+
+15:42.080 --> 15:44.430
+So it's a logger of log
+
+15:49.300 --> 15:52.260
+that's a log.
+
+15:52.880 --> 15:53.670
+So here we go.
+
+15:53.690 --> 15:59.390
+Now all we need to do is go and fill in all of the messages that we want it to show.
+
+15:59.390 --> 16:00.800
+And then we should be good to go.
+
+16:00.800 --> 16:01.850
+So let's go one by one.
+
+16:01.850 --> 16:05.930
+So the blogger says I log cool.
+
+16:06.170 --> 16:07.750
+Let's see what it should say.
+
+16:07.760 --> 16:15.850
+So I say console right line and then we're going to have to import those guys you already know.
+
+16:15.860 --> 16:25.630
+And I'm going to say I've log using my GoPro so what I'm going to say.
+
+16:25.730 --> 16:29.320
+So that's what a blogger does.
+
+16:29.600 --> 16:39.140
+And then I'm going to say I write so this one is for the blogger.
+
+16:39.530 --> 16:45.420
+I write in my blog I write and I write for my own blog.
+
+16:46.640 --> 16:50.970
+OK very simple just kind of making sure it works.
+
+16:50.980 --> 16:52.960
+Book This also has a blog.
+
+16:52.970 --> 16:56.550
+So I'm going to say I blog using my iPhone.
+
+16:57.570 --> 16:59.290
+All right.
+
+16:59.450 --> 17:01.700
+So different implementation of the same method.
+
+17:01.700 --> 17:03.770
+So this is polymorphism right here guys.
+
+17:03.770 --> 17:06.470
+So let's see.
+
+17:06.500 --> 17:09.340
+So so we need to use system.
+
+17:09.330 --> 17:10.740
+Cool.
+
+17:11.360 --> 17:13.660
+Let's see if I put a period on the other one.
+
+17:13.730 --> 17:14.860
+Yes I did.
+
+17:14.870 --> 17:16.330
+Just to keep it consistent.
+
+17:16.640 --> 17:23.210
+I write I write books.
+
+17:23.210 --> 17:23.660
+All right.
+
+17:23.660 --> 17:26.920
+Once again just keeping it simple keeping it simple.
+
+17:26.990 --> 17:34.450
+I bodybuilder doesn't do nothing as an empty interface blogger empty interface omni club promoter use.
+
+17:34.510 --> 17:36.140
+You use paid ads.
+
+17:36.140 --> 17:47.040
+So I'm going to say I use Google AdWords for paid ads rants.
+
+17:47.090 --> 17:58.880
+Then as that guy takes care of that and then share with the inner circle I'm going to say I share with
+
+17:58.880 --> 18:01.060
+my friends.
+
+18:01.320 --> 18:01.820
+OK.
+
+18:02.840 --> 18:06.120
+And that's that for the Armenia program.
+
+18:06.140 --> 18:08.270
+This is what really had.
+
+18:08.430 --> 18:10.160
+This doesn't really need much on it.
+
+18:10.160 --> 18:14.900
+And then the writer doesn't really need much on it as well.
+
+18:14.930 --> 18:16.190
+And then the excess club promoter.
+
+18:16.190 --> 18:18.280
+So this is the guy here.
+
+18:18.330 --> 18:18.950
+Let's see.
+
+18:19.010 --> 18:30.930
+I will say for use paydays I would say I use Facebook ads.
+
+18:31.580 --> 18:32.680
+OK.
+
+18:32.990 --> 18:34.010
+So that's that.
+
+18:34.100 --> 18:45.770
+And then I will say for share with inner circle I will say I share with my Instagram followers.
+
+18:45.940 --> 18:47.350
+All right.
+
+18:47.600 --> 18:52.320
+Share with my instagram followers capitalize that for the hell of it.
+
+18:52.460 --> 18:57.090
+And then I am here.
+
+18:57.150 --> 19:03.810
+The vlog I will say I use a professional.
+
+19:04.670 --> 19:15.560
+Oh I will say I use DSA LA to in order to log and I will say
+
+19:21.920 --> 19:23.360
+I work out
+
+19:26.060 --> 19:28.210
+at my house.
+
+19:30.050 --> 19:30.660
+So here we go.
+
+19:30.660 --> 19:34.730
+Now we have everything filled out and in the next video we'll be running it.
+
+19:34.760 --> 19:38.530
+And just kind of going over the structure and just talking about what we've done so far.

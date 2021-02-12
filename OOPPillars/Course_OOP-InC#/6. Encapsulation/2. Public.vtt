@@ -1,0 +1,298 @@
+WEBVTT
+
+00:00.150 --> 00:05.190
+OK before I jump into anything let me introduce you to a concept that you already have been using this
+
+00:05.190 --> 00:07.320
+whole time without knowing what it is.
+
+00:07.380 --> 00:13.440
+It is the concept of axis specifies axis specifies are basically tools at our disposal that allow us
+
+00:13.440 --> 00:17.660
+to show or hide methods properties constructors classes and fields.
+
+00:17.660 --> 00:22.130
+They're allowing us as programmers to specify access to the entire application.
+
+00:22.140 --> 00:27.600
+Now we have quite a few of them but I will be going over the very main ones which I use the most to
+
+00:27.600 --> 00:28.560
+keep the course simple.
+
+00:28.560 --> 00:33.330
+But once you understand the concept behind axis specifies which is not that complicated then you will
+
+00:33.330 --> 00:37.420
+be able to understand any other ones that might not have been mentioned in this course.
+
+00:37.590 --> 00:42.630
+Done this video will be going over public axis specified and you have guessed it right.
+
+00:42.630 --> 00:49.080
+Just like in the diagram that we saw in the previous video the public axis specifies says that if we
+
+00:49.080 --> 00:56.790
+make any method field property etc. public then it can be used from within the class and from the outside
+
+00:56.790 --> 00:57.240
+of the class.
+
+00:57.270 --> 01:04.130
+So in other words any object has access to it before even going over the other axis specifies.
+
+01:04.140 --> 01:06.410
+I want to propose a hypothetical problem.
+
+01:06.600 --> 01:14.850
+So again as we solve this hypothetical problem we can understand the concepts and what the idea is behind
+
+01:14.850 --> 01:17.070
+these concepts even more thoroughly.
+
+01:17.100 --> 01:18.090
+So imagine this.
+
+01:18.240 --> 01:25.060
+Imagine if one of our clients who were writing this application for says hey man we just got a new requirement.
+
+01:25.230 --> 01:28.600
+We want all of our sales people to have five stages of selling.
+
+01:28.740 --> 01:30.750
+As you can see here right.
+
+01:31.200 --> 01:37.470
+These stages are engaged the customer establish trust and address concerns demonstrate value and close
+
+01:37.470 --> 01:38.300
+the deal.
+
+01:38.580 --> 01:41.040
+These are some of the new ways in which they are trying to sell.
+
+01:41.040 --> 01:41.560
+Got it.
+
+01:41.560 --> 01:47.070
+Now the problem is that we want to only have the method sell to still be exposed to the world and not
+
+01:47.130 --> 01:53.130
+the five stages and we want to be able to override these five stages specifically in each of salesmen
+
+01:53.130 --> 02:00.090
+child classes or any other new salesman child class in the future that we might add please make it happen
+
+02:00.090 --> 02:00.570
+for us.
+
+02:00.780 --> 02:01.500
+Wow.
+
+02:01.530 --> 02:02.490
+So that's the problem.
+
+02:02.910 --> 02:08.060
+So let's take a look at the diagram that they sent us in order to better understand the requirements.
+
+02:08.220 --> 02:12.330
+As you can see we have our abstract salesmen class right here.
+
+02:12.330 --> 02:15.570
+Well they have that and we have the child classes I only have two here.
+
+02:15.570 --> 02:21.150
+But we obviously have more than two and what the requirement is is that we want to have only the sell
+
+02:21.150 --> 02:22.630
+method to be public.
+
+02:22.680 --> 02:29.670
+So this guy so that other objects can call it from the outside so they can call the sell method and
+
+02:29.880 --> 02:35.020
+it can show us how it sells but want to sell using five steps method.
+
+02:35.250 --> 02:42.410
+So these are other methods in which we are selling and this is what we want to use in order to sell.
+
+02:42.480 --> 02:49.380
+But what they say is that these methods cannot be accessed from outside of the class so they have to
+
+02:49.380 --> 02:51.870
+be only accessible from within the class.
+
+02:52.050 --> 02:58.750
+But then what they also say is that the five steps need to be overwrite a bull in the child classes.
+
+02:58.860 --> 03:04.630
+So they need to be a all into child classes but you know children have to have access to them.
+
+03:04.740 --> 03:10.580
+But the outside world can not have access to them right the outside world can only call cell.
+
+03:10.680 --> 03:15.630
+And the reasoning behind it is that you know the outside world if they only call let's say Step 3 address
+
+03:15.630 --> 03:16.560
+concerns.
+
+03:16.560 --> 03:23.400
+That's really not going to show how those salesman sells because that's only one part of the sale selling
+
+03:23.400 --> 03:24.320
+process right.
+
+03:24.360 --> 03:31.350
+If they call sell however sell within the class we'll know how to order the methods together it'll say
+
+03:31.350 --> 03:35.730
+first I engaged then I establish trust then I address concerns then I demonstrate value then I close.
+
+03:35.730 --> 03:41.040
+But anybody from the outside that does not know how to put these together and doesn't have that you
+
+03:41.040 --> 03:45.870
+know business logic behind them they might put them in the wrong order or they might just call one method
+
+03:45.870 --> 03:48.680
+or two methods and they will mess up the sell process right.
+
+03:48.810 --> 03:53.750
+So if you can imagine if this was actually a thing that was let's say this is some type of class that
+
+03:53.790 --> 03:58.290
+is actually making a sale then that sale would have been compromised.
+
+03:58.320 --> 04:04.950
+If you know somebody else just called the third method without knowing that they shouldn't just call
+
+04:04.950 --> 04:05.750
+the third method.
+
+04:05.760 --> 04:10.630
+Now what axis specifies give us once again it's just more stability and regulation.
+
+04:10.710 --> 04:15.720
+What we're doing is we're saying listen these methods we're going to hide from certain classes we're
+
+04:15.720 --> 04:22.670
+going to only show it to other classes because we know that what what can happen will happen right.
+
+04:22.680 --> 04:26.670
+So if we leave these public then we know that there's a chance somebody might call them and if they
+
+04:26.670 --> 04:29.160
+call them then that's not going to be the proper process.
+
+04:29.160 --> 04:35.490
+So why not mitigate that risk and hide them and only expose what we need to expose so that there is
+
+04:35.490 --> 04:38.440
+no risk of sabotaging a sale.
+
+04:38.460 --> 04:38.760
+Right.
+
+04:38.760 --> 04:41.740
+So that's kind of like the idea behind the requirement.
+
+04:41.820 --> 04:43.290
+So let's start from the simplest part.
+
+04:43.320 --> 04:44.770
+We have our sell method.
+
+04:44.880 --> 04:50.190
+We only have that let's go ahead and make sure that the world can access it once we check and verified
+
+04:50.190 --> 04:52.090
+that that part works.
+
+04:52.170 --> 04:57.930
+We'll then move on to making the five stages of selling and then making them override a bull only in
+
+04:57.930 --> 04:59.100
+the child classes.
+
+04:59.100 --> 05:08.170
+So I'll go ahead and open this one up and go to these salesmen abstract class and here we see that our
+
+05:08.170 --> 05:12.820
+sell is public seats these are the axis specifies so public public.
+
+05:12.840 --> 05:18.130
+So the property is also public construct there is also public where only this time we're talking about
+
+05:18.130 --> 05:23.800
+the method so we have public abstract abstract means that this can be overriding all in its child classes
+
+05:23.800 --> 05:29.680
+will you know that this is the return type not just void just see it says that it's not returning anything
+
+05:29.680 --> 05:34.610
+because it's not public is the axis specifies so that it says that the world can access it.
+
+05:34.660 --> 05:40.210
+Now once you once you inherit as a child from this abstract class as we saw in the previous videos for
+
+05:40.210 --> 05:48.190
+example on the retail salesperson then you can overwrite this cell class and that's fine that's actually
+
+05:48.430 --> 05:52.240
+make sure that this is you know we can access it.
+
+05:52.570 --> 05:58.990
+And so I'm going to actually go clean all this stuff up and what I'm going to do is I'm just going to
+
+05:58.990 --> 06:06.910
+say retail salesperson and that's equals new retail salesperson
+
+06:20.340 --> 06:21.370
+so here we go.
+
+06:21.390 --> 06:26.270
+And then I'm going to just say that sell.
+
+06:26.340 --> 06:27.450
+All right.
+
+06:27.450 --> 06:27.900
+Here we go.
+
+06:28.110 --> 06:29.050
+So we just verified it.
+
+06:29.060 --> 06:29.880
+This is public.
+
+06:29.880 --> 06:33.180
+So another class so a program.
+
+06:33.180 --> 06:36.910
+This is a class was able to use cell.
+
+06:36.930 --> 06:41.640
+So it was able to access cell from its own method which is Maine and the Maine is just kind of like
+
+06:41.640 --> 06:43.370
+the entry point into the whole application.
+
+06:43.380 --> 06:44.580
+But it is a method nevertheless.
+
+06:44.610 --> 06:48.180
+So you know it's able to access our cell method.
+
+06:48.180 --> 06:55.830
+So for now we know that we're using public access specified to expose cell method and it is able to
+
+06:55.830 --> 06:59.740
+be accessed from within and from the outside classes.
+
+06:59.790 --> 07:02.370
+That part of our requirement has been satisfied.
+
+07:02.370 --> 07:06.300
+And the next couple of videos will be satisfying the rest of the business requirements.

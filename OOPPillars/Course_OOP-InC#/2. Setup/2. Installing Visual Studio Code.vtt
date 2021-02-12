@@ -1,0 +1,298 @@
+WEBVTT
+
+00:00.180 --> 00:07.560
+Now we're going to go ahead and download and install Visual Studio code Visual Studio code is a cross
+
+00:07.560 --> 00:11.170
+platform compatible lightweight code editor.
+
+00:11.190 --> 00:14.650
+Now you might be asking why do we need a code editor.
+
+00:14.670 --> 00:16.090
+That's a good question.
+
+00:16.200 --> 00:22.410
+After we get the dot net core SDK we can basically start developing using command line or notepad.
+
+00:22.410 --> 00:29.160
+However why not make our lives easier and use a tool that can make code writing much more convenient.
+
+00:29.170 --> 00:32.220
+Now Visual Studio code does exactly that.
+
+00:32.250 --> 00:38.640
+It is not as bloated as Visual Studio yet still is very powerful since it allows for code suggestions
+
+00:38.940 --> 00:46.920
+syntax highlighting and debugging Visual Studio code has extensions which allow it to stay compact so
+
+00:46.920 --> 00:53.150
+that individuals can download extra functionality as they wish for their specific projects.
+
+00:53.350 --> 00:57.550
+I just wanted to explain my thought process so that you are not just blindly following what I'm doing
+
+00:57.610 --> 01:00.670
+but you understand the logic behind it.
+
+01:00.690 --> 01:04.580
+Now let's go ahead and download the install Visual Studio code.
+
+01:05.210 --> 01:14.560
+So go to Google type in Visual Studio code click google search first link right here click on that and
+
+01:14.560 --> 01:17.200
+you have options that you can download for Mac OS or Linux.
+
+01:17.230 --> 01:27.830
+I will be downloading into four windows so download for windows let it download fully and then go ahead
+
+01:27.860 --> 01:33.630
+and open it up once it's done.
+
+01:33.720 --> 01:34.320
+Here we go.
+
+01:35.710 --> 01:43.360
+So now installation is actually very simple so click Next accept the agreement click Next choose the
+
+01:43.360 --> 01:47.170
+folder for your installation click Next.
+
+01:47.260 --> 01:50.440
+Next I will say create a desktop icon.
+
+01:50.440 --> 01:56.410
+Though it's optional click next and then install give it a few seconds and you should be good to go
+
+02:01.410 --> 02:01.810
+all right.
+
+02:01.810 --> 02:02.850
+It's all set.
+
+02:02.980 --> 02:05.050
+Launch Visual Studio code click finish
+
+02:11.300 --> 02:12.080
+and here we go.
+
+02:12.080 --> 02:14.380
+This is Visual Studio code.
+
+02:14.540 --> 02:20.090
+I will quickly go over the layout to show you where everything is and then we will set up our initial
+
+02:20.090 --> 02:23.360
+project where we will be writing code.
+
+02:23.360 --> 02:24.950
+So let's start from here.
+
+02:24.950 --> 02:25.940
+This is the Explorer.
+
+02:25.940 --> 02:30.050
+This is where you will see the project assets your folders and files.
+
+02:30.050 --> 02:35.000
+Here is the search where you can search for Project assets.
+
+02:35.000 --> 02:36.280
+This is source control.
+
+02:36.290 --> 02:38.450
+We won't be using this in our course.
+
+02:38.660 --> 02:40.370
+Next coming up is debug.
+
+02:40.370 --> 02:45.350
+This is where we can debug our application see local variables watch any local variables and look at
+
+02:45.350 --> 02:46.130
+the call stack.
+
+02:47.120 --> 02:53.900
+And lastly this is where we can add extensions from the marketplace and extend the functionality of
+
+02:53.900 --> 02:54.850
+Visual Studio code.
+
+02:54.860 --> 03:01.850
+As you can see I already have one install from the previous run but we will install the C Sharp Plug
+
+03:01.850 --> 03:03.110
+in together once again.
+
+03:03.140 --> 03:03.980
+So don't worry about it.
+
+03:04.430 --> 03:08.840
+So in order to do that all you need to do is type in C sharp
+
+03:11.580 --> 03:16.560
+and then click on the one that's by omni sharp and click install
+
+03:19.230 --> 03:21.020
+give it a few seconds.
+
+03:21.240 --> 03:22.050
+All right.
+
+03:22.050 --> 03:22.950
+Click reload
+
+03:25.870 --> 03:27.160
+and you should be all set.
+
+03:27.220 --> 03:33.910
+As you can see it's enabled and it's installed on Visual Studio code.
+
+03:33.910 --> 03:38.560
+Now let's go ahead and set up a quick project and for that we will be using one of the tools included
+
+03:38.560 --> 03:40.590
+in the dot net core SDK.
+
+03:40.720 --> 03:45.970
+So remember how I said that dot net cause decay is dot net core plus other stuff.
+
+03:45.970 --> 03:47.890
+Let's go over that other stuff.
+
+03:47.890 --> 03:54.340
+So dot net core SDK contains three components that dot net core command line tools that are used to
+
+03:54.340 --> 03:57.840
+build applications that dot net core itself.
+
+03:57.850 --> 04:01.120
+Remember the libraries written by other people so we can use them.
+
+04:01.270 --> 04:08.320
+And then the dot net driver for running the CLIA commands as well as running applications.
+
+04:08.350 --> 04:15.360
+Now in order to create our new console application we're going to use the CLIA commands.
+
+04:15.400 --> 04:29.550
+Let's go to the explorer then let's open folder I will create new and call O P select that folder.
+
+04:30.190 --> 04:38.440
+And here we go now come down here into the terminal which you can toggle on and off by pressing control
+
+04:38.440 --> 04:39.340
+tick.
+
+04:39.340 --> 04:45.200
+So if you press controlled tick it will hide and it will come back if you press it again here.
+
+04:45.200 --> 04:53.050
+Type in dot net new console press enter.
+
+04:53.360 --> 05:00.530
+See it created a symbol console project and also restore all of the dependencies using dot and restore
+
+05:00.860 --> 05:03.450
+right here.
+
+05:04.140 --> 05:08.880
+You can also run dot net restore severally to restore any of the dependencies but that is out of the
+
+05:08.880 --> 05:10.190
+scope of our course.
+
+05:10.290 --> 05:16.770
+In one word restore just gets the code from the web and puts it in your local folder to put it simply
+
+05:17.070 --> 05:22.530
+this code being some more libraries written by other people that we can use.
+
+05:22.590 --> 05:29.390
+That is all then if you want to run the project go ahead and type in dot net run dot net.
+
+05:29.860 --> 05:30.210
+Run
+
+05:34.750 --> 05:42.010
+and as you can see it says hello world and that is our application very simple just prints to the console
+
+05:42.010 --> 05:45.970
+saying hello world we can also debug our application.
+
+05:45.970 --> 05:50.140
+So go to the debug panel and click on Add configuration.
+
+05:50.170 --> 05:57.570
+Here we go by the way if there is a pop up saying required as is to build and debug are missing from
+
+05:57.570 --> 06:05.370
+all IP add them just say not now because we'll be adding that manually here it says no configuration
+
+06:05.880 --> 06:12.280
+just click on that say add configuration then click dot net core and here we go.
+
+06:12.420 --> 06:18.480
+This is only one time setup and all this does is tell visual studio code how to debug our dot net core
+
+06:18.480 --> 06:19.830
+console application.
+
+06:19.920 --> 06:20.120
+OK.
+
+06:20.130 --> 06:26.970
+So close this and come over here what we're doing is we're break pointing on a line that we want it
+
+06:26.970 --> 06:32.280
+to stop at and what it's going to do is during the debug it's going to come to that line stop and then
+
+06:32.280 --> 06:34.830
+tell us the exact state that we're in.
+
+06:34.830 --> 06:39.360
+So show us any local variables or anything else that we want or have rather.
+
+06:39.360 --> 06:48.320
+On this page that we see so click Start debugging and as you can see it stop right here we can see any
+
+06:48.320 --> 06:53.880
+logos and we can step over step into step out.
+
+06:53.900 --> 06:59.720
+All we're going to do is step over as you can see it printed Hello World and then we will continue.
+
+07:00.220 --> 07:00.490
+OK.
+
+07:00.500 --> 07:01.010
+That's all.
+
+07:01.010 --> 07:05.370
+Now we have download it dot net core as decay.
+
+07:05.370 --> 07:06.180
+We've installed it.
+
+07:06.190 --> 07:08.270
+We've also installed Visual Studio code.
+
+07:08.280 --> 07:11.880
+We've set it up and we've set up our initial project.
+
+07:11.890 --> 07:17.640
+Next we'll be learning about P why we use it and what it is.
+
+07:17.670 --> 07:22.980
+And the basics and then right after that we'll be jumping right into and learning about the four main
+
+07:22.980 --> 07:25.390
+pillars of object or programming.
+
+07:25.480 --> 07:26.800
+The simple examples.
+
+07:26.850 --> 07:30.330
+And at the end we'll put it together in an app to title together.

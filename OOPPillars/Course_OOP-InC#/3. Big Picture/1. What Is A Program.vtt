@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.120 --> 00:06.000
+Before we even start talking about object oriented programming let's step back a bit and define what
+
+00:06.000 --> 00:07.530
+a program is.
+
+00:07.530 --> 00:13.890
+The reason is because we will see the entire evolution of how programs were written and how object oriented
+
+00:13.890 --> 00:20.430
+programming came to the scene and most importantly why this will make you more well-rounded as a software
+
+00:20.430 --> 00:21.060
+developer.
+
+00:21.060 --> 00:22.330
+So what is a program.
+
+00:22.350 --> 00:28.140
+So as you can see in this diagram program is our intention and it is written in a programming language
+
+00:28.560 --> 00:35.210
+which gets translated to machine language to let the computer know what to do.
+
+00:35.220 --> 00:41.550
+So in this nifty diagram you can see it all starts with an idea either something want to build or a
+
+00:41.550 --> 00:43.170
+problem one to solve.
+
+00:43.170 --> 00:49.170
+We start from an idea hey we have to do this down we have to do that after we have to do some other
+
+00:49.170 --> 00:49.610
+stuff.
+
+00:49.680 --> 00:57.090
+Whatever it is then we have to convert our idea and our intention of getting that idea working into
+
+00:57.090 --> 00:59.460
+code using a programming language.
+
+00:59.460 --> 01:03.750
+So here is some simple pseudo code showing functions called Do this do that.
+
+01:03.750 --> 01:04.900
+Do some other stuff.
+
+01:04.920 --> 01:11.220
+So this code written in some programming language gets converted to machine language that a computer
+
+01:11.310 --> 01:18.390
+can understand and then our program runs a.k.a. our intention which basically makes our idea come to
+
+01:18.390 --> 01:19.050
+life.
+
+01:19.050 --> 01:25.290
+So starts from an intention we write that intention into code using a programming language gets converted
+
+01:25.290 --> 01:28.470
+to machine language which then a computer can understand.
+
+01:28.590 --> 01:32.960
+So this is the basic lifecycle of a program from beginning to end.

@@ -1,0 +1,703 @@
+WEBVTT
+
+00:00.420 --> 00:02.160
+Let's talk about static polymorphism.
+
+00:02.160 --> 00:03.570
+It is very simple actually.
+
+00:03.570 --> 00:08.180
+We already know that it is done only within classes obstruct or concrete or interfaces.
+
+00:08.410 --> 00:13.710
+And the other thing to know is that it happens during compile time which I will explain to you in just
+
+00:13.710 --> 00:14.430
+a minute.
+
+00:14.460 --> 00:19.410
+Let's imagine that we just got a new business requirement for a developer base class stating that we
+
+00:19.410 --> 00:21.310
+need other methods of coding.
+
+00:21.360 --> 00:26.610
+One method we'll take in an additional developer language besides the primary and the other method will
+
+00:26.610 --> 00:30.050
+take in two additional development languages besides the primary.
+
+00:30.060 --> 00:34.770
+And as you have already guessed for each method we would need to display a different message stating
+
+00:34.860 --> 00:40.470
+that we're using those additional development languages so we can do this without static polymorphism.
+
+00:40.470 --> 00:43.560
+We could just do this by using conditional statements.
+
+00:43.560 --> 00:49.230
+So let's go ahead and skip static polymorphism and just use good old fashioned if else statements.
+
+00:49.260 --> 00:52.950
+Let's do that first and then we will clean up our code afterwards.
+
+00:52.950 --> 01:02.910
+So we'll go to a developer and here I will just pass into parameters string first extra Dev language
+
+01:04.740 --> 01:12.350
+and string second extra Dev language.
+
+01:12.420 --> 01:13.980
+All right.
+
+01:13.980 --> 01:16.120
+And here are some conditions.
+
+01:16.140 --> 01:18.610
+First of all we're going to make these optional.
+
+01:18.630 --> 01:27.870
+So we're going to say if nobody passes in first extra Dev language then just set it to no meaning set
+
+01:27.870 --> 01:29.310
+it to nothing.
+
+01:29.310 --> 01:33.480
+Same thing do it for the second extra Dev language.
+
+01:33.480 --> 01:45.840
+Now we're going to say if forced sex or Dev language is basically null and second extra Dev language
+
+01:45.840 --> 01:46.490
+is normal.
+
+01:46.650 --> 01:53.850
+Meaning that nothing has been passed in that what we're going to do is we're going to just print the
+
+01:53.940 --> 02:00.210
+regular message which we had before which is just printing the primary message right next condition
+
+02:00.210 --> 02:06.180
+is going to state if we have both of them set to something.
+
+02:06.180 --> 02:12.630
+So if our first extra Dev language is something so it's not normal.
+
+02:12.780 --> 02:19.050
+And same thing goes for our second extra Dev language.
+
+02:19.060 --> 02:21.670
+So they're both set to something.
+
+02:21.850 --> 02:26.600
+We're going to say is the following We're going to say
+
+02:30.020 --> 02:31.610
+here we go.
+
+02:31.610 --> 02:38.650
+We're going to say I'm coding using my main dev language additionally.
+
+02:39.200 --> 02:40.430
+So additionally
+
+02:43.190 --> 02:45.200
+I am using
+
+02:47.750 --> 02:57.290
+the first extra and the second extra languages so additionally I'm using whatever it is that's going
+
+02:57.290 --> 02:57.950
+to be in there.
+
+02:57.950 --> 03:06.010
+And the second thing that's going to be in there is extra Dev language is great.
+
+03:06.140 --> 03:08.010
+Now it's pop them in there.
+
+03:08.180 --> 03:15.320
+So first extra dub language second extra Dev language by the way.
+
+03:15.320 --> 03:17.160
+This is not this.
+
+03:17.210 --> 03:17.930
+That was my mistake.
+
+03:17.930 --> 03:20.650
+So it's just a parameter coming down from here.
+
+03:20.660 --> 03:21.980
+It doesn't belong to the class.
+
+03:22.010 --> 03:29.430
+So I don't needed this for that the first extra day of language second extra Dev language.
+
+03:29.450 --> 03:31.270
+That's all we need now.
+
+03:31.640 --> 03:33.730
+A few more conditions.
+
+03:34.400 --> 03:37.170
+I'm going to go down and continue those on.
+
+03:37.490 --> 03:43.230
+So I will say first extra Dev language is not normal.
+
+03:43.250 --> 03:46.270
+Meaning that if both of them are not then this is what's going to happen.
+
+03:46.280 --> 03:50.510
+If none of them are no everything is passed and then this was going to happen.
+
+03:50.630 --> 03:55.730
+If only the first one is passed in then I'm going to say I'm call I'm I'm coding using my main dev language
+
+03:55.770 --> 03:58.190
+Additionally I'm using that
+
+04:02.170 --> 04:03.400
+whatever it is.
+
+04:03.400 --> 04:11.200
+As extra devil language so I'm just going to say first and then this is going to repeat the same exact
+
+04:11.200 --> 04:14.380
+things aren't going to repeat for the second one.
+
+04:14.850 --> 04:20.070
+And the second one is going to say second extra dub language.
+
+04:20.080 --> 04:23.190
+Using that as extra dub language.
+
+04:23.290 --> 04:24.430
+So that's it.
+
+04:24.430 --> 04:28.180
+And for this one the condition is going to be different.
+
+04:29.080 --> 04:33.430
+So we're going to see if the second extra Dev language is not no.
+
+04:33.760 --> 04:34.350
+OK.
+
+04:34.360 --> 04:36.520
+As you can see this is not very clean.
+
+04:36.910 --> 04:41.860
+Firstly using if else statements is not the most preferable way to go unless you have to.
+
+04:41.860 --> 04:44.510
+The reason is because the code becomes harder to manage.
+
+04:44.530 --> 04:49.060
+In our case it is a very simple requirement but if there were more parameters this could get pretty
+
+04:49.060 --> 04:51.790
+ugly which would be hard to read and maintain.
+
+04:51.790 --> 04:56.410
+Before anything let's instantiate our Web developer class and test out our code method.
+
+04:56.410 --> 05:03.730
+So I could have also instantiated the software developer but web developer is already here so let's
+
+05:03.730 --> 05:04.770
+just go with that.
+
+05:04.810 --> 05:05.740
+Remove this.
+
+05:05.740 --> 05:07.570
+Keep it simple and plain.
+
+05:08.660 --> 05:09.240
+OK.
+
+05:09.250 --> 05:15.640
+We don't need develop this example so to say code OK this works.
+
+05:15.640 --> 05:21.850
+What if I said code with an additional language of C Sharpless they they're working on whether API that
+
+05:21.850 --> 05:28.330
+works as well and if they are working on a web API on the back end and let's say front and each team
+
+05:28.340 --> 05:31.330
+out that works as well.
+
+05:31.330 --> 05:32.800
+But here is another thing.
+
+05:32.800 --> 05:35.550
+We can also do things such as this.
+
+05:35.630 --> 05:42.810
+We can just pass on something that's normal and then also have the second language be HMO.
+
+05:42.880 --> 05:49.990
+I mean what this is going to do is it's going to do the same thing as this because we are checking here
+
+05:50.560 --> 05:57.190
+to say if the first language is NULL which in this case if it's if both both are now theirs what's can
+
+05:57.190 --> 06:02.380
+happen of none our knowledge that this going to happen if first is not know then that's going to happen.
+
+06:02.410 --> 06:08.470
+But if this fails then it's going to fall back on this guy which is second extra language is not normal
+
+06:08.950 --> 06:15.820
+and then it's going to do the same message but just for the second extra Dev language so it can actually
+
+06:15.820 --> 06:18.580
+run and see that that works.
+
+06:18.580 --> 06:20.890
+And I will go ahead and do just that
+
+06:26.680 --> 06:33.820
+so go through this just says I'm quoting using my main dev language angular six second one.
+
+06:33.880 --> 06:40.180
+Additionally I am using C sharp as extra Dev languages it says which we can just change.
+
+06:40.180 --> 06:46.980
+It's just a verbal thing for the second line it says I'm using C sharp finish Tamil is extra Dev language
+
+06:46.980 --> 06:47.980
+is cool.
+
+06:48.250 --> 06:51.850
+And then last one is I'm using your stamina as extra Dev language.
+
+06:51.850 --> 06:57.520
+So it's a singular but still you know we have this weird thing where we can just pass on a null and
+
+06:57.520 --> 07:02.070
+it treats us as a as a source as a single extra Dev language past.
+
+07:02.080 --> 07:03.810
+So it's actually let's go.
+
+07:04.000 --> 07:10.810
+One thing we want to quickly fix say language is extra Dev language and language course.
+
+07:10.820 --> 07:12.940
+That's just kind of a quick fix there.
+
+07:13.120 --> 07:17.220
+And as we can see we have successfully satisfied our business requirements.
+
+07:17.230 --> 07:20.140
+However on the back end the code is not the best.
+
+07:20.470 --> 07:22.560
+So here the code is not the best.
+
+07:22.570 --> 07:28.300
+Just looking at this which is very simple solution to a very simple problem it already looks cryptic
+
+07:28.330 --> 07:31.790
+and you have to read through the entire thing to understand what it means.
+
+07:31.810 --> 07:33.970
+Also there is a lot more room for error.
+
+07:33.970 --> 07:39.490
+For example if you messed up the order of your conditions and bring the second one all the way to the
+
+07:39.490 --> 07:42.380
+end then the whole thing will start to malfunction.
+
+07:42.460 --> 07:43.060
+Let's try it.
+
+07:43.600 --> 07:51.020
+So for example if I take this and put it at the bottom right here.
+
+07:51.040 --> 07:54.270
+Now this will not function properly anymore.
+
+07:54.400 --> 08:00.610
+Let's see why if I don't pass anything as my first extra Dev language and I don't pass anything as my
+
+08:00.610 --> 08:02.620
+second extra Dev language fine.
+
+08:02.620 --> 08:03.100
+Sounds good.
+
+08:03.100 --> 08:05.470
+The first condition will work just fine.
+
+08:05.470 --> 08:12.190
+It'll print the default message then what's going to happen is if I pass both of them men so I have
+
+08:12.190 --> 08:15.630
+first extra Dev language and I have second extra Dev language.
+
+08:15.650 --> 08:16.570
+And guess what.
+
+08:16.690 --> 08:22.240
+It's only going to check the first condition is gonna say is there a first extra Dev language.
+
+08:22.240 --> 08:22.890
+Cool sounds good.
+
+08:22.900 --> 08:31.150
+Then just go ahead and print this it'll won't even hit the last condition which would actually check
+
+08:31.150 --> 08:37.360
+for the second extra Dev language and print this message which would be the proper response.
+
+08:37.990 --> 08:42.910
+But since you're mixing up the conditions it's very easy for this code to break.
+
+08:42.910 --> 08:48.340
+So if I was just some person and rewriting this thing and I wasn't very careful I could have easily
+
+08:48.340 --> 08:49.660
+broken the functionality.
+
+08:49.720 --> 08:52.640
+So you can see that this is very fragile right.
+
+08:52.750 --> 08:54.190
+So it can actually go out and try that.
+
+08:54.190 --> 09:01.770
+We'll see that this is malfunctioning now run that thing give it a second and see if we go here first
+
+09:01.780 --> 09:02.880
+all works.
+
+09:02.920 --> 09:08.540
+Second one says I'm using C sharp great but then see the third one.
+
+09:08.650 --> 09:13.420
+It says I'm using C sharp as extra Dev language but it's not really taken into consideration the fact
+
+09:13.420 --> 09:19.720
+that we passing each team out and the last one works properly because it says you know the first one
+
+09:19.720 --> 09:24.370
+is not there so I'm going to go through a second but the case where we're able to pass in two languages
+
+09:24.410 --> 09:25.630
+does just broke.
+
+09:25.720 --> 09:28.710
+And that's because it's easy to break this code.
+
+09:28.810 --> 09:31.980
+It's not very readable and maintainable.
+
+09:32.110 --> 09:37.630
+So if somebody wants to refactor it or rewrite it there's a higher probability that they would break
+
+09:37.630 --> 09:37.920
+it.
+
+09:37.930 --> 09:42.860
+Now the entire complexity of bad readability can be avoided if we use static polymorphism.
+
+09:42.880 --> 09:43.910
+Let's check it out.
+
+09:43.930 --> 09:46.950
+I'm going to go ahead and I'm going to say this.
+
+09:46.960 --> 09:53.100
+I'm going to basically pass in the code here and say virtual.
+
+09:53.110 --> 09:54.610
+That's cool.
+
+09:54.790 --> 10:04.460
+It's only it's not going to have any additional or optional rather parameters for the one where it's
+
+10:04.460 --> 10:07.890
+both of them passed and this is the message.
+
+10:07.940 --> 10:09.910
+Cut them paste it right here.
+
+10:10.460 --> 10:19.550
+So that's that if this doesn't have any parameters we just want to keep it to the original.
+
+10:20.030 --> 10:27.530
+So by the way C I have the same signature so it says you cannot have the same method but if I take it
+
+10:27.530 --> 10:29.800
+out C.
+
+10:30.130 --> 10:34.400
+Okay so that's how I'm able to make it work if I have different parameters.
+
+10:34.400 --> 10:38.450
+We'll talk about that just in a few seconds but I'm just gonna write the code first.
+
+10:39.440 --> 10:45.530
+So this is the case where we're using the primary language and then what's going to happen is right
+
+10:45.530 --> 10:46.670
+in the middle I'm gonna put
+
+10:50.000 --> 10:56.010
+one where we only have one extra language and in this case I'm going to change the name of the parameter.
+
+10:56.240 --> 11:02.780
+Extra language and I'm going to grab this guy and wouldn't have to repeat the code as well popping in
+
+11:02.780 --> 11:04.460
+here.
+
+11:04.460 --> 11:06.530
+Extra language boom.
+
+11:06.860 --> 11:08.240
+And that's it.
+
+11:08.240 --> 11:12.680
+Take the whole thing out.
+
+11:13.730 --> 11:15.620
+And here we go.
+
+11:15.620 --> 11:19.360
+As you can see now I have the same name method which is code.
+
+11:19.370 --> 11:25.640
+However I'm passing in a different variables inside so different parameters or different amount of parameters.
+
+11:25.670 --> 11:30.160
+This is what I meant when I said that static polymorphism happens during compile time.
+
+11:30.260 --> 11:34.670
+We're basically determining it's different behavior as we're writing our code.
+
+11:34.670 --> 11:37.670
+Not while the code is running.
+
+11:37.670 --> 11:40.890
+Isn't this much cleaner and much more readable.
+
+11:40.910 --> 11:41.850
+Of course it is.
+
+11:41.900 --> 11:44.050
+There's not much room for user error.
+
+11:44.060 --> 11:48.800
+And if anybody else rewrites any of these methods and none of the conditions would be accidentally messed
+
+11:48.800 --> 11:54.180
+up because the code is a lot simpler and we're also not repeating ourselves.
+
+11:54.230 --> 11:59.420
+Also this is what I meant when I said that a component can have the same form but different behavior
+
+11:59.810 --> 12:03.970
+so static polymorphism as we have mentioned that component is the method.
+
+12:04.010 --> 12:05.660
+So it is on a method level.
+
+12:05.660 --> 12:10.760
+In our case the method is code and the signature of the method is exactly the same except the parameter
+
+12:10.790 --> 12:17.120
+it is taking and that is what determines is different behavior which then will allow us to use static
+
+12:17.120 --> 12:21.210
+polymorphism as an O feature or object or in a feature.
+
+12:21.230 --> 12:23.060
+So once again the name is the same.
+
+12:23.060 --> 12:26.100
+It's code type is void.
+
+12:26.150 --> 12:27.640
+Virtual Public.
+
+12:27.650 --> 12:32.450
+Everything is the same except the parameters that is taking this one is taking one.
+
+12:32.450 --> 12:38.340
+This one is taking into this one is a string and this one has two strings so one more thing.
+
+12:38.360 --> 12:41.980
+The way you can differentiate methods from one another is as follows.
+
+12:42.020 --> 12:46.060
+You can have different amounts of parameters which is what we have currently.
+
+12:46.070 --> 12:48.500
+We have different amounts so this has nothing.
+
+12:48.500 --> 12:50.900
+This has one and this has two.
+
+12:51.020 --> 12:55.670
+You can have the same amount or different amount but different types of parameters and you can have
+
+12:55.670 --> 13:00.530
+the same amount or different amount but parameters put in a different order.
+
+13:00.650 --> 13:02.510
+So I'm just gonna quickly demonstrate that.
+
+13:02.660 --> 13:10.440
+For example let's say this had another parameter and it's extra Dev language too.
+
+13:10.580 --> 13:15.530
+For simplicity's sake I'm not going to keep it here so that's the reason c I can't have it here.
+
+13:15.530 --> 13:16.250
+Why.
+
+13:16.250 --> 13:18.950
+Because the signature is exactly the same.
+
+13:18.950 --> 13:25.290
+This now has parameters that are two strings and two strings so it doesn't know how to differentiate.
+
+13:25.340 --> 13:28.190
+If I take it out then it knows.
+
+13:28.340 --> 13:33.770
+So that's how we're just relying on the different amount but the types were the same.
+
+13:33.770 --> 13:37.730
+If I change this into end that's a different type.
+
+13:37.730 --> 13:45.590
+Now I can still differentiate it and that's cool but if let's say this guy was also end that would not
+
+13:45.590 --> 13:46.420
+work.
+
+13:46.620 --> 13:49.320
+However C right on the line.
+
+13:49.400 --> 13:55.640
+However if I was to change the order of it then it would work again.
+
+13:55.640 --> 13:57.970
+So it's a three ways in which we can differentiate it.
+
+13:58.100 --> 14:02.940
+The amount to types and the order in which they're placed OK.
+
+14:02.960 --> 14:07.940
+One thing is it's actually not recommended to differentiate your methods based on the order of parameters
+
+14:07.970 --> 14:13.220
+because it makes your code very confusing so just try to rely on the amount of parameters and the types
+
+14:13.220 --> 14:14.040
+of parameters.
+
+14:14.090 --> 14:17.200
+So I'll actually bring this back to its original state.
+
+14:17.220 --> 14:17.860
+Here we go.
+
+14:17.870 --> 14:21.980
+Now let's actually look at the program.
+
+14:22.010 --> 14:22.640
+Here we go.
+
+14:22.640 --> 14:25.920
+As you can see nothing has changed and everything is working just fine.
+
+14:26.000 --> 14:31.910
+So the way we have instantiate our method is exactly the same and the way we call code method is also
+
+14:31.910 --> 14:32.870
+exactly the same.
+
+14:32.870 --> 14:37.460
+However on the back end we're using static polymorphism in order to clean up our code.
+
+14:37.460 --> 14:45.470
+Also this last one is not a weird behavior anymore because with this all we're saying is that the first
+
+14:45.470 --> 14:48.500
+language is null and the second language is h Tamil.
+
+14:48.530 --> 14:56.210
+But this method will still hit this guy which is first extra language and second extra Dev language.
+
+14:56.210 --> 15:02.920
+It's much more intuitive whereas in the other case you are passing it to is but it's treating it as
+
+15:02.980 --> 15:05.490
+if you were passing and only one proud.
+
+15:05.500 --> 15:06.390
+So it's just confusing.
+
+15:06.400 --> 15:11.980
+But in this case if you're passing it is no it just says that a I just don't have that programming language
+
+15:12.010 --> 15:13.150
+so I'm not going to show anything.
+
+15:13.150 --> 15:16.020
+So if we actually run this you'll see what I mean by that.
+
+15:16.090 --> 15:18.670
+We go here first one works.
+
+15:18.670 --> 15:22.060
+Second one works.
+
+15:22.060 --> 15:25.350
+Third one also works C sharp an HMO.
+
+15:25.360 --> 15:26.620
+And the last one.
+
+15:26.890 --> 15:29.940
+See it just says I'm using there's empty space.
+
+15:29.950 --> 15:34.120
+It's null because it doesn't know what to write I mean it's just an empty space and a Tamil is extra
+
+15:34.150 --> 15:40.870
+Dev languages but it's much more intuitive because when you're code when you're calling the code method
+
+15:40.900 --> 15:47.800
+and you're passing in two things whether it has Nolen it or has two parameters you are expecting that
+
+15:47.890 --> 15:54.700
+this is the message that's going to come back instead of it making some strange assumptions in the back
+
+15:54.700 --> 16:01.780
+end and treating it treating this case the same as this just because we're using conditional statements
+
+16:02.140 --> 16:07.750
+and getting around the problem in a hacky way or in other words as I've already said many many times
+
+16:07.990 --> 16:10.440
+we're trying to fit the square peg in a round hole.
+
+16:10.450 --> 16:11.420
+So this is it.
+
+16:11.470 --> 16:17.480
+I will go back to the developer see much much cleaner and that's it in our next video.
+
+16:17.480 --> 16:19.450
+We'll talk about dynamic polymorphism.

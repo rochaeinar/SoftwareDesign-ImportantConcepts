@@ -1,0 +1,106 @@
+WEBVTT
+
+00:00.120 --> 00:03.100
+So it is time for us to start talking about encapsulation.
+
+00:03.120 --> 00:04.610
+Let's first define it.
+
+00:04.950 --> 00:10.680
+The simplest way to think of encapsulation is to think of it as a protective shield that prevents the
+
+00:10.680 --> 00:14.540
+data from being accessed by the code outside the shield.
+
+00:14.550 --> 00:15.810
+That's all.
+
+00:15.810 --> 00:18.850
+Here I have a very simple example to demonstrate what I mean.
+
+00:18.930 --> 00:25.230
+Let's say that our object which is right here is the circle and within the object we have a method called
+
+00:25.230 --> 00:26.910
+go to work this guy.
+
+00:27.000 --> 00:31.040
+And then we have separate steps which define how we get to work.
+
+00:31.050 --> 00:34.410
+So these guys right here these are each a separate method.
+
+00:34.410 --> 00:35.140
+You can think of.
+
+00:35.160 --> 00:37.450
+Now we see how I have public and private right.
+
+00:37.470 --> 00:39.450
+Private and public right here.
+
+00:39.450 --> 00:46.350
+Basically I'm saying here to go to work method is public and the rest of the methods which are the numbers
+
+00:46.380 --> 00:47.420
+are private.
+
+00:47.460 --> 00:51.750
+I'm also saying that the go to work method calls all of the numbered methods.
+
+00:51.780 --> 00:57.890
+So this guy calls all of these so that it knows how to get to work.
+
+00:57.900 --> 01:01.980
+So in other words objects outside of the circle.
+
+01:01.980 --> 01:08.970
+Anything outside of the circle can call our go to work method but they cannot call any of the private
+
+01:08.970 --> 01:10.170
+methods right here.
+
+01:10.230 --> 01:14.840
+The only method which can call the number and methods is the go to work method which is right here.
+
+01:14.850 --> 01:19.230
+So see some random objects says Where are you.
+
+01:19.230 --> 01:23.370
+It is 9 a.m. and we respond back by saying no problem.
+
+01:23.370 --> 01:30.090
+Just call my go to work method which is right here and I will get to work because anything outside of
+
+01:30.090 --> 01:36.840
+it can interact with our public method but they cannot interact with the private methods that some other
+
+01:36.840 --> 01:38.200
+objects as.
+
+01:38.430 --> 01:42.660
+How do you get to work and what we say is don't worry about it.
+
+01:42.750 --> 01:45.030
+And that's just us making these private.
+
+01:45.030 --> 01:48.430
+We don't want to expose our dysfunctionality.
+
+01:48.510 --> 01:51.000
+This is the essence of encapsulation.
+
+01:51.000 --> 01:59.230
+We decide what we want to expose out into the world and let the world be able to interact with and some
+
+01:59.230 --> 02:04.840
+of the things we keep it to ourselves such as these methods because we don't want the world to know
+
+02:04.840 --> 02:08.970
+about them for whatever reason that is going to be specific for each scenario.
+
+02:09.010 --> 02:09.580
+That's it.
+
+02:09.610 --> 02:13.420
+We'll be talking more about the technical details in our next videos.

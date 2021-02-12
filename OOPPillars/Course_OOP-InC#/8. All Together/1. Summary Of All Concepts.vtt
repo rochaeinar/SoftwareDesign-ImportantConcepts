@@ -1,0 +1,544 @@
+WEBVTT
+
+00:00.090 --> 00:03.300
+In this video we'll be talking about a summary of all the concepts.
+
+00:03.300 --> 00:06.910
+Just go over everything all one so that you are even more familiar with them.
+
+00:06.960 --> 00:11.850
+And in the next video we'll be building a small application which we'll be putting all of these concepts
+
+00:11.850 --> 00:14.680
+together to even further solidify the lessons learned.
+
+00:14.700 --> 00:16.110
+First let's talk about a class.
+
+00:16.200 --> 00:18.920
+A class is the building block an object or in a programming.
+
+00:18.960 --> 00:23.280
+And we can create one with the reserved keyword class like we have one right here.
+
+00:23.280 --> 00:24.850
+So we have the reserve keyword class.
+
+00:24.870 --> 00:29.520
+And then we have the name of the class which can be anything we choose it to be a class is basically
+
+00:29.520 --> 00:32.400
+a blueprint which we use in order to create objects.
+
+00:32.430 --> 00:35.580
+And from one blueprint we can create as many objects as we want.
+
+00:35.580 --> 00:41.130
+So we have one class and then we can as many objects from that as we want to take a look at here.
+
+00:41.250 --> 00:43.900
+I'm just gonna copy and paste this real quick.
+
+00:43.950 --> 00:48.660
+I won't be changing any of the names just want to quickly up the name or change the names so that they
+
+00:48.660 --> 00:49.380
+can work.
+
+00:49.380 --> 00:55.040
+And so here we have the same class but we have a different object right.
+
+00:55.050 --> 01:04.470
+So we instantiate our class in both ways the same class but out of that class instantiation a different
+
+01:04.530 --> 01:06.030
+object comes out.
+
+01:06.030 --> 01:11.130
+So we have the variable on the left side with the type of the class that we are instantiating.
+
+01:11.220 --> 01:16.350
+And then on the right side we have the instantiation of the class which then gives us an object and
+
+01:16.350 --> 01:17.580
+puts it into this variable.
+
+01:17.580 --> 01:23.120
+So this is a different object and a different object but they both came from the same class.
+
+01:23.130 --> 01:23.480
+OK.
+
+01:23.730 --> 01:29.250
+So the way we make new objects is that through a process of instantiating a class and as you saw here
+
+01:29.250 --> 01:32.070
+we instantiate a class by using the reserved keyword new.
+
+01:32.070 --> 01:39.360
+So you use the new reserve keyword and that's how you instantiate a class which then takes that and
+
+01:39.360 --> 01:43.440
+puts a new object into the variable on the left side.
+
+01:43.440 --> 01:45.510
+So that's how that process happens.
+
+01:45.520 --> 01:50.850
+Now let's talk about abstract classes abstract classes or classes which cannot be instantiated the way
+
+01:50.850 --> 01:55.200
+we are instantiating this concrete retail salesperson class or concrete car salesman class.
+
+01:55.200 --> 01:58.390
+However here we have our salesmen abstract class.
+
+01:58.500 --> 02:02.640
+And so as I was saying an abstract class is basically a base class.
+
+02:02.640 --> 02:07.080
+So in other words they are allowing us to unify functionality in one class.
+
+02:07.170 --> 02:11.910
+We then inherit from the abstract class to gain the base functionality in abstract classes we can have
+
+02:11.910 --> 02:18.270
+abstract members such as abstract properties or methods which need to be overridden in classes inheriting
+
+02:18.270 --> 02:21.080
+from them by using the override reserved keyword.
+
+02:21.120 --> 02:27.750
+They can also have virtual members which means they already have a definition but they can also be overridden
+
+02:27.780 --> 02:29.460
+using the override reserved keyword.
+
+02:30.000 --> 02:35.700
+So as mentioned here I have some abstract members and those abstract members get overridden in the retail
+
+02:35.700 --> 02:37.030
+salesperson for example.
+
+02:37.260 --> 02:42.830
+So we'll write them using the override reserved keyword and we have their own specific definitions.
+
+02:42.840 --> 02:48.000
+Now I don't have any virtual members but from the previous examples you remember how a virtual member
+
+02:48.120 --> 02:55.740
+on the abstract class was able to have its own definition but then we had a choice to whether override
+
+02:55.740 --> 02:59.760
+that or leave it the way it was as it was on the base class.
+
+02:59.760 --> 03:04.200
+So it's our choice but it gives us an opportunity to be able to override that.
+
+03:04.290 --> 03:09.900
+So the class inheriting from another class is called a Charter class or a subclass and a class being
+
+03:09.900 --> 03:10.860
+inherited from.
+
+03:10.860 --> 03:12.890
+It's called a parent class or base class.
+
+03:12.900 --> 03:19.760
+So this case this is our parent or base class and our retail salesperson and car salesmen are child
+
+03:19.760 --> 03:21.700
+classes or subclasses.
+
+03:21.750 --> 03:27.550
+So when we are in the child class we can refer to the base class by using the reserved keyword base
+
+03:27.550 --> 03:29.250
+which as we have it here.
+
+03:29.310 --> 03:34.970
+And we're referring to the base classes constructor using the base rows of keyword.
+
+03:35.100 --> 03:39.390
+Also in the chat class we can refer to itself by using the reserved keyword this.
+
+03:39.420 --> 03:45.840
+So for example if I had another parameter coming in such as an h as we've seen that before private and
+
+03:45.840 --> 03:57.440
+age and I'm going to just say this and the constructor say age you can see we have access to it.
+
+03:58.050 --> 04:03.830
+And what this says is that this meaning car salesman's age is equal to the age.
+
+04:03.830 --> 04:05.570
+This coming down from the parameters.
+
+04:05.610 --> 04:06.010
+OK.
+
+04:06.030 --> 04:11.100
+So that's what this reserve keyword allows us to do it just allows us to refer it to the class that
+
+04:11.100 --> 04:12.510
+we are currently in.
+
+04:13.130 --> 04:15.120
+So I'll take that out and we can move on.
+
+04:15.360 --> 04:19.530
+So interfaces on the other hand in C sharp contain no declarations whatsoever.
+
+04:19.530 --> 04:21.630
+We already have one called cell developing.
+
+04:21.630 --> 04:26.070
+So these have no declarations at all and they can only have methods and properties in this case only
+
+04:26.070 --> 04:31.220
+have a method which are completely abstract and need to be implemented in the child classes.
+
+04:31.230 --> 04:38.490
+So our web developer actually has a self developing interface that it's implementing and so it needs
+
+04:38.490 --> 04:44.550
+to have a developed method with the same signature that we see on self developing interface.
+
+04:44.540 --> 04:50.190
+So it's a void develop and if we come here void develop public by default and it has its own definition.
+
+04:50.190 --> 04:56.820
+So we need to define that we need to basically implement that class or property that we get from an
+
+04:56.820 --> 05:01.940
+interface in our child class that is how interfaces work.
+
+05:01.960 --> 05:03.730
+They don't have any definition of their own.
+
+05:03.730 --> 05:08.590
+We have to give it a definition when we inherit from them or when we implement them.
+
+05:08.710 --> 05:13.750
+So one quick conventional so we inherit from classes but we implement an interface the way it's done
+
+05:13.750 --> 05:17.890
+is exactly the same we use a colon but we just use different words.
+
+05:17.890 --> 05:19.090
+And that's just a convention.
+
+05:19.090 --> 05:20.520
+Quick convention to know.
+
+05:20.600 --> 05:26.560
+So now the difference between abstract classes and interfaces abstract classes are for unifying relevant
+
+05:26.560 --> 05:31.070
+group of classes and interfaces are there to unify unrelated group of classes.
+
+05:31.080 --> 05:37.030
+They can inherit from one class but you can implement many interfaces and CCAR does not allow you to
+
+05:37.030 --> 05:40.920
+inherit from multiple classes and interfaces were introduced to get around that problem.
+
+05:40.940 --> 05:45.850
+And as you can see we have a developer a base class classes an abstract class and we have a self developing
+
+05:45.850 --> 05:46.830
+interface.
+
+05:46.830 --> 05:47.800
+Now check it up.
+
+05:47.800 --> 05:52.250
+Imagine if I said that my web developer can also have salesmanship abilities right.
+
+05:52.330 --> 05:56.330
+If I take that out and I say salesman this would not work why.
+
+05:56.410 --> 06:02.620
+Because it says cannot have multiple base classes C sharp is forbidding us to have multiple inheritance
+
+06:02.650 --> 06:04.010
+when it comes to classes.
+
+06:04.270 --> 06:09.900
+But if we put back the interface you can have one base class and it can have many interfaces.
+
+06:09.910 --> 06:11.650
+We just happen to have only one.
+
+06:11.650 --> 06:17.140
+But if we wanted it to have more we would just have a comma and then put the next interface in line.
+
+06:17.140 --> 06:23.230
+So that's one of the key things to remember in C sharp object our programming is that we do not have
+
+06:23.230 --> 06:24.640
+multiple inheritance.
+
+06:24.670 --> 06:29.170
+Let's not talk about the four pillars of object or a programming which are inheritance polymorphism
+
+06:29.170 --> 06:31.750
+which has two types encapsulation and abstraction.
+
+06:31.750 --> 06:34.540
+Inheritance is done through using a colon symbol.
+
+06:34.540 --> 06:36.070
+So just the way we have a right here.
+
+06:36.100 --> 06:39.670
+So we use the colon symbol in order to perform inheritance.
+
+06:39.670 --> 06:45.340
+You can have the class on the left of the colon right here which is trying to inherit from the class
+
+06:45.370 --> 06:47.460
+that is located on the right of the colon.
+
+06:47.470 --> 06:52.180
+So you know does the base class and is also implementing this interface or anything that's on the right
+
+06:52.180 --> 06:57.310
+it's inheriting or implementing what's on the left which is usually going to be not usually but always
+
+06:57.310 --> 07:04.570
+going to be one class that is going to either inherited from one class or inherit from one class and
+
+07:04.570 --> 07:09.510
+many interfaces are just one interface or many interfaces so those are the possibilities that we have.
+
+07:09.520 --> 07:14.260
+So Inheritance allows you to gain access to the attributes and behaviour of an existing class.
+
+07:14.260 --> 07:20.590
+So in our class car salesman we needed the base functionality from the salesman based class.
+
+07:20.590 --> 07:24.370
+We used inheritance to gain access to those attributes and behaviour.
+
+07:24.370 --> 07:34.000
+So car salesmen and retail salesperson needed some base functionality and we inherited that by using
+
+07:34.000 --> 07:42.850
+a call in from the salesmen base class abstract class such as the property towards calculating that
+
+07:42.850 --> 07:47.340
+the constructor the way it's ordering the sell concrete method.
+
+07:47.350 --> 07:50.230
+We got the concrete method sell from that.
+
+07:50.230 --> 07:54.720
+So there's a few things that we inherited down from an existing class.
+
+07:54.790 --> 07:56.830
+That's what Inheritance allows us to do.
+
+07:56.890 --> 08:02.330
+Paul morph ism is a technique in which the same component can have different behaviours.
+
+08:02.350 --> 08:07.540
+We have dynamic polymorphism and static polymorphism and dynamic polymorphism where the same method
+
+08:07.540 --> 08:12.820
+signature on two child classes which inherit from the same base class.
+
+08:13.090 --> 08:20.980
+So in this case we have the Engage which is only on the base class right.
+
+08:21.130 --> 08:29.870
+And it has the same signature but in car salesmen and retail salesperson you can see.
+
+08:29.870 --> 08:37.510
+So if we go back once again is the engage right is the same thing but it has different behaviour on
+
+08:37.510 --> 08:40.450
+car salesmen right here.
+
+08:40.450 --> 08:45.820
+And you know in this case it says hello but I could just set as simply I could have just said hi on
+
+08:45.820 --> 08:49.390
+this one and retail salesperson says hello.
+
+08:49.390 --> 08:50.760
+So it's a different behaviour.
+
+08:50.790 --> 08:56.150
+We just happened to have them the same but it doesn't have to be the same.
+
+08:56.200 --> 09:04.060
+We can completely differentiate the behaviour though it is basically the same method but it's been defined
+
+09:04.060 --> 09:06.700
+differently in two child classes.
+
+09:06.700 --> 09:08.730
+So that's our dynamic polymorphism.
+
+09:08.740 --> 09:14.830
+So once again in dynamic polymorphism we have the same method signature on two child classes which inherit
+
+09:14.830 --> 09:16.360
+from the same base class.
+
+09:16.360 --> 09:21.610
+But those methods have different behaviours and we define them separately just the way you saw it a
+
+09:21.610 --> 09:22.710
+few seconds ago.
+
+09:22.720 --> 09:28.930
+So the method is the component in this scenario which can act differently depending on how many chart
+
+09:28.930 --> 09:32.200
+classes inherit that same method and define it on their own.
+
+09:32.320 --> 09:35.020
+Dynamic polymorphism also happens on a class level.
+
+09:35.020 --> 09:40.330
+So we need abstract classes and interfaces in order to perform that as you've already seen.
+
+09:40.360 --> 09:50.800
+So it happens on a class level meaning that this class says I will be you know in this case engage or
+
+09:50.800 --> 09:57.190
+any one of the methods as abstract that says that hey I am here on this class but I will behave differently
+
+09:57.220 --> 09:59.170
+on child classes.
+
+09:59.170 --> 10:04.270
+So that's why we need an abstract class or we need an interface just the way you've seen before.
+
+10:04.270 --> 10:09.460
+Develop also has different behavior has the same signature on the parent.
+
+10:09.700 --> 10:16.630
+But on the child it has a different definition so it acts differently on other classes.
+
+10:16.630 --> 10:21.820
+Static polymorphism on the other hand allows us to let the same method in the same class have different
+
+10:21.820 --> 10:22.420
+behavior.
+
+10:22.900 --> 10:27.740
+So you have a method code let's say in our developer right here.
+
+10:27.760 --> 10:28.260
+Right.
+
+10:28.300 --> 10:33.280
+We have code method but it behaves differently.
+
+10:33.280 --> 10:38.560
+And what makes it behave differently is the fact that it takes in different parameters so that static
+
+10:38.560 --> 10:44.260
+polymorphism either different amount of parameters different type of parameters or parameters which
+
+10:44.260 --> 10:46.430
+are ordered differently from one another.
+
+10:46.450 --> 10:48.840
+In this case we have different amounts.
+
+10:48.850 --> 10:49.690
+This one has none.
+
+10:49.690 --> 10:50.530
+This one has one.
+
+10:50.530 --> 10:57.280
+This one is two but we could have also had same amount different types so could have just been you know
+
+10:57.910 --> 11:01.180
+same amount but different types of this one isn't.
+
+11:01.240 --> 11:07.090
+This would have worked as well or they're ordered differently meaning that you know you can have two
+
+11:07.420 --> 11:08.450
+parameters right.
+
+11:09.510 --> 11:14.740
+And same types one is int 1 a string.
+
+11:14.760 --> 11:18.930
+Let's say bring it back but they're ordered definitely.
+
+11:18.960 --> 11:22.280
+Though this is not recommended because it just makes your code a lot more confusing.
+
+11:22.290 --> 11:28.920
+So you just want to keep it either differentiated between the amount of parameters or types of parameters.
+
+11:28.920 --> 11:34.560
+It's much more intuitive that way now encapsulation is the process of hiding our implementation.
+
+11:34.560 --> 11:41.590
+I'll go back to the salesman and reuse axis specifies in order to do so.
+
+11:41.670 --> 11:47.100
+We have public private protected public as you've already found out allows us to share the attributes
+
+11:47.100 --> 11:51.590
+or behavior of the class with any other class within or outside of the class.
+
+11:51.600 --> 11:58.050
+Private keeps the class members only at only accessible from within the class so are fields right here
+
+11:58.680 --> 12:06.720
+protected on the other hand says that the members that are denoted as protected can be access only from
+
+12:06.720 --> 12:10.740
+the classes that inherit from the class that they're in.
+
+12:10.740 --> 12:17.850
+So in this case salesmen will give access only to retail salesperson and car salesman which is what
+
+12:17.850 --> 12:18.690
+we have right here.
+
+12:18.690 --> 12:21.900
+Anything else won't have access to these methods because they're protected.
+
+12:21.900 --> 12:28.950
+Lastly abstraction happens as a result of encapsulation encapsulation in and of itself is a blind process.
+
+12:28.950 --> 12:30.270
+So we go back to salesmen.
+
+12:30.330 --> 12:33.820
+It's just a blind process of hiding certain things and showing others.
+
+12:33.960 --> 12:34.860
+And that's all it is.
+
+12:34.920 --> 12:40.410
+However the reason as to why you're hiding or showing things is abstraction you hide things because
+
+12:40.410 --> 12:45.720
+you want to only show things to the end user that are relevant to them and you want to abstract away
+
+12:45.720 --> 12:52.320
+the implementation details such as these guys that the user doesn't much care about in general and it
+
+12:52.320 --> 12:58.530
+makes the usability of your class much more intuitive and less error prone when it's used by others.
+
+12:58.530 --> 12:59.530
+So that is all.
+
+12:59.550 --> 13:04.050
+I hope this was a good refresher for you in the next video we'll be building a small application which
+
+13:04.050 --> 13:09.600
+is going to put all these concepts together in a code so that you can see how they all fit together.

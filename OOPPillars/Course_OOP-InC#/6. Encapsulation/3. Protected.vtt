@@ -1,0 +1,523 @@
+WEBVTT
+
+00:00.240 --> 00:06.450
+So now our next requirement is to be able to have five stages of selling which are overwrite label on
+
+00:06.450 --> 00:11.680
+the chart classes but not accessible by any other class other than the children.
+
+00:11.730 --> 00:15.060
+And each child is required to have those five stages.
+
+00:15.060 --> 00:17.060
+So now let's go ahead and do that.
+
+00:17.070 --> 00:23.610
+So the way we make children have those steps as a requirement is by putting them on the base class and
+
+00:23.610 --> 00:29.780
+you already know that the next thing is to make them abstract so that they can be overwrite label.
+
+00:29.830 --> 00:35.910
+Now we could have also made them virtual but that was not part of the requirement as in the requirement.
+
+00:35.910 --> 00:40.020
+There was nowhere where it said that we have to have pre written sales pitches.
+
+00:40.050 --> 00:43.350
+It just said that they have to be overriding all by the children.
+
+00:43.350 --> 00:46.770
+And that's all so we're gonna keep it simple and make them abstract.
+
+00:46.770 --> 00:51.930
+Last thing is we need to make them hidden from the world and only accessible by the children.
+
+00:51.930 --> 00:54.780
+This is when we use the protected access specified.
+
+00:54.870 --> 01:01.920
+So if we use the protected access specified then any of the five methods will not be able to be access
+
+01:01.920 --> 01:07.150
+from outside of the class but they can only be accessible by the child classes.
+
+01:07.170 --> 01:12.850
+So let's go ahead and make five protected abstract methods on the salesman based class.
+
+01:13.080 --> 01:25.990
+So I will say protected abstract void because it's not returning anything and I will say engage.
+
+01:26.190 --> 01:27.470
+So that's the first step
+
+01:31.780 --> 01:32.820
+Copy that.
+
+01:34.330 --> 01:36.730
+And then the next one is establish trust
+
+01:40.540 --> 01:48.510
+establish trust then address concerns.
+
+01:48.510 --> 01:56.350
+All right.
+
+01:58.670 --> 01:59.990
+That's great.
+
+02:00.190 --> 02:04.820
+Address concerns and then demonstrate value.
+
+02:05.520 --> 02:12.210
+So I would say demo value and then close.
+
+02:12.250 --> 02:12.700
+All right.
+
+02:13.660 --> 02:17.990
+So these are the ones now that we have them.
+
+02:17.990 --> 02:23.040
+Let's go to retail salesperson and override these sales methods.
+
+02:23.180 --> 02:34.820
+So I'll go to retail salesperson and over here I'll say rover it implement abstract class and we have
+
+02:34.820 --> 02:40.610
+it right here pushed us down a little bit go
+
+02:44.740 --> 02:45.550
+for engage.
+
+02:45.550 --> 02:47.610
+I will simply say hello.
+
+02:47.650 --> 02:58.340
+So I will just basically copy this guy and start to say hello for engage.
+
+02:58.630 --> 02:59.080
+All right
+
+03:02.090 --> 03:10.720
+for established trust I will say just want to help you quickly.
+
+03:10.790 --> 03:16.650
+Just wanted to quickly help you
+
+03:22.270 --> 03:25.810
+so I just wanted to quickly help you
+
+03:29.060 --> 03:30.810
+for addressing concerns.
+
+03:30.830 --> 03:39.530
+I will say everything is 80 percent discounted so I will say it's kind of like a general way of addressing
+
+03:39.530 --> 03:41.130
+concerns.
+
+03:41.510 --> 03:45.690
+So even though it's not like they have sure that they have a concern.
+
+03:45.700 --> 03:56.380
+But you know we're just keeping it simple we're saying everything is 80 percent is counted OK.
+
+03:57.100 --> 04:05.300
+And then for demonstrating value we will say our customers love it.
+
+04:08.380 --> 04:11.320
+Our customers love it.
+
+04:14.740 --> 04:16.750
+And then for close we will say
+
+04:21.250 --> 04:22.480
+by this point.
+
+04:23.020 --> 04:26.670
+OK so there we go.
+
+04:26.950 --> 04:32.350
+Now obviously for other child classes we would have to inherit and define these methods as well.
+
+04:32.680 --> 04:37.090
+But in order to keep this video short I will remove the rest of the child classes and only leave car
+
+04:37.090 --> 04:39.250
+salesman and implement only for that.
+
+04:39.580 --> 04:42.200
+So I'll get rid of insurance broker.
+
+04:42.280 --> 04:45.260
+Well it is in that online marketer.
+
+04:45.280 --> 04:46.460
+Get rid of that.
+
+04:47.250 --> 04:55.520
+And then for a car salesman I'm basically we'll grab these some not bring a bag here.
+
+04:55.940 --> 04:57.760
+So I'm not starting from scratch.
+
+04:57.780 --> 05:03.180
+And then basically I will leave everything the same except the fact that I will say it's only 10 percent
+
+05:03.180 --> 05:06.080
+discounted and now we'll say Buy this car.
+
+05:06.420 --> 05:08.360
+And then the car pays theirs.
+
+05:08.370 --> 05:10.500
+Get rid of that car.
+
+05:11.130 --> 05:15.680
+So now we have what we need now for each class.
+
+05:15.680 --> 05:18.370
+I'll put the methods in order into the cell.
+
+05:18.390 --> 05:22.770
+Abstract class so as you can see we have the cells still here.
+
+05:22.770 --> 05:31.700
+And what I will do is I will say this that engage now say this that establish trust.
+
+05:31.730 --> 05:33.320
+Now say this dot.
+
+05:33.870 --> 05:40.490
+So establish tracks address concern and then demo value.
+
+05:40.500 --> 05:41.970
+And then this close.
+
+05:42.300 --> 05:43.420
+OK.
+
+05:43.800 --> 05:51.970
+So then I'll do the same exact thing for our retail OK.
+
+05:52.040 --> 05:55.910
+Do the same thing for a retail salesperson.
+
+05:55.910 --> 05:57.170
+Here we go.
+
+05:57.170 --> 05:59.800
+Now let's go to program and let's call cell.
+
+05:59.810 --> 06:08.540
+For each of these child classes so I'll go here and for retail person we're already doing that.
+
+06:08.540 --> 06:15.590
+So I'll basically just copy paste that save some time I'll say car salesman.
+
+06:15.620 --> 06:18.300
+All right so that's that.
+
+06:19.250 --> 06:20.960
+And that's that.
+
+06:20.960 --> 06:22.680
+Now just change the name to Mike.
+
+06:22.700 --> 06:23.600
+How about that.
+
+06:25.280 --> 06:25.850
+OK.
+
+06:25.970 --> 06:29.780
+So as you can see we can call cell from each class.
+
+06:29.780 --> 06:31.130
+No problem with that.
+
+06:31.160 --> 06:35.840
+Now let's try to access any of the five stages of selling from any of the classes.
+
+06:35.840 --> 06:40.160
+So remember we have a method named trust.
+
+06:40.520 --> 06:41.440
+Establish trust.
+
+06:41.490 --> 06:42.210
+Right.
+
+06:42.230 --> 06:47.020
+That is not seen anywhere on retail salesperson.
+
+06:47.060 --> 06:53.990
+Same with if we go to car salesmen and we try to do that you'll see we have no access to it.
+
+06:53.990 --> 06:54.840
+Why.
+
+06:54.860 --> 06:55.820
+Because it's protected.
+
+06:55.820 --> 06:58.220
+Protected says Hey you.
+
+06:58.250 --> 07:06.890
+You can access protect it basically says if you inherit me you can use me as a child or I can be used
+
+07:06.890 --> 07:08.120
+within the class that I'm in.
+
+07:08.150 --> 07:15.230
+So we're a salesman so salesmen obviously can if these were not abstract classes or these were just
+
+07:15.230 --> 07:19.430
+protected like fields we can just make this protected as well.
+
+07:19.940 --> 07:27.230
+And this can be used within salesmen but it can also be used inside of you know it's shop classes.
+
+07:27.230 --> 07:31.010
+So right now first name could be access from within here.
+
+07:31.160 --> 07:33.770
+But if I make it private you can't.
+
+07:33.780 --> 07:34.060
+Right.
+
+07:34.070 --> 07:38.150
+So we'll talk about privacy in the next video but that's what protected is is just says that it can
+
+07:38.150 --> 07:42.810
+be used from within the class and it can be used from any class that inherits the class that it sent.
+
+07:43.180 --> 07:44.570
+So in this case it's exactly what's happening.
+
+07:44.570 --> 07:47.090
+But the outside world cannot access it.
+
+07:47.240 --> 07:48.760
+And that's exactly what we want.
+
+07:49.190 --> 07:53.050
+So now you can see that we're unable to access them from outside the class.
+
+07:53.060 --> 07:57.770
+We have also defined each one specifically for each class.
+
+07:57.770 --> 07:59.680
+And we have made them required.
+
+07:59.750 --> 08:02.070
+So our business requirements are now complete.
+
+08:02.090 --> 08:04.160
+Let's go ahead and run.
+
+08:04.380 --> 08:07.650
+Go ahead here try to run this thing
+
+08:11.760 --> 08:15.810
+and give it a few seconds.
+
+08:15.970 --> 08:17.270
+OK.
+
+08:17.300 --> 08:18.210
+As you can see.
+
+08:18.340 --> 08:18.850
+Hello.
+
+08:18.850 --> 08:21.060
+I just wanted to quickly help you.
+
+08:21.130 --> 08:25.660
+Everything is 80 percent discount to our customers love it.
+
+08:25.660 --> 08:26.580
+By this point.
+
+08:26.620 --> 08:26.920
+Right.
+
+08:26.920 --> 08:28.210
+Five stage process.
+
+08:28.210 --> 08:30.490
+Now same thing for a car salesman.
+
+08:30.490 --> 08:30.940
+Hello.
+
+08:30.940 --> 08:32.260
+I just wanted to help you.
+
+08:32.260 --> 08:33.790
+Everything is 10 percent discount.
+
+08:33.970 --> 08:34.930
+Our customers love it.
+
+08:34.930 --> 08:35.680
+Buy this car.
+
+08:35.740 --> 08:41.200
+Obviously we have changed everything else but we just decided to change only a few things.
+
+08:41.240 --> 08:46.810
+Would you see the point as you can see we're still calling the sell method but we're getting different
+
+08:46.810 --> 08:48.380
+results just as expected.
+
+08:48.490 --> 08:49.290
+Sounds great.
+
+08:49.390 --> 08:51.160
+Now one more thing.
+
+08:51.340 --> 08:57.040
+Their requirements said that they just wanted the methods to be private and they wanted to have a specific
+
+08:57.040 --> 08:57.830
+definition.
+
+08:57.880 --> 09:04.330
+So they just wanted these methods to have their own definition in each class and they wanted them to
+
+09:04.330 --> 09:08.400
+be not be accessible from outside of the class.
+
+09:08.410 --> 09:10.620
+And we already know that we've seen that.
+
+09:10.750 --> 09:16.140
+However they didn't say anything about the order being exactly the way it is in each cell method.
+
+09:16.210 --> 09:22.420
+Right now we do follow the orders so here we say engage establish trust address concerns demo value
+
+09:22.420 --> 09:22.810
+close.
+
+09:22.810 --> 09:31.540
+Same thing we do in car salesmen but if I put demo value in here right and the car salesman here Dad
+
+09:31.540 --> 09:34.950
+would still work because in their requirements they didn't mention anything about it.
+
+09:35.050 --> 09:40.090
+But for example let's just kind of like throw a curveball if they called call us back and they say hey
+
+09:40.090 --> 09:41.160
+you know what.
+
+09:41.230 --> 09:46.900
+There have been a problem where people are each child class is messing around and people who are implementing
+
+09:46.930 --> 09:50.830
+other types from our car salesmen they're actually messing around and they're putting address concerns
+
+09:50.830 --> 09:53.890
+first and engages last and close the second.
+
+09:53.950 --> 09:57.550
+So you know it's not really it's not really working properly.
+
+09:57.550 --> 10:00.470
+Can you make sure that these steps are locked.
+
+10:00.490 --> 10:01.310
+Exactly.
+
+10:01.330 --> 10:03.970
+And also notice another thing these are being repeated.
+
+10:04.000 --> 10:05.530
+So that's called repetition.
+
+10:05.530 --> 10:13.690
+So what we can do is we can actually go ahead here and we can make this concrete and what we can do
+
+10:13.690 --> 10:18.810
+is we can say this that we're putting here right.
+
+10:18.830 --> 10:25.950
+So based functionality unifies functionality that's shared and put it right here.
+
+10:26.000 --> 10:27.210
+All right.
+
+10:27.340 --> 10:28.520
+And that's it.
+
+10:28.520 --> 10:36.050
+Now cell can no longer be overwritten because a concrete class so we can't mess with the order of how
+
+10:36.050 --> 10:38.000
+things are being sold.
+
+10:38.070 --> 10:40.760
+So now I have to take these out.
+
+10:41.150 --> 10:49.190
+What I can do though is I can override each way and so each step can be or read and I can I can define
+
+10:49.190 --> 10:55.370
+my own way how to engage and how to establish trust and how to address concerns and how to demo value
+
+10:55.370 --> 10:57.760
+and how to close in each child class.
+
+10:57.770 --> 11:05.240
+I can do that but I can't mess with the order in which they're being called because that is on the parent
+
+11:05.240 --> 11:06.020
+class.
+
+11:06.020 --> 11:12.200
+So imagine this is in another code repository then that's kind of like one companies and then there's
+
+11:12.200 --> 11:15.500
+other companies that are using this base class.
+
+11:15.590 --> 11:18.050
+Right let's say this is another company's class.
+
+11:18.050 --> 11:26.030
+And if we didn't make this the order set then they might as well have changed the order of things and
+
+11:26.030 --> 11:28.490
+messed up the way things are being sold right.
+
+11:28.640 --> 11:34.760
+But right now they are not they are going to be concrete and stuck in a place in which they're supposed
+
+11:34.760 --> 11:35.510
+to be cold.
+
+11:35.540 --> 11:41.720
+So they're just some I wanted to kind of show that we can you know mess around with kind of inheritance
+
+11:41.750 --> 11:44.930
+and encapsulation and kind of put the two things together right.
+
+11:44.930 --> 11:49.050
+So you you want to combine these these concepts to understand the power behind it.
+
+11:49.100 --> 11:53.420
+Because that's really where the power lies is combining these concepts together so I just wanted to
+
+11:53.420 --> 11:59.000
+kind of like draw another requirement curve ball so to speak and then see how we can kind of save ourselves
+
+11:59.000 --> 12:02.350
+from that by using concepts that we have already learned.
+
+12:02.360 --> 12:07.000
+So that's it for now in the next video we'll be talking about private access specified.

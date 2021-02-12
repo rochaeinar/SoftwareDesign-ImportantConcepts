@@ -1,0 +1,868 @@
+WEBVTT
+
+00:00.210 --> 00:04.530
+Hey now we're going to write a simple application that is going to be putting all of the concepts we
+
+00:04.530 --> 00:05.640
+learned together.
+
+00:05.640 --> 00:07.650
+The application is not going to be complicated.
+
+00:07.650 --> 00:12.960
+The main goal of this is for you to understand these concepts even further than you can use them in
+
+00:12.960 --> 00:14.640
+more complex applications.
+
+00:14.670 --> 00:19.860
+If I use them in a complex application myself you will have to focus on figuring out the complexity
+
+00:19.890 --> 00:25.700
+and might not be able to focus on the concepts altogether that we have learned in this course so far.
+
+00:25.830 --> 00:29.560
+With that said let's take a look at the diagram here and see about the requirements.
+
+00:29.580 --> 00:35.900
+So as you can see we have an imaginary database once again and it has writers and promoters.
+
+00:35.910 --> 00:39.570
+So we have two sets of data so to speak.
+
+00:39.570 --> 00:41.260
+There is some sample data here.
+
+00:41.310 --> 00:42.930
+So first name last name.
+
+00:42.970 --> 00:47.520
+There is an autobiography I guess this is the property right type.
+
+00:47.520 --> 00:51.410
+So this is a blog and this is book.
+
+00:51.480 --> 00:59.230
+So we have a type as you can see a main kind of abstract base class that is saying it's a writer and
+
+00:59.230 --> 01:00.590
+then this is gonna be a blog writer.
+
+01:00.590 --> 01:06.480
+There's gonna be a book writer and you know there's you can imagine this has millions of rows but for
+
+01:06.480 --> 01:10.110
+simplicity's sake we're just saying the database only has three writers and three promoters.
+
+01:10.110 --> 01:16.710
+So the other type is promoters promoters of First Name Last Name cell phone and then they have my business
+
+01:16.710 --> 01:21.300
+card which is once again is going to be the property and they have two types omni promoters and access
+
+01:21.300 --> 01:27.750
+promoters access an omni our bases clubs in Las Vegas and you know there are two promoters two types
+
+01:27.750 --> 01:31.890
+of promoters and promoter being the bass class once again.
+
+01:31.890 --> 01:37.140
+So you can imagine that it really has been loaded for you in a list.
+
+01:37.160 --> 01:42.150
+So just like the way we've done it before you can imagine that you have old information at your disposal
+
+01:42.150 --> 01:45.500
+so you can put them in a list and imagine like you have already loaded from database.
+
+01:45.510 --> 01:46.350
+That's totally fine.
+
+01:46.560 --> 01:49.100
+And now let's look at what we have to work with.
+
+01:49.110 --> 01:52.650
+So once again you already know that we have two base classes.
+
+01:52.650 --> 01:54.920
+We have a writer we have a promoter.
+
+01:55.040 --> 01:55.260
+Right.
+
+01:55.740 --> 01:57.630
+Because from that then you have two children.
+
+01:57.630 --> 02:02.210
+You have the Omni club promoter access club promoter then you have blog writer and book writer.
+
+02:02.280 --> 02:08.550
+Then you have these methods so the writer has a method right which goes down all the way to blog writer
+
+02:08.550 --> 02:12.180
+and book writer and promoter has a method promote.
+
+02:12.180 --> 02:18.400
+So it goes to excess club promoter and omni a promoter or omni club promoter.
+
+02:18.480 --> 02:22.490
+And then you have IV logger and I bodybuilder.
+
+02:22.500 --> 02:24.280
+So these are abilities that.
+
+02:24.420 --> 02:29.460
+So for example access club promoter also happens to be a body builder.
+
+02:29.460 --> 02:29.730
+Right.
+
+02:29.730 --> 02:33.580
+So it has body building abilities but it's also of logger.
+
+02:33.600 --> 02:35.430
+So it has also of logging abilities.
+
+02:35.880 --> 02:38.980
+So this is where you're going to have to deal with the multiple inheritance.
+
+02:39.180 --> 02:46.610
+And but then also both book and book and blog writers both of them are also loggers.
+
+02:46.610 --> 02:50.100
+All right so you gonna have to figure out where to put the interfaces and then all that stuff you need
+
+02:50.100 --> 02:52.560
+to figure out and that's actually look at some of the steps.
+
+02:52.560 --> 02:57.540
+So it's this final requirement you will have for this personal information is up to you so you can fake
+
+02:57.540 --> 02:58.090
+some of the data.
+
+02:58.100 --> 03:01.140
+You know when you're putting the first name last name you can use the stuff that we have here or you
+
+03:01.140 --> 03:02.730
+can just fake them out it's totally fine.
+
+03:02.970 --> 03:07.590
+But at the end you're going to have list one so you can have four lists and list what is going to have
+
+03:07.590 --> 03:13.070
+three promoters to Xs promoters and one omni promoter list who is going to have three writers.
+
+03:13.080 --> 03:17.610
+So two book writers one blog writer list three is going to have two bodybuilders any type.
+
+03:17.610 --> 03:22.410
+So in this case we only have one type as you can see it's excess club promoter so you can basically
+
+03:22.410 --> 03:27.750
+gonna have to access club promoters and life is a list for is going to have to loggers any type.
+
+03:27.750 --> 03:34.210
+Once again it can be you know it can be an access club promoter because it's a blogger it can be a blog
+
+03:34.210 --> 03:38.190
+writer or book writer anyone of them but they're going to be unless you're going out for lists and then
+
+03:38.550 --> 03:39.540
+want to see how.
+
+03:39.540 --> 03:45.030
+So we basically once again in our previous example we want to see our promoters promote our writers
+
+03:45.030 --> 03:48.720
+write how bodybuilders work out how bloggers blog regardless of their type.
+
+03:48.720 --> 03:52.320
+So you know you can be creative with a text that are not given.
+
+03:52.320 --> 03:58.590
+So if any of the promoting you don't know what put text to put just be creative with it just say console
+
+03:58.590 --> 03:59.550
+that write line.
+
+03:59.580 --> 04:01.290
+I am promoting now or whatever you want.
+
+04:01.310 --> 04:01.970
+It doesn't matter.
+
+04:02.020 --> 04:06.690
+It's not part of the requirements as long as it's using the console dot right line and it's saying some
+
+04:06.690 --> 04:09.500
+Texas relevant to the action happening you're good to go.
+
+04:09.510 --> 04:12.290
+So then promoters have to step promotion process.
+
+04:12.300 --> 04:19.080
+So these guys and share with inner circle so they share with inner circle the promoters share with their
+
+04:19.080 --> 04:23.360
+friends exes promoters share what their instagram followers and paid ads.
+
+04:23.430 --> 04:28.470
+That's a second step that they use all media promoters use Facebook ads and excess promoters use Google
+
+04:28.470 --> 04:29.160
+AdWords.
+
+04:29.190 --> 04:34.860
+Now another requirement I'm going to add is that you are going to keep these private from the world
+
+04:35.090 --> 04:40.030
+but you're going to going to only reveal these steps in the child classes.
+
+04:40.050 --> 04:44.490
+And I'm not going to tell you what to use you're going to have to figure that out yourself but the requirement
+
+04:44.490 --> 04:49.280
+once again here is that the promotion process to promote can be used by the outside world.
+
+04:49.290 --> 04:54.480
+But these two processes that are part of the promotion can only be accessed by the children and they
+
+04:54.480 --> 04:55.590
+have to be done in the order.
+
+04:55.620 --> 04:58.960
+So first you have to share with inner circle then you have to use the paid ads.
+
+04:59.010 --> 05:03.810
+You can't do it in you know in a reverse order if you decide to do it.
+
+05:03.820 --> 05:09.010
+So once the class is instantiate it you can do you cannot mess with what the order.
+
+05:09.010 --> 05:09.310
+Right.
+
+05:09.310 --> 05:11.230
+So that's the that's the other rule.
+
+05:11.470 --> 05:12.700
+So that's essentially it.
+
+05:13.120 --> 05:17.010
+Now before I write any code I'm going to give you some time to do it for yourself.
+
+05:17.140 --> 05:18.870
+So please pause the video here.
+
+05:18.880 --> 05:24.810
+We have already done a very similar example to this and you should know exactly how to write this application.
+
+05:24.820 --> 05:29.170
+You can pretend like the data has already been loaded once again from the database so you can put them
+
+05:29.170 --> 05:34.660
+in a list the way we have done it in our previous videos they just read through the requirements and
+
+05:34.660 --> 05:40.260
+write the app step by step as we have done in our previous example.
+
+05:40.270 --> 05:45.070
+Once you have written it then play the video and follow through to see what you have got right and what
+
+05:45.070 --> 05:46.810
+you did differently or got wrong.
+
+05:46.810 --> 05:52.210
+This way you will learn a lot more than just by watching me writing code or my own even though I will
+
+05:52.210 --> 05:55.560
+still be explaining all of my thought processes and my decisions.
+
+05:55.600 --> 05:59.770
+So don't worry about that but just be a better for you to write it on your own and kind of struggle
+
+05:59.770 --> 06:04.900
+with it and then see how I do it so that you can fill any gaps that you might have after it so positive
+
+06:04.900 --> 06:05.620
+video.
+
+06:05.620 --> 06:07.600
+Do it yourself and then come back.
+
+06:07.630 --> 06:07.860
+All right.
+
+06:07.870 --> 06:10.210
+So let's go ahead and write some code here.
+
+06:10.330 --> 06:12.970
+So I have my charts here.
+
+06:12.970 --> 06:13.990
+That's cool.
+
+06:13.990 --> 06:17.360
+Now I also have visual studio code open.
+
+06:17.500 --> 06:18.550
+It's completely empty.
+
+06:18.610 --> 06:25.960
+So what I'm gonna do is I'm going to say file and I'm going to say open folder and in here I'm gonna
+
+06:25.990 --> 06:29.750
+say create a new one I'm gonna call it app.
+
+06:30.460 --> 06:31.660
+You can name it whatever you want.
+
+06:31.660 --> 06:32.880
+That doesn't really matter.
+
+06:33.030 --> 06:38.650
+I'm not up and then remember here we have to actually create a new projects so I'm going to do is I'm
+
+06:38.680 --> 06:46.390
+to say dot net new console and it'll do the restoring of all the stuff and we don't need to run it right
+
+06:46.390 --> 06:49.690
+off the bat to so it can just create that first.
+
+06:49.690 --> 06:50.470
+Get that going.
+
+06:50.860 --> 06:52.580
+And here we have our program.
+
+06:52.580 --> 06:59.800
+So we are at least good to go and we should be able to do everything else if the configuration you haven't
+
+06:59.800 --> 07:00.390
+set up yet.
+
+07:00.400 --> 07:07.210
+We can just go and do that very quickly you just say add configuration dot net core and that's about
+
+07:07.210 --> 07:07.630
+that.
+
+07:08.250 --> 07:09.940
+It's very easy.
+
+07:09.940 --> 07:16.570
+Now we can just test that it runs just click play or you know start debugging that has a play button
+
+07:16.990 --> 07:21.300
+and we go hello world so we verify that our program runs great.
+
+07:21.310 --> 07:25.280
+Now well we can do is actually start thinking about this.
+
+07:25.330 --> 07:26.860
+So let's open this up.
+
+07:26.920 --> 07:27.850
+Let's see what we need.
+
+07:27.910 --> 07:33.700
+We need to abstract base classes religious create all of this stuff and not put anything in it just
+
+07:33.700 --> 07:34.050
+yet.
+
+07:34.060 --> 07:36.470
+Just have our structure built up.
+
+07:36.520 --> 07:37.480
+That's the first step.
+
+07:37.540 --> 07:38.350
+That's what I would do.
+
+07:38.350 --> 07:39.930
+Now you might have done a definitely that's cool.
+
+07:39.940 --> 07:41.310
+I'm just showing you my approach.
+
+07:41.320 --> 07:42.540
+So it's totally fine.
+
+07:42.580 --> 07:48.940
+What I'm going to do is I'm gonna grab these guys promoter and writer and come back here and I'm going
+
+07:48.940 --> 07:51.990
+to create two new file promoter doubts.
+
+07:51.980 --> 07:56.670
+Yes I want to create another one rider doubts.
+
+07:56.730 --> 07:57.400
+Yes.
+
+07:57.430 --> 07:59.660
+And these are both abstract classes right.
+
+07:59.830 --> 08:03.620
+Public abstract class.
+
+08:03.910 --> 08:10.580
+And this one is writer and the other one is gonna be promoter.
+
+08:10.720 --> 08:12.070
+So there we go.
+
+08:12.070 --> 08:14.590
+Just you know setting some time here.
+
+08:15.820 --> 08:21.700
+So we got these two skeletons done this guy and this guy are good to go.
+
+08:22.150 --> 08:28.610
+Now we need to create a blog writer and book writer so I grab these guys let's just create everyone.
+
+08:28.750 --> 08:31.860
+Book writers promoters everyone.
+
+08:31.930 --> 08:34.120
+So just get the skeleton down first.
+
+08:34.180 --> 08:41.910
+I will say blog writer C.S. and then I will say book Ryder.
+
+08:42.430 --> 08:43.170
+Yes.
+
+08:43.170 --> 08:47.970
+And then I won't put anything in there yet because they're going to be very similar to the promoters
+
+08:48.380 --> 08:49.730
+structure why that is.
+
+08:49.740 --> 08:50.890
+And here we go.
+
+08:50.890 --> 08:57.060
+We're just gonna say once again that CBS and Miss baloney thinks I'm going to copy the name.
+
+08:57.630 --> 09:00.160
+And here we go.
+
+09:00.160 --> 09:01.080
+That's yes.
+
+09:01.080 --> 09:05.880
+And then now let's actually do some code writing so public.
+
+09:05.880 --> 09:15.420
+Public class blog writer the concrete class this one as book writer.
+
+09:15.420 --> 09:18.270
+So just change that word.
+
+09:18.360 --> 09:19.250
+All right.
+
+09:19.260 --> 09:29.960
+And access club promoter let's see she going to grab the name and saying with omni M paste that.
+
+09:29.980 --> 09:32.010
+So grab this.
+
+09:32.010 --> 09:34.990
+And this one was actually not there by itself.
+
+09:35.100 --> 09:38.620
+I'll just say Nia club promoter.
+
+09:38.640 --> 09:39.050
+All right.
+
+09:39.050 --> 09:41.800
+So now we have these ready.
+
+09:41.810 --> 09:42.890
+Let's see what else we need.
+
+09:42.890 --> 09:47.840
+So we have our copy classes ready wherever abstract class is ready and we need some interfaces.
+
+09:47.850 --> 09:50.570
+So let's create the IV logger interface.
+
+09:50.730 --> 09:52.100
+I'll pop that in here.
+
+09:52.110 --> 09:54.270
+Now say I've logger Dodds.
+
+09:54.300 --> 09:57.890
+Yes public interface.
+
+09:57.930 --> 10:03.870
+I've logger because that's how I create an interface using interface reserve keyword.
+
+10:03.870 --> 10:11.240
+And then I will create a body builder for that I'm going to need this guy.
+
+10:11.440 --> 10:12.380
+Scrap that.
+
+10:12.380 --> 10:15.960
+Pop it in here.
+
+10:16.030 --> 10:23.910
+Yes it's going to be very similar to I have logger except the name and grab the name.
+
+10:23.910 --> 10:24.520
+And here we go.
+
+10:25.040 --> 10:28.200
+Now let's see the diagram.
+
+10:28.410 --> 10:34.050
+So we have our concrete classes where we're abstract classes and we have our interfaces all ready to
+
+10:34.050 --> 10:34.710
+go.
+
+10:34.740 --> 10:40.340
+Now I think the easiest thing we can do is go top down now that we have everything ready.
+
+10:40.350 --> 10:47.220
+Let's actually connect them together and create the hierarchy before we put any methods or any implementations
+
+10:47.240 --> 10:50.530
+and let's just get the whole picture down before we start painting.
+
+10:50.690 --> 10:53.910
+I mean like let's set the canvas before we paint our picture.
+
+10:53.910 --> 10:57.260
+That's how I approach program writing not just this one.
+
+10:57.270 --> 11:01.440
+Even when I write very complex application I still do the same thing I just kind of put the stuff down
+
+11:01.440 --> 11:06.570
+the skeleton down from that scale and I start building you know building the actual human so to speak
+
+11:06.570 --> 11:10.170
+like that's that's the analogy that I would make or I just kind of like put the skeleton there and I'm
+
+11:10.170 --> 11:13.630
+from there go and start making more and more complex.
+
+11:13.650 --> 11:13.910
+OK.
+
+11:13.920 --> 11:17.620
+So what I'm going to do is I'm going to say vlog is a method on Blogger.
+
+11:17.680 --> 11:18.660
+Let's go here.
+
+11:18.660 --> 11:20.500
+Let's say or you blogger.
+
+11:20.510 --> 11:24.050
+So there's a public there's going to just be void.
+
+11:24.090 --> 11:31.080
+So void vlog and before I bought a builder is it going to be void workout.
+
+11:32.400 --> 11:33.650
+So here we go.
+
+11:33.690 --> 11:35.920
+These two were pretty easy.
+
+11:35.940 --> 11:38.470
+Writer is going to have a method right on it.
+
+11:38.640 --> 11:39.870
+That's cool.
+
+11:39.930 --> 11:40.930
+So let's see.
+
+11:40.950 --> 11:42.630
+Writer where are you.
+
+11:42.630 --> 11:44.140
+You're right here.
+
+11:44.140 --> 11:51.280
+You can have a method right which is abstracts from say public abstract void.
+
+11:51.300 --> 11:57.000
+So that means that this method is going to have to be defined by the child classes and then I'm going
+
+11:57.000 --> 12:05.970
+to go to the promoter and I want to say well the promoter needs to have a method promote promote take
+
+12:05.970 --> 12:09.550
+that out loud.
+
+12:10.020 --> 12:10.590
+Here we go.
+
+12:12.150 --> 12:12.440
+OK.
+
+12:12.450 --> 12:15.090
+Now let's go back to our diagram.
+
+12:15.240 --> 12:17.340
+So we have the right we have promote.
+
+12:17.340 --> 12:24.390
+We have a vlog where we work out now where we need to do is we need to combine these together and create
+
+12:24.390 --> 12:25.070
+the hierarchy.
+
+12:25.200 --> 12:32.550
+So let's see book writer a blog writer and book writer both inherited from writer and then excess club
+
+12:32.550 --> 12:36.700
+promoter and Armenia club promoter inherit promoter based class.
+
+12:36.720 --> 12:37.530
+So go ahead and do that.
+
+12:37.530 --> 12:39.530
+That's easy to do now.
+
+12:39.540 --> 12:41.380
+Promoter is right here.
+
+12:41.490 --> 12:48.930
+We're going to grab that guys actually close everything and save that save these and close these just
+
+12:48.930 --> 12:54.460
+so we can have a cleaner dashboard here.
+
+12:54.720 --> 12:55.820
+That that.
+
+12:55.910 --> 12:56.070
+OK.
+
+12:56.100 --> 12:56.460
+Cool.
+
+12:56.460 --> 13:02.160
+Now I will go to Armenia and next says promoters both of them where they're going to inherit from promoter
+
+13:02.160 --> 13:02.660
+right.
+
+13:02.670 --> 13:04.380
+And I do inheritance.
+
+13:04.380 --> 13:07.110
+So that's that's and that's that.
+
+13:07.110 --> 13:14.960
+Now they say you need to generate your own constructor that's cool that's fine.
+
+13:15.150 --> 13:20.100
+But we also need to implement the abstract promote.
+
+13:20.110 --> 13:23.540
+So I will just do that and then we'll put some code in that afterwards.
+
+13:23.700 --> 13:24.080
+OK.
+
+13:24.090 --> 13:28.020
+So that looks good that looks good just so far so good.
+
+13:28.020 --> 13:33.450
+Right the Skelton's still we're creating the hierarchy now of the skeleton of Aki and the next thing
+
+13:33.450 --> 13:34.310
+is the writers.
+
+13:34.310 --> 13:42.940
+So the writer is once again an abstract base class book writer is going to inherit that and so as the
+
+13:42.940 --> 13:43.920
+blog writer.
+
+13:44.170 --> 13:49.120
+See it's making it read because it's saying we need to do some stuff so you can actually do this automatically
+
+13:49.120 --> 13:54.370
+create the constructor and the abstract method implementation
+
+13:56.910 --> 13:58.470
+I'm going to go ahead and do these guys.
+
+13:58.860 --> 14:00.870
+Okay so this is looking good.
+
+14:00.870 --> 14:04.660
+So let's see what we have done so far so we created this.
+
+14:04.740 --> 14:05.850
+We created this.
+
+14:05.850 --> 14:07.320
+We created this recreated this.
+
+14:07.440 --> 14:16.050
+Now a promoter can be of logger or excess promoter can be a VC logger and it can be a body builder.
+
+14:16.050 --> 14:22.740
+So let's actually pop those two things in there excess so this can be I.
+
+14:22.920 --> 14:31.060
+Body builder and an IV logger so zero how this is multiple inheritance right now.
+
+14:31.830 --> 14:38.030
+It's saying implement interface vlog and it needs to also implement work out.
+
+14:38.070 --> 14:41.020
+So it's forcing us to do that.
+
+14:41.100 --> 14:44.710
+So an access club promoter will know how to promote out of log and not a workout.
+
+14:44.710 --> 14:48.030
+It's doing these all of these things at the same time.
+
+14:48.030 --> 14:49.560
+Now let's see what else we need.
+
+14:49.560 --> 14:53.970
+Here it says that nobody else is as a body builder which is cool.
+
+14:53.970 --> 14:59.130
+And then of lager so besides X says club promoter the book writer and the blog writer are also bloggers
+
+14:59.240 --> 15:03.530
+and instead of us doing them individually we can just inherit that from the.
+
+15:03.530 --> 15:09.360
+Or we can implement that in the you know in the bass class and the bass class will then force our child
+
+15:09.360 --> 15:15.120
+classes to do the same thing which is going to say hey listen I implement I've logger so you guys have
+
+15:15.120 --> 15:15.920
+to do that as well.
+
+15:15.930 --> 15:16.350
+Right.
+
+15:16.500 --> 15:19.460
+So it's going to save us a lot of code and it's just a cleaner way to do it.
+
+15:19.470 --> 15:31.410
+So I'm gonna go to writer and in here I'm going to say so I will say I have the logger and then what
+
+15:31.410 --> 15:37.470
+that's going to say that's going to say we need to implement the method now here's thing I implement
+
+15:37.650 --> 15:39.360
+a vlog.
+
+15:39.510 --> 15:45.840
+So vlog here what's going to happen is it's going to have a concrete definition so that if I go back
+
+15:45.840 --> 15:46.160
+here.
+
+15:46.350 --> 15:52.650
+So then these both will get the same way of logging but what we want to do is want to give the opportunity
+
+15:52.650 --> 15:57.240
+for each guy to define it for themselves.
+
+15:57.240 --> 16:03.570
+So what we what we can do is we can make this into an abstract method so let's actually take this out
+
+16:04.020 --> 16:09.860
+and say public void public abstract void vlog.
+
+16:09.960 --> 16:13.390
+So this still follows the same convention.
+
+16:13.420 --> 16:18.560
+You know it is still says that you're not following the logger interface contract.
+
+16:18.570 --> 16:23.490
+I still have a law vlog method on me is just that at that method happens to be abstract.
+
+16:23.490 --> 16:28.050
+Now what that says then to the children classes which are you know blog writer and book writers you
+
+16:28.050 --> 16:33.390
+can see that red now is that now they have to implement it specifically themselves which is what we're
+
+16:33.390 --> 16:34.640
+doing here.
+
+16:34.740 --> 16:40.590
+So but you know the reason why it's using the override rules of keyword is because it's overriding the
+
+16:40.860 --> 16:49.390
+method on the abstract class and then the abstract class just follows the contract from the interface.
+
+16:49.530 --> 16:52.960
+So we can just do the same thing on the blog writer as well.
+
+16:52.980 --> 16:53.790
+So here we go.
+
+16:54.300 --> 16:56.340
+And let me see.
+
+16:56.370 --> 17:03.420
+So do we have everything I think we do well besides the concrete stuff in there we have created the
+
+17:03.420 --> 17:04.430
+entire hierarchy.
+
+17:04.440 --> 17:11.100
+So we have all the hierarchy all set and we have also put all the methods in.
+
+17:11.100 --> 17:14.640
+We created all the classes so it's looking pretty good.
+
+17:14.710 --> 17:15.930
+It's looking pretty good.
+
+17:15.960 --> 17:21.030
+Let me close all the stuff out and then we can move from there.
+
+17:21.060 --> 17:22.560
+So go back to the diagram.
+
+17:22.560 --> 17:24.360
+Now let's see what it now what we need to do.
+
+17:24.600 --> 17:28.650
+So the next thing we're going to do is we're going to take care of this requirement.
+
+17:28.650 --> 17:34.530
+It said this promoters have a two step promotion process and it gives us the promotion process and then
+
+17:34.530 --> 17:39.720
+also remember the requirement that the promotion process can only be seen by the children classes not
+
+17:39.720 --> 17:40.970
+by the outside world.
+
+17:40.980 --> 17:43.740
+So in the next video we're going to take care of that requirement.
+
+17:43.770 --> 17:51.600
+Now we're also going to kind of like fill in the actual implementations on any method that we have created
+
+17:51.660 --> 17:56.270
+and then we're going to create these lists and fulfill the entire business requirement.
